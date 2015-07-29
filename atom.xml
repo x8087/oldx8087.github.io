@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[假如上帝不是程序员]]></title>
+  <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://x8087.gitcafe.io//"/>
+  <updated>2015-07-29T08:31:38.000Z</updated>
+  <id>http://x8087.gitcafe.io//</id>
+  
+  <author>
+    <name><![CDATA[x8087]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo NexT主题 多说评论的显示问题解决]]></title>
+    <link href="http://x8087.gitcafe.io/2015/07/29/hexo-NexT%E4%B8%BB%E9%A2%98-%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA%E7%9A%84%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>http://x8087.gitcafe.io/2015/07/29/hexo-NexT主题-多说评论的显示问题解决/</id>
+    <published>2015-07-29T02:52:07.000Z</published>
+    <updated>2015-07-29T08:31:38.000Z</updated>
+    <content type="html"><![CDATA[<h5 id="问题说明：">问题说明：</h5><hr>
+<p><strong>hexo</strong> <strong>NexT主题</strong>配置<strong>多说评论</strong></p>
+<ul>
+<li><strong>游客</strong>评论正常显示</li>
+<li>当有<strong>登陆用户</strong>发布评论后会导致评论无法正常显示。<br>使用了<code>hexo3.1.1</code>+<code>nexT0.3.0</code>+<code>duoshuo</code></li>
+</ul>
+<h5 id="解决方法：">解决方法：</h5><hr>
+<p>  把<strong>主题配置</strong><code>_config.yml</code>里<code>duoshuo_info</code>下的<code>admin_enable</code>设置成<code>true</code></p>
+<hr>
+<h5 id="背景介绍+详细说明">背景介绍+详细说明</h5><ul>
+<li><p><em>背景</em>~~</p>
+<blockquote>
+<p>花了一小天时间把github和gitcafe的pages主页弄成博客<br>结果评论系统无论怎么弄都有显示问题<br>于是乎有了下面的漫长折腾之旅。</p>
+</blockquote>
+</li>
+<li><p><em>为什么不用其他评论系统</em></p>
+<blockquote>
+<p>由于主要面向国内用户，评论后台不打算用disqus，而准备采用多说(duoshuo)。</p>
+</blockquote>
+</li>
+<li><p><em>问题表现</em></p>
+<blockquote>
+<p>按照多说和next主题官方说明添加配置，能够正常显示评论界面。<br>通过登陆发表评论，点击发布后会一直显示正在发布，刷新评论界面消失，发出的评论没有显示，而在多说后台能够查询到，并无问题。</p>
+</blockquote>
+</li>
+<li><p><em>解决过程</em></p>
+<blockquote>
+<p>通过谷歌搜索了一圈，虽然有遇到相似问题的案例，但是并无半毫收获，不是没有解决，就是吐槽多说后台问题比较多，建议转投disqus。百无聊赖才想起自己也是个程序猿，虽然不是搞web前端开发，但是多少能看懂一点。于是尝试自己调试查找问题。</p>
+<ul>
+<li><em>测试验证</em><br>测试了下，只要不登陆发表评论，或者把所有登陆用户的评论删除，评论界面是可以正常显示的。打开浏览器的开发者工具，可以看到当页面有问题时<code>source/js/hook-duoshuo.js</code>脚本在<strong>18</strong>行报错找不到变量<code>duoshuo_user_ID</code>。<br>到这里，之前的所有缺少底气和担心都烟消云散。</li>
+<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;% if theme.duoshuo_info.ua_enable %&#125;</span><br><span class="line"> &#123;% if theme.duoshuo_info.admin_enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="kotlin"></span><br><span class="line"> <span class="variable"><span class="keyword">var</span> duoshuo_user_ID</span> = </span></span><span class="expression">&#123;&#123;<span class="variable">theme.duoshuo</span>_<span class="variable">info.user</span>_<span class="variable">id</span>&#125;&#125;</span><span class="xml"><span class="undefined"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以看出如果主题配置里<code>duoshuo_info</code>的<code>ua_enable</code>设置为<code>true</code>时会往页面嵌入<code>hook-duoshuo.js</code>，而<code>admin_enable</code>设置为<code>true</code>时则会生成变量<code>duoshuo_user_ID</code>。这时才发现原来罪魁祸首是主题配置里的<code>admin_enable</code>设置成了<code>false</code>，在next官方还没修复之前，把它设置成<code>true</code>就可以完美解决了。</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h5 id="问题说明：">问题说明：</h5><hr>
+<p><strong>hexo</strong> <strong>NexT主题</strong>配置<strong>多说评论</strong></p>
+<ul>
+<li><strong>游客</strong>评论正常显示]]>
+    </summary>
+    
+      <category term="bug" scheme="http://x8087.gitcafe.io/tags/bug/"/>
+    
+      <category term="hexo" scheme="http://x8087.gitcafe.io/tags/hexo/"/>
+    
+      <category term="next" scheme="http://x8087.gitcafe.io/tags/next/"/>
+    
+      <category term="多说" scheme="http://x8087.gitcafe.io/tags/%E5%A4%9A%E8%AF%B4/"/>
+    
+      <category term="技术" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="技术" scheme="http://x8087.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[累觉不爱的闹腾]]></title>
+    <link href="http://x8087.gitcafe.io/2015/07/28/%E7%B4%AF%E8%A7%89%E4%B8%8D%E7%88%B1%E7%9A%84%E9%97%B9%E8%85%BE/"/>
+    <id>http://x8087.gitcafe.io/2015/07/28/累觉不爱的闹腾/</id>
+    <published>2015-07-28T06:21:38.000Z</published>
+    <updated>2015-07-28T08:46:33.000Z</updated>
+    <content type="html"><![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
+]]>
+    </summary>
+    
+      <category term="杂感" scheme="http://x8087.gitcafe.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+      <category term="生活" scheme="http://x8087.gitcafe.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="情感" scheme="http://x8087.gitcafe.io/categories/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
+  
+</feed>
