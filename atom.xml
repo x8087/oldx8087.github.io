@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-07-29T08:31:38.000Z</updated>
+  <updated>2015-07-29T15:38:54.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[累了，疯了~]]></title>
+    <link href="http://x8087.gitcafe.io/2015/07/29/%E7%B4%AF%E4%BA%86%EF%BC%8C%E7%96%AF%E4%BA%86/"/>
+    <id>http://x8087.gitcafe.io/2015/07/29/累了，疯了/</id>
+    <published>2015-07-29T15:31:59.000Z</published>
+    <updated>2015-07-29T15:38:54.000Z</updated>
+    <content type="html"><![CDATA[<p>每天莫名的发脾气<br>小心脏有点受不了<br>有点累了<br>我想，如果有一天我疯了<br>那一定是拜小木头所赐~<br>难怪心脏会有问题啊</p>
+<p>为什么？</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>每天莫名的发脾气<br>小心脏有点受不了<br>有点累了<br>我想，如果有一天我疯了<br>那一定是拜小木头所赐~<br>难怪心脏会有问题啊</p>
+<p>为什么？</p>
+]]>
+    </summary>
+    
+      <category term="杂感" scheme="http://x8087.gitcafe.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+      <category term="生活" scheme="http://x8087.gitcafe.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="情感" scheme="http://x8087.gitcafe.io/categories/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[hexo NexT主题 多说评论的显示问题解决]]></title>
