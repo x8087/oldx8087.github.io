@@ -1,27 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
   
-  <title><![CDATA[假如上帝不是程序员]]></title>
-  <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-07T03:31:56.000Z</updated>
-  <id>http://x8087.gitcafe.io//</id>
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="vim,技巧,笔记," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="假如上帝不是程序员" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="0. Vim解决问题的方式结识. [^hpoint] 命令功能 重复上次修改注意 
+
+插入模式下,重复从进入到结束的所有操作(移动光标会重置修改状态)
+.命令事实上是一个微型的宏
+
+
+
+
+操作
+功能
+
+
+
+
+x
+删除光标下字符
+
+
+dd
+删除整行
+
+
+&amp;gt;G
+增加当前行到文档末尾处的缩进层级
+
+
+
+不要自我重复减少无关移动example1:在行末添加分号方法1
+123$a;&amp;lt;Esc&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-Vim实用技巧">
+<meta property="og:url" content="http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/index.html">
+<meta property="og:site_name" content="假如上帝不是程序员">
+<meta property="og:description" content="0. Vim解决问题的方式结识. [^hpoint] 命令功能 重复上次修改注意 
+
+插入模式下,重复从进入到结束的所有操作(移动光标会重置修改状态)
+.命令事实上是一个微型的宏
+
+
+
+
+操作
+功能
+
+
+
+
+x
+删除光标下字符
+
+
+dd
+删除整行
+
+
+&amp;gt;G
+增加当前行到文档末尾处的缩进层级
+
+
+
+不要自我重复减少无关移动example1:在行末添加分号方法1
+123$a;&amp;lt;Esc&amp;gt">
+<meta property="og:updated_time" content="2015-08-07T03:31:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔记-Vim实用技巧">
+<meta name="twitter:description" content="0. Vim解决问题的方式结识. [^hpoint] 命令功能 重复上次修改注意 
+
+插入模式下,重复从进入到结束的所有操作(移动光标会重置修改状态)
+.命令事实上是一个微型的宏
+
+
+
+
+操作
+功能
+
+
+
+
+x
+删除光标下字符
+
+
+dd
+删除整行
+
+
+&amp;gt;G
+增加当前行到文档末尾处的缩进层级
+
+
+
+不要自我重复减少无关移动example1:在行末添加分号方法1
+123$a;&amp;lt;Esc&amp;gt">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 笔记-Vim实用技巧 | 假如上帝不是程序员 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
-  <author>
-    <name><![CDATA[x8087]]></name>
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?db3298e9568f60ef1f92511a86e7a270";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">假如上帝不是程序员</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[笔记-Vim实用技巧]]></title>
-    <link href="http://x8087.gitcafe.io/2015/08/07/%E7%AC%94%E8%AE%B0-Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/</id>
-    <published>2015-08-07T01:40:52.000Z</published>
-    <updated>2015-08-07T03:31:56.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              笔记-Vim实用技巧
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-08-07T09:40:52+08:00" content="2015-08-07">
+            2015-08-07
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/笔记/" itemprop="url" rel="index">
+                  <span itemprop="name">笔记</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/08/07/笔记-Vim实用技巧/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/07/笔记-Vim实用技巧/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
 <ul>
 <li>插入模式下,重复从进入到结束的所有操作(<em>移动光标会重置修改状态</em>)</li>
 <li><code>.</code>命令事实上是一个微型的宏</li>
@@ -1849,529 +2143,445 @@
 <p>[^paste]: <code>:h &#39;paste&#39;</code></p>
 <p>[^@]: <code>:h @</code></p>
 <p>[^visualbell]: <code>:h &#39;visualbell&#39;</code></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><stron]]>
-    </summary>
-    
-      <category term="vim" scheme="http://x8087.gitcafe.io/tags/vim/"/>
-    
-      <category term="技巧" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="笔记" scheme="http://x8087.gitcafe.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="笔记" scheme="http://x8087.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vim/" rel="tag">#vim</a>
+          
+            <a href="/tags/技巧/" rel="tag">#技巧</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/02/图形思考力量大-解决不了的问题-用画的-就对了/" rel="next">笔记-图形思考力量大：解决不了的问题, 用画的就对了！</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+            <!-- 多说热评文章-->
+            <p>热评文章</p>
+            <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/08/07/笔记-Vim实用技巧/"
+                   data-title="笔记-Vim实用技巧" data-url="http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
   
-  <entry>
-    <title><![CDATA[笔记-图形思考力量大：解决不了的问题, 用画的就对了！]]></title>
-    <link href="http://x8087.gitcafe.io/2015/08/02/%E5%9B%BE%E5%BD%A2%E6%80%9D%E8%80%83%E5%8A%9B%E9%87%8F%E5%A4%A7-%E8%A7%A3%E5%86%B3%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98-%E7%94%A8%E7%94%BB%E7%9A%84-%E5%B0%B1%E5%AF%B9%E4%BA%86/"/>
-    <id>http://x8087.gitcafe.io/2015/08/02/图形思考力量大-解决不了的问题-用画的-就对了/</id>
-    <published>2015-08-02T14:44:14.000Z</published>
-    <updated>2015-08-07T01:38:47.000Z</updated>
-    <content type="html"><![CDATA[<p><em>村井瑞枝/著 张凌虚/译</em></p>
-<blockquote>
-<p><strong>明明看了一堆书,为什么记不起来,也无法实际应用在工作上?</strong><br>如果你有以上的困扰,请务必好好研读本书，试着活用图形。<br>一旦学会灵活运用图形思考、表达，即使是左耳进右耳出的普通资讯，也能消化吸收，成为自己血肉的一部分。<br>本书以循序渐进的方式说明图形思考的优点，使用方法，读者可透过书中列举的实例，学会以图圈、三角形、箭头与线条等简单的图形，汇整思路，提高思考力和解决问题的能力！</p>
-</blockquote>
-<p><strong>图形思考的5大优点:</strong></p>
-<ol>
-<li><code>整理思绪</code></li>
-<li><code>提高解决问题的能力</code></li>
-<li><code>提升工作效率</code></li>
-<li><code>让沟通更加顺畅</code></li>
-<li><code>在任何工作场合都能派上用场</code></li>
-</ol>
-<p><strong>复杂变单纯,困难变简单</strong><br><strong>学会7种必胜图形，工作从此事半功倍！</strong></p>
-<ol>
-<li><code>将事物分解思考的</code><strong>因数分解图</strong></li>
-<li><code>将事物分类思考的</code><strong>矩阵图</strong></li>
-<li><code>整理思绪的</code><strong>表格图</strong></li>
-<li><code>借由比较突显优势方的</code><strong>比较图</strong></li>
-<li><code>让无形的时间显现的</code><strong>线表图</strong></li>
-<li><code>简单表达想法的</code><strong>概念图</strong></li>
-<li><code>抓住趋势的</code><strong>时程表图</strong></li>
-</ol>
-<hr>
-<h2 id="1-_是用文字思考的人？还是用数字思考的人？或是……">1. 是用文字思考的人？还是用数字思考的人？或是……</h2><blockquote>
-<p>比较文字，数字和图形使用上的区别。表明图形相对文字和数字更容易理解。</p>
-<ul>
-<li>只要画成图形，就能看清事物的本质</li>
-<li>没错没错，这就是我要表达的意思！</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="2-_使用图形思考的5大优点">2. 使用图形思考的5大优点</h2><h3 id="2-1_整理思绪">2.1 整理思绪</h3><ul>
-<li>接收的资讯量越来越多</li>
-<li>透过图形汇整情报<br><code>画成图形的话，就能知道问题何在</code></li>
-</ul>
-<h3 id="2-2_提高解决问题能力">2.2 提高解决问题能力</h3><ul>
-<li>资讯解读能力是必备能力</li>
-<li>图形可以用来协助解决问题</li>
-<li>例：阴晴不定的时刻表<br><code>光在脑中思考会觉得困难的问题也……</code></li>
-<li>例：北方的小屋<br><code>画成图来看，答案就很简单了</code></li>
-</ul>
-<h3 id="2-3_提升工作效率">2.3 提升工作效率</h3><ul>
-<li>提高速度的重要性</li>
-</ul>
-<h3 id="2-4_让沟通更加顺畅">2.4 让沟通更加顺畅</h3><ul>
-<li>8成靠外表来决定</li>
-<li>做得好的资料只要看一眼就能理解</li>
-<li>图形是右脑负责的工作区域<br><code>做得好的资料只要看一眼就能理解</code></li>
-<li>图形能培养共识</li>
-<li>使用图形能留下记忆</li>
-</ul>
-<h3 id="2-5_所有工作场合都能派上用场">2.5 所有工作场合都能派上用场</h3><ul>
-<li>用在企划书或报告书上</li>
-<li>用来做笔记<br><code>把思考的事情用图形记在笔记上</code></li>
-<li>用在做简报的时候<br><code>使用图形的简报简单易懂</code></li>
-<li>让会议进行得更有效率<br><code>透过图形来整理，讨论会更容易达成共识</code></li>
-<li>可以取代会议记录</li>
-</ul>
-<hr>
-<h2 id="3-_没有绘画天赋也没关系">3. 没有绘画天赋也没关系</h2><ul>
-<li><p><strong>所谓用在工作上的图形是?</strong></p>
-<ul>
-<li>只要把传达的信息表现在图形上就可以了！</li>
-</ul>
-</li>
-<li><p><strong>图形的基本形状每个人都画得出来</strong><br><code>使用简单的图案就能画出图形</code><br>圆形，三角形，四方形，箭头，线条</p>
-<p><code>恶性循环让感到棘手的意识根植心中</code><br><strong>没有画图习惯</strong>-&gt;<strong>不知道该画什么才好</strong>-&gt;<strong>感到棘手</strong>-&gt;<strong>不画了</strong></p>
-<p>无论如何先拿起笔试试看<br><code>总之先动手，克服感到棘手的意识！</code><br><strong>总之先试着画看看再说</strong>-&gt;<strong>意外地能画出来</strong>-&gt;<strong>思路清晰</strong>-&gt;<strong>越画越多</strong></p>
-</li>
-<li><p><strong>手绘可以激发灵感</strong></p>
-</li>
-<li><strong>手绘容易修正</strong></li>
-<li><strong>手绘可以把人拉进来一起讨论</strong></li>
-<li><strong>创造一个随时能画图的环境</strong><ul>
-<li>准备方格笔记纸<br><code>推荐使用可以自由画图的方格纸Life clipper 5mm方格笔记纸，life first class paper 10mm方格笔记纸</code></li>
-<li>画得流畅的魔法笔<br><code>以粗线条笔为佳，推荐百乐的v corn</code></li>
-<li>修正带 反覆修正图形时必备</li>
-<li>附加影印功能的电子白板 用过就会上瘾，最适合思考型工作的工具！</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="4-_学会图形的7种必胜类型">4. 学会图形的7种必胜类型</h2><p><strong> 不是“思考图形”，而是“为了思考而使用图形”</strong></p>
-<h3 id="4-1_将事物分解思考的“因数分解类型”">4.1 将事物分解思考的“因数分解类型”</h3><ul>
-<li><strong>很大</strong> <strong>很复杂</strong>的问题，帮助找出<strong>切入点</strong></li>
-<li>画法：<ul>
-<li>左边画上一个方格，里面填上想达成的目的，往右增加方格数量。</li>
-<li>从最初的方格往下一层的方格移动时，以“达成这个目标的要素是什么？”的方式进行思考，将想法扩展开来</li>
-<li>区分可实行与不可实行，按顺位高低排序，淘汰不好够好的想法</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-2_将事物分类思考的“矩阵类型”">4.2 将事物分类思考的“矩阵类型”</h3><ul>
-<li><strong>将事物分门别类</strong>  <strong>厘清彼此关联性或优先顺序的图形</strong></li>
-<li>画法：<ul>
-<li>合并四个正方形，呈现格子状的图形</li>
-<li>首先画出4个正方形，横向与纵向各并列2个</li>
-<li>重要的条件与基准放在横轴和纵轴上</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-3_整理思绪的“表格类型”">4.3 整理思绪的“表格类型”</h3><ul>
-<li><strong>轻松简单地整理大量资讯</strong> <strong>商场上运用最广泛</strong> <strong>汇整资讯，达成共识</strong></li>
-<li>画法：<ul>
-<li>画出必要项目数量相等的横线</li>
-<li>把需要思考的项目，有思考必要的项目写在横线上</li>
-<li>接着在横线下方写入对应的项目内容</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-4_借由比较突显优势方的“比较类型”">4.4 借由比较突显优势方的“比较类型”</h3><ul>
-<li><strong>与某种事物比较，验证哪一个较好，或是用来彰显不同事物之间的相异之处</strong></li>
-<li>画法：<ul>
-<li>算好要比较的物品数量</li>
-<li>画上相等数目的横线</li>
-<li>纵轴写上比较时使用的项目</li>
-<li>项目之间插入箭头，可以把每个物品的不同之处标示得更清楚</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-5_让无形的时间显现的“线表类型”">4.5 让无形的时间显现的“线表类型”</h3><ul>
-<li><strong>把看不见的时间整理成任何人都能了解的图形，在建立行事历之类的团队共通工作计划时使用</strong> <strong>团队确立目标，让事情顺畅进行</strong></li>
-<li>画法：<ul>
-<li>在横轴标示“年”、“月”、“周”、“日”等时间单位</li>
-<li>依计划时间长短选择时间单位</li>
-<li>纵轴写上该段期间应执行的项目</li>
-<li>把每个项目所需时间以箭头标示</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-6_简单表达想法的“概念类型”">4.6 简单表达想法的“概念类型”</h3><ul>
-<li><strong>以非常简单且很容易理解的方式，将想转达的事物特征表现出来</strong></li>
-<li>画法：<ul>
-<li>思考概念构成要素有几种</li>
-<li>根据构成要素的数目，画出相等数量的圆</li>
-<li>弄清楚要素之间的关系：重叠、相互关联、先后顺序</li>
-<li>重叠，让圆形叠在一起</li>
-<li>关联，用线条连在一起</li>
-<li>先后顺序，用箭头连接</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-7_抓住均势的“时程表类型”">4.7 抓住均势的“时程表类型”</h3><ul>
-<li><strong>分析每个阶段各有什么事时使用</strong> <strong>分析动势</strong> <strong>说明事物先后顺序</strong></li>
-<li>画法：<ul>
-<li>了解整个过程分成几个阶段</li>
-<li>按照阶段数量，将数个本垒板形的箭头连接在一起</li>
-<li>在箭头中写上该阶段的摘要</li>
-<li>纵轴列出每个阶段执行的内容</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="5-_试着思考在工作上实际运用图形的状况">5. 试着思考在工作上实际运用图形的状况</h2><ul>
-<li>透过图形学会工作上必备的2项技能<br><code>想法的“扩展技巧”和“归纳技巧”</code></li>
-<li>将业绩提升1.5倍的故事</li>
-<li><p>使用分解思考扩展对策<br><code>使用分解思考</code><br><code>专案小组成员</code><br><code>提升料理教室营业额的方案</code></p>
-</li>
-<li><p>透过分类排列优先顺序<br><code>以提升业绩为目标的矩阵图</code></p>
-</li>
-<li>透过分类扩展构思<br><code>料理教室的目标客群</code></li>
-<li>透过比较过滤构思<br><code>比较料理教室的目标客群</code></li>
-<li>从构思中再延伸出构思<br><code>男性料理教室的构思</code></li>
-<li>整理、归纳概念<br><code>将3个概念整理归纳出来</code></li>
-<li>汇整时程表<br><code>用图形制作一目了然的时程表</code></li>
-</ul>
-<hr>
-<h2 id="6-_专业级的资料制作法">6. 专业级的资料制作法</h2><h3 id="6-1_分别使用适合内容的软体">6.1 分别使用适合内容的软体</h3><ul>
-<li>使用电脑制作资料<ul>
-<li>依公司不同有所差异</li>
-<li>power point 顾问公司，广告代理商</li>
-<li>word 金融机构</li>
-<li>Excel 汽车和机械制造商</li>
-</ul>
-</li>
-<li>使用power point<ul>
-<li>最适合作简报的软体</li>
-<li>适合用投影机放映</li>
-<li>色彩图形丰富</li>
-<li>基本版面设置<ul>
-<li>决定标题放在资料上方或下方</li>
-<li>决定页面的架构，根据内容调整版面设置</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用word<ul>
-<li>适合写文章</li>
-<li>注意避免冗长的文字</li>
-<li>基本版本设置<ul>
-<li>基本上要归纳成“标题”、“目的”、“结论”、“详细说明”4个项目</li>
-<li>要做成只看第1页就知道结论的格式</li>
-<li>详细内容第2页之后再说明</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用Excel<ul>
-<li>适合大量图表和数据的资料</li>
-<li>版面容易混乱，須注意</li>
-<li>基本版面设置<ul>
-<li>决定标题放在资料上方或下方</li>
-<li>决定页面的架构</li>
-<li>在插入图表时，在另一个sheet输入数据，只把图表贴在资料上，看起来简单易懂</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-2_决定资料的架构">6.2 决定资料的架构</h3><p>制作资料时一开始要做的应该是决定资料的架构。</p>
-<ul>
-<li>决定用多少页</li>
-<li>朝怎样的方向来制作</li>
-<li>避免作错重来并省略不必要的页数</li>
-<li>容易理解</li>
-<li>方法：<ul>
-<li>条列大纲</li>
-<li>在纸上把架构和要写的内容简单画成草稿</li>
-<li>说明内容，确认要变更的地方</li>
-</ul>
-</li>
-</ul>
-<p><code>先画草稿，再到电脑上作业</code></p>
-<h3 id="6-3_开始下标题">6.3 开始下标题</h3><p><em>标题，把整个页面想表达的讯息浓缩成精简的文字</em><br><strong>下好标题的资料，马上能传达作者想要表达的事情</strong><br><strong>决定标题后，就等于决定了资料的内容</strong></p>
-<ul>
-<li><p>学会3个顺利下标题的方法</p>
-<ol>
-<li><p>陈述对方不知道的事</p>
-<blockquote>
-<p>因为资料是调查汇整的，所以是别人都不知道的事或者不确认的事，含有读者可能不知道的资讯且想知道的事。<br>形式：<br><strong>其实</strong>~ （其实）两成的消费者占了营业额的8成<br><strong>果然</strong>~ （果然）节省家庭支出的项目，是以娱乐和伙食费为主。<br><strong>事实上</strong>~ （事实上）不动产价格的下滑，导致业绩低迷。</p>
-</blockquote>
-</li>
-<li>为了做出决定而陈述结论<blockquote>
-<p>为某些非下决定不可的事做出结论而制作。<br>试着比较的结果<br>果然还是这个比较好<br>和B方案比较起来，应该采用A方案<br>形式：<br><strong>以结论来说</strong> （以结论来说），今后的一年期间，要把库存量压缩到一半。<br><strong>比较之后的结果</strong> （比较之后的结果）是，工厂应该建在印度和越南。</p>
-</blockquote>
-</li>
-<li>陈述希望对方采取行动，或希望获得对方认同的事。<blockquote>
-<p>为了说服对方或是获得对方认同而撰写的资料。<br>形式：<br><strong>~应该</strong> 在研发新产品这个部分，应该投入人力。<br><strong>~是必要的</strong> 以长期观点来看，研发产品是必要的。<br><strong>~开始</strong> 从涩谷区开始，很快就能看到成果。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li>注意标题是否变成<strong>无意义的标题</strong><blockquote>
-<p>思考<strong>我想用这份资料告诉对方什么？</strong>是下标题的必要步骤。<br>标题位置，资料的最上方<br>以事实的报告为主的情况，可以把标题放最下方</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="6-4_画出图形">6.4 画出图形</h3><ol>
-<li>记住经常使用的图形<br><code>五种基本形状，四方形，三角形，圆形，线条，箭头，本垒板形</code></li>
-<li>使用对齐排列</li>
-</ol>
-<h3 id="6-5_整理外观">6.5 整理外观</h3><blockquote>
-<p>工作上使用的资料，注意细节，显得专业<br>字形统一，线条粗细一致</p>
-</blockquote>
-<ol>
-<li><p>汇整相同的资讯</p>
-<blockquote>
-<p>把相同资讯重复出现的汇整标示，减少多余资讯，让内容简单明了，容易理解。<br>数字之类的符号的单位放进项目，看起来会更整齐。</p>
-</blockquote>
-</li>
-<li><p>文字说明尽可能简短</p>
-<blockquote>
-<p>将较长的内容拆开来写<br>利用<strong>原因在于</strong>，<strong>如何才能</strong>，<strong>以什么</strong>之类的词汇作为拆句的基准点，连接在这些词后面的文句，则拆掉作为补充资讯。<br>不但列出重点，同时还能改善外观。<br><strong>Because</strong>，<strong>How</strong>，<strong>What</strong></p>
-</blockquote>
-</li>
-<li><p>了解颜色的使用方式</p>
-<blockquote>
-<p>专业资料，透过颜色表示事物的重要程度<br>即使没有文字说明，颜色也能让阅读者直觉感受到<strong>哪里很重要</strong>，<strong>必须看哪里</strong><br>方法：</p>
-<ol>
-<li>选择一个颜色作为资料中使用的基础色<br>逻辑性简报、以数据为主的报告资料——&gt;蓝绿之类的冷色系<br>发售新产品或提供给顾客的营业用提案资料——&gt;红、橘、黄之类的暖色系<br>蓝、绿——沉着冷静客观<br>红——热情，振奋，精神，活泼<br>橘、黄——激发购买欲</li>
-<li>选一个比基本色亮度更高的颜色作为辅助色。<br>蓝色——水蓝色<br>绿色——浅绿色</li>
-<li>搭配白色</li>
-<li>基本色用在重要的地方</li>
-<li>辅助色用在除基本色之外需要上色的部分</li>
-<li>表格可通过上色把项目突显出来。</li>
-<li>即使转变成黑白模式后明暗也很清楚，适合黑白打印</li>
-</ol>
-</blockquote>
-</li>
-<li><p>选择适合内容的字体</p>
-<blockquote>
-<p>文章里常用细明体，新细明体和MS Gothic<br>平常工作用的资料，建议MS Gothic，不花俏且远处也能看清，适合制作简报<br>明体给人文学、学术性的印象，因此多半用在论文之类的文章，想要营造知性气氛时相当适用。<br>明体的横线比纵线粗，适合直书式的资料<br>英文商业简报基本上使用Arial<br>Times New Roman适合用在文学和学术性方面的资料</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="6-6_最终检查的方法">6.6 最终检查的方法</h3><ol>
-<li>检查用字遣词<blockquote>
-<p>简写的罗马字也要翻译成中文<br>使用具体数字</p>
-</blockquote>
-</li>
-<li>附上单位</li>
-<li>一定要标明出处和母体<blockquote>
-<p>资料出处，何时的数据<br>母体是以[n=数字]表示</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><em>村井瑞枝/著 张凌虚/译</em></p>
-<blockquote>
-<p><strong>明明看了一堆书,为什么记不起来,也无法实际应用在工作上?</strong><br>如果你有以上的困扰,请务必好好研读本书，试着活用图形。<br>一旦学会灵活运用图形思考、表达]]>
-    </summary>
-    
-      <category term="图形" scheme="http://x8087.gitcafe.io/tags/%E5%9B%BE%E5%BD%A2/"/>
-    
-      <category term="思考" scheme="http://x8087.gitcafe.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-      <category term="技巧" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="笔记" scheme="http://x8087.gitcafe.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="绘图" scheme="http://x8087.gitcafe.io/tags/%E7%BB%98%E5%9B%BE/"/>
-    
-      <category term="笔记" scheme="http://x8087.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uploads/avatar.jpg" alt="x8087" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">x8087</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/x8087" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1817414410" target="_blank">weibo</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-_Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">0. Vim解决问题的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-_[^hpoint]_命令"><span class="nav-number">1.1.</span> <span class="nav-text">结识. [^hpoint] 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要自我重复"><span class="nav-number">1.2.</span> <span class="nav-text">不要自我重复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#减少无关移动"><span class="nav-number">1.2.1.</span> <span class="nav-text">减少无关移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复合命令"><span class="nav-number">1.2.2.</span> <span class="nav-text">复合命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用复合命令"><span class="nav-number">1.2.3.</span> <span class="nav-text">常用复合命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以退为进"><span class="nav-number">1.3.</span> <span class="nav-text">以退为进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行、重复、回退"><span class="nav-number">1.4.</span> <span class="nav-text">执行、重复、回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找并手动替换"><span class="nav-number">1.5.</span> <span class="nav-text">查找并手动替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-范式"><span class="nav-number">1.6.</span> <span class="nav-text">结识.范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_模式"><span class="nav-number">2.</span> <span class="nav-text">2. 模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-_普通"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. 普通</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-_把撤消单元切成块，普通模式和插入模式之间切换的粒度,"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-_构造可重复的修改:"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2. 构造可重复的修改:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-_用次数做简单的算术运算"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3. 用次数做简单的算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-_能够重复，就别用次数"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4. 能够重复，就别用次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-_双剑合璧，天下无敌"><span class="nav-number">2.1.5.</span> <span class="nav-text">2.1.5. 双剑合璧，天下无敌</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-_插入"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 插入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-_在插入模式中即时更正错误"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1. 在插入模式中即时更正错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-_返回普通模式"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2. 返回普通模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-_不离开插入模式，粘贴寄存器中的文本"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3. 不离开插入模式，粘贴寄存器中的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-_随时随地做运算"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4. 随时随地做运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-_用字符编码插入非常用字符"><span class="nav-number">2.2.5.</span> <span class="nav-text">2.2.5. 用字符编码插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-_用二合字母[^digraphsdefault]插入非常用字符"><span class="nav-number">2.2.6.</span> <span class="nav-text">2.2.6. 用二合字母[^digraphsdefault]插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-_用替换模式替换已有文本"><span class="nav-number">2.2.7.</span> <span class="nav-text">2.2.7. 用替换模式替换已有文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-_可视"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 可视</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-_深入理解可视模式"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1. 深入理解可视模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-_选择高亮选区"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2. 选择高亮选区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-_重复执行面向行的可视命令"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3. 重复执行面向行的可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-_只要可能，最好用操作符命令，而不是可视命令"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.4. 只要可能，最好用操作符命令，而不是可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-_用面向列块的可视模式编辑表格数据"><span class="nav-number">2.3.5.</span> <span class="nav-text">2.3.5. 用面向列块的可视模式编辑表格数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-6-_修改列文本"><span class="nav-number">2.3.6.</span> <span class="nav-text">2.3.6. 修改列文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-7-_在长短不一的高亮块后添加文本"><span class="nav-number">2.3.7.</span> <span class="nav-text">2.3.7. 在长短不一的高亮块后添加文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4_命令行"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1_结识vim的命令行模式"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 结识vim的命令行模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2_在一行或多个连续行上执行命令"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 在一行或多个连续行上执行命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3_使用:t和:m命令复制和移动行"><span class="nav-number">2.4.3.</span> <span class="nav-text">2.4.3 使用:t和:m命令复制和移动行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4_在指定范围上执行普通模式命令"><span class="nav-number">2.4.4.</span> <span class="nav-text">2.4.4 在指定范围上执行普通模式命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-5_重复上次的Ex命令"><span class="nav-number">2.4.5.</span> <span class="nav-text">2.4.5 重复上次的Ex命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-6_自动补全Ex命令[^commandcomplete]"><span class="nav-number">2.4.6.</span> <span class="nav-text">2.4.6 自动补全Ex命令[^commandcomplete]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-7_把当前单词插入到命令行"><span class="nav-number">2.4.7.</span> <span class="nav-text">2.4.7 把当前单词插入到命令行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-8_回溯历史命令"><span class="nav-number">2.4.8.</span> <span class="nav-text">2.4.8 回溯历史命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-9_运行Shell命令"><span class="nav-number">2.4.9.</span> <span class="nav-text">2.4.9 运行Shell命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-_管理多个文件"><span class="nav-number">3.</span> <span class="nav-text">3. 管理多个文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1_用缓冲区列表管理打开的文件"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 用缓冲区列表管理打开的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1_ls列出缓冲区列表[^ls]"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 ls列出缓冲区列表[^ls]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2_使用缓冲区列表："><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 使用缓冲区列表：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3_删除缓冲区"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 删除缓冲区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2_用参数列表将缓冲区分组"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 用参数列表将缓冲区分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3_管理隐藏缓冲区"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 管理隐藏缓冲区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4_将工作区切分成窗口"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 将工作区切分成窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5_用标签页将窗口分组[^tabpage]"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 用标签页将窗口分组[^tabpage]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-_打开和保存文件"><span class="nav-number">4.</span> <span class="nav-text">4. 打开和保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1_用edit命令打开文件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 用edit命令打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2_使用find打开文件"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 使用find打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3_使用netrw管理文件系统"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 使用netrw管理文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4_把文件保存到不存在的目录中"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 把文件保存到不存在的目录中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5_以超级用户权限保存文件"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 以超级用户权限保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-_移动跳转[^motion]"><span class="nav-number">5.</span> <span class="nav-text">5. 移动跳转[^motion]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1_用动作命令在文档中移动"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 用动作命令在文档中移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1_让手指保持在本位行上"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 让手指保持在本位行上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2_区分实际行与屏幕行"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 区分实际行与屏幕行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3_基于单词移动[^wordmotions]"><span class="nav-number">5.1.3.</span> <span class="nav-text">5.1.3 基于单词移动[^wordmotions]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4_对字符进行查找"><span class="nav-number">5.1.4.</span> <span class="nav-text">5.1.4 对字符进行查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-5_通过查找进行移动"><span class="nav-number">5.1.5.</span> <span class="nav-text">5.1.5 通过查找进行移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-6_用精确的文本对象选择选区[^textobjects]"><span class="nav-number">5.1.6.</span> <span class="nav-text">5.1.6 用精确的文本对象选择选区[^textobjects]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-7_删除周边，修改内部"><span class="nav-number">5.1.7.</span> <span class="nav-text">5.1.7 删除周边，修改内部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-8_设置位置标记[^markmotion]，以便快速跳回"><span class="nav-number">5.1.8.</span> <span class="nav-text">5.1.8 设置位置标记[^markmotion]，以便快速跳回</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-9_在匹配括号间跳转"><span class="nav-number">5.1.9.</span> <span class="nav-text">5.1.9 在匹配括号间跳转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2_在文件间跳转"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 在文件间跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1_遍历跳转列表"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 遍历跳转列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2_遍历改变列表"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 遍历改变列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3_跳转到光标下的文件[^gf]"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3 跳转到光标下的文件[^gf]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4_用全局位置标记在文件间快速跳转"><span class="nav-number">5.2.4.</span> <span class="nav-text">5.2.4 用全局位置标记在文件间快速跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-_寄存器"><span class="nav-number">6.</span> <span class="nav-text">6. 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1_复制与粘贴"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 复制与粘贴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1_用无名寄存器实现删除、复制与粘贴操作"><span class="nav-number">6.1.1.</span> <span class="nav-text">6.1.1 用无名寄存器实现删除、复制与粘贴操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2_深入理解Vim寄存器"><span class="nav-number">6.1.2.</span> <span class="nav-text">6.1.2 深入理解Vim寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3_用寄存器中的内容替换高亮选区的文本"><span class="nav-number">6.1.3.</span> <span class="nav-text">6.1.3 用寄存器中的内容替换高亮选区的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-4_把寄存器的内容粘贴出来[^p]"><span class="nav-number">6.1.4.</span> <span class="nav-text">6.1.4 把寄存器的内容粘贴出来[^p]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-5_与系统剪贴板进行交互[^paste]"><span class="nav-number">6.1.5.</span> <span class="nav-text">6.1.5 与系统剪贴板进行交互[^paste]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2_宏"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-1_宏的读取与执行"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.2.1 宏的读取与执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-2_规范光标位置、直达目标以及中止宏"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.2.2 规范光标位置、直达目标以及中止宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-3_加次数回放宏"><span class="nav-number">6.2.3.</span> <span class="nav-text">6.2.3 加次数回放宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-4_在连续的文件行上重复修改"><span class="nav-number">6.2.4.</span> <span class="nav-text">6.2.4 在连续的文件行上重复修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-5_给宏追加命令"><span class="nav-number">6.2.5.</span> <span class="nav-text">6.2.5 给宏追加命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-6_在一组文件中执行宏"><span class="nav-number">6.2.6.</span> <span class="nav-text">6.2.6 在一组文件中执行宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-7_用迭代求值的方式给列表编号"><span class="nav-number">6.2.7.</span> <span class="nav-text">6.2.7 用迭代求值的方式给列表编号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-8_编辑宏的内容"><span class="nav-number">6.2.8.</span> <span class="nav-text">6.2.8 编辑宏的内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-_匹配"><span class="nav-number">7.</span> <span class="nav-text">7. 匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1_按模式匹配及按原义匹配"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 按模式匹配及按原义匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-1_调整查找模式的大小写敏感性"><span class="nav-number">7.1.1.</span> <span class="nav-text">7.1.1 调整查找模式的大小写敏感性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-2_按正则表达式查找时，使用\v模式开关"><span class="nav-number">7.1.2.</span> <span class="nav-text">7.1.2 按正则表达式查找时，使用\v模式开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3_按原义查找文本时，使用\V原义开关"><span class="nav-number">7.1.3.</span> <span class="nav-text">7.1.3 按原义查找文本时，使用\V原义开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-4_使用圆括号捕获子匹配"><span class="nav-number">7.1.4.</span> <span class="nav-text">7.1.4 使用圆括号捕获子匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-5_界定单词的边界"><span class="nav-number">7.1.5.</span> <span class="nav-text">7.1.5 界定单词的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-6_界定匹配的边界"><span class="nav-number">7.1.6.</span> <span class="nav-text">7.1.6 界定匹配的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-7_转义问题字符"><span class="nav-number">7.1.7.</span> <span class="nav-text">7.1.7 转义问题字符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2_查找"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-1_结识查找命令"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.2.1 结识查找命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-2_高亮查找匹配"><span class="nav-number">7.2.2.</span> <span class="nav-text">7.2.2 高亮查找匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-3_在执行查找前预览第一处匹配"><span class="nav-number">7.2.3.</span> <span class="nav-text">7.2.3 在执行查找前预览第一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-4_统计当前模式的匹配个数"><span class="nav-number">7.2.4.</span> <span class="nav-text">7.2.4 统计当前模式的匹配个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-5_将光标偏移到查找匹配结尾"><span class="nav-number">7.2.5.</span> <span class="nav-text">7.2.5 将光标偏移到查找匹配结尾</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-6_对完整的查找匹配进行操作"><span class="nav-number">7.2.6.</span> <span class="nav-text">7.2.6 对完整的查找匹配进行操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-7_利用查找历史，迭代完成复杂的模式"><span class="nav-number">7.2.7.</span> <span class="nav-text">7.2.7 利用查找历史，迭代完成复杂的模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-8_查找当前高亮选区中的文本"><span class="nav-number">7.2.8.</span> <span class="nav-text">7.2.8 查找当前高亮选区中的文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3_替换"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 替换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-1_结识substitute命令"><span class="nav-number">7.3.1.</span> <span class="nav-text">7.3.1 结识substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-2_在文件范围内查找并替换每一处匹配"><span class="nav-number">7.3.2.</span> <span class="nav-text">7.3.2 在文件范围内查找并替换每一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-3_手动控制每一次替换操作"><span class="nav-number">7.3.3.</span> <span class="nav-text">7.3.3 手动控制每一次替换操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-4_重用上次的查找模式"><span class="nav-number">7.3.4.</span> <span class="nav-text">7.3.4 重用上次的查找模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-5_用寄存器的内容替换"><span class="nav-number">7.3.5.</span> <span class="nav-text">7.3.5 用寄存器的内容替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-6_重复上一次Substitute命令"><span class="nav-number">7.3.6.</span> <span class="nav-text">7.3.6 重复上一次Substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-7_使用子匹配重排CSV文件的字段"><span class="nav-number">7.3.7.</span> <span class="nav-text">7.3.7 使用子匹配重排CSV文件的字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-8_在替换过程中执行算术运算"><span class="nav-number">7.3.8.</span> <span class="nav-text">7.3.8 在替换过程中执行算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-9_交换两个或更多的单词"><span class="nav-number">7.3.9.</span> <span class="nav-text">7.3.9 交换两个或更多的单词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-10_在多个文件中执行查找与替换"><span class="nav-number">7.3.10.</span> <span class="nav-text">7.3.10 在多个文件中执行查找与替换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4_global命令"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 global命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-1_结识global命令"><span class="nav-number">7.4.1.</span> <span class="nav-text">7.4.1 结识global命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-2_删除所有包含模式的文本行"><span class="nav-number">7.4.2.</span> <span class="nav-text">7.4.2 删除所有包含模式的文本行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-3_将ToDo项收集至寄存器"><span class="nav-number">7.4.3.</span> <span class="nav-text">7.4.3 将ToDo项收集至寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-4_将CSS文件中所有规则的属性按照字母排序"><span class="nav-number">7.4.4.</span> <span class="nav-text">7.4.4 将CSS文件中所有规则的属性按照字母排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-_工具"><span class="nav-number">8.</span> <span class="nav-text">8. 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1_安装Exuberant_Ctags"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 安装Exuberant Ctags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2_详解标签文件"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 详解标签文件</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
   
-  <entry>
-    <title><![CDATA[各类资源各类网站收藏]]></title>
-    <link href="http://x8087.gitcafe.io/2015/07/31/%E5%90%84%E7%B1%BB%E8%B5%84%E6%BA%90%E5%90%84%E7%B1%BB%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/"/>
-    <id>http://x8087.gitcafe.io/2015/07/31/各类资源各类网站收藏/</id>
-    <published>2015-07-31T02:51:38.000Z</published>
-    <updated>2015-08-03T02:04:20.000Z</updated>
-    <content type="html"><![CDATA[<h6 id="评论系统:">评论系统:</h6><p><a href="http://duoshuo.com" target="_blank" rel="external">多说</a><br><a href="https://disqus.com" target="_blank" rel="external">disqus</a></p>
-<h6 id="图标:">图标:</h6><p><a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank" rel="external">Font Awesome</a><br><a href="http://www.faviconer.com/" target="_blank" rel="external">Faviconer</a><br><a href="http://www.bitbug.net" target="_blank" rel="external">比特虫</a><br><a href="http://icomoon.io/" target="_blank" rel="external">icoMoon</a></p>
-<p><a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPod域名映射CDN</a><br><a href="https://www.godaddy.com" target="_blank" rel="external">Goddaddy域名提供商</a><br><a href="http://www.sousuoyinqingtijiao.com/" target="_blank" rel="external">屈站长</a></p>
-<h6 id="绘图引擎:">绘图引擎:</h6><p><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank" rel="external">MathJax数学公式引擎javascrip</a><a href="https://mathjax-chinese-doc.readthedocs.org/en/latest/" target="_blank" rel="external">中文文档</a><br><a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="external">序列图javascript库</a><br><a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="external">流程图javascript库</a></p>
-<h6 id="404:">404:</h6><p><a href="http://www.qq.com/404" target="_blank" rel="external">腾讯公益404</a><br><a href="http://yibo.iyiyun.com/Index/web404" target="_blank" rel="external">404公益_益云(公益互联网)社会创新中心</a><br><a href="http://404page.missingkids.org.tw/" target="_blank" rel="external">失蹤兒童少年資料管理中心404</a></p>
-<h6 id="图床:">图床:</h6><p><a href="http://www.qiniu.com/" target="_blank" rel="external">七牛图床</a><br><a href="http://www.farbox.com/" target="_blank" rel="external">FarBox</a><br><a href="http://www.dropbox.com/" target="_blank" rel="external">DropBox</a><br><a href="http://www.upyun.com/" target="_blank" rel="external">又拍云</a></p>
-<h6 id="分享:">分享:</h6><p><a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a><br><a href="http://www.bshare.cn/" target="_blank" rel="external">bshare</a><br><a href="http://www.jiathis.com/" target="_blank" rel="external">加网</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h6 id="评论系统:">评论系统:</h6><p><a href="http://duoshuo.com" target="_blank" rel="external">多说</a><br><a href="https://disqus.com" target="_blan]]>
-    </summary>
-    
-      <category term="收藏" scheme="http://x8087.gitcafe.io/tags/%E6%94%B6%E8%97%8F/"/>
-    
-      <category term="网站" scheme="http://x8087.gitcafe.io/tags/%E7%BD%91%E7%AB%99/"/>
-    
-      <category term="资源" scheme="http://x8087.gitcafe.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-      <category term="技术" scheme="http://x8087.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x8087</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
   
-  <entry>
-    <title><![CDATA[git学习]]></title>
-    <link href="http://x8087.gitcafe.io/2015/07/30/git%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://x8087.gitcafe.io/2015/07/30/git学习/</id>
-    <published>2015-07-30T09:46:31.000Z</published>
-    <updated>2015-07-31T02:01:08.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="1-_取得项目的Git仓库">1. 取得项目的Git仓库</h3><ul>
-<li>在工作目录中初始化新仓库<br><code>git init</code><br><code>git add</code></li>
-<li>从现有仓库克隆<br><code>git clone [url]</code><br><code>git clone [url] [addr]</code></li>
-</ul>
-<hr>
-<h3 id="2-_记录每次更新到仓库">2. 记录每次更新到仓库</h3><ul>
-<li>文件状态 <code>untracked 未跟踪</code>, <code>unmodified 未修改</code>, <code>modified 已修改</code>, <code>staged 已缓存</code></li>
-</ul>
-<h5 id="2-1_检查当前文件状态_git_status">2.1 检查当前文件状态 <code>git status</code></h5><h5 id="2-2_跟踪新文件git_add">2.2 跟踪新文件<code>git add</code></h5><h5 id="2-3_暂存已修改文件git_add">2.3 暂存已修改文件<code>git add</code></h5><h5 id="2-4_忽略某些文件-gitignore">2.4 忽略某些文件<code>.gitignore</code></h5><ul>
-<li>忽略空行及<code>#</code>开头的行</li>
-<li>后跟<code>/</code>表示目录</li>
-<li>模式前加<code>!</code>表示取反，忽略模式以外的文件或目录</li>
-<li>以标准glob模式匹配<ul>
-<li>指shell所使用简化了的正则表达式</li>
-<li><code>*</code>匹配0个或多个任意字符</li>
-<li><code>[abc]</code>可选匹配</li>
-<li><code>?</code>匹配一个任意字符</li>
-<li><code>[0-9]</code>匹配指定范围字符</li>
-<li><code>**/</code>递归匹配子目录（1.8.2以上版本）</li>
-</ul>
-</li>
-</ul>
-<h5 id="2-5_查看已暂存和未暂存的文件">2.5 查看已暂存和未暂存的文件</h5><ul>
-<li><code>git diff</code>比较工作目录中当前文件与暂存文件之间的差异 </li>
-<li><code>git diff --cached</code>或<code>git diff --staged</code>（1.6.1以上版本，效果一样）比较暂存文件与上次提交文件之间的差异</li>
-</ul>
-<h5 id="2-6_提交更新">2.6 提交更新</h5><ul>
-<li><code>git commit</code></li>
-<li><code>git config --global core.editor</code>设定编辑器</li>
-<li><code>-v</code>显示详细差异</li>
-</ul>
-<h5 id="2-7_跳过使用暂存区域">2.7 跳过使用暂存区域</h5><ul>
-<li><code>git commit -a</code></li>
-</ul>
-<h5 id="2-8_移除文件">2.8 移除文件</h5><ul>
-<li><code>git rm</code></li>
-<li><code>git rm -f</code>强制删除包含在暂存区的文件</li>
-<li><code>git rm --cached</code>删除版本控制，保留本地文件</li>
-<li>后面可跟文件或者目录的名字，也可以使用glob模式</li>
-<li>模式前加反斜杠<code>\</code>，使用git自身的文件模式扩展匹配方式，<code>*</code>会递归匹配</li>
-</ul>
-<h5 id="2-9_移动文件">2.9 移动文件</h5><ul>
-<li><code>git mv file_from file_to</code></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1-_取得项目的Git仓库">1. 取得项目的Git仓库</h3><ul>
-<li>在工作目录中初始化新仓库<br><code>git init</code><br><code>git add</code></li>
-<li>从现有仓库克隆<br><code>gi]]>
-    </summary>
-    
-      <category term="git" scheme="http://x8087.gitcafe.io/tags/git/"/>
-    
-      <category term="版本控制" scheme="http://x8087.gitcafe.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
-      <category term="笔记" scheme="http://x8087.gitcafe.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="技术" scheme="http://x8087.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[hexo NexT主题 多说评论的显示问题解决]]></title>
-    <link href="http://x8087.gitcafe.io/2015/07/29/hexo-NexT%E4%B8%BB%E9%A2%98-%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA%E7%9A%84%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
-    <id>http://x8087.gitcafe.io/2015/07/29/hexo-NexT主题-多说评论的显示问题解决/</id>
-    <published>2015-07-29T02:52:07.000Z</published>
-    <updated>2015-08-03T02:13:50.000Z</updated>
-    <content type="html"><![CDATA[<p><font color="blue"><strong>2015-08-01更新：</strong>nexT官方已于0.4.5.1版本修复</font></p>
-<hr>
-<h5 id="问题说明：">问题说明：</h5><hr>
-<p><strong>hexo</strong> <strong>NexT主题</strong>配置<strong>多说评论</strong></p>
-<ul>
-<li><strong>游客</strong>评论正常显示</li>
-<li>当有<strong>登陆用户</strong>发布评论后会导致评论无法正常显示。<br>使用了<code>hexo3.1.1</code>+<code>nexT0.3.0</code>+<code>duoshuo</code></li>
-</ul>
-<h5 id="解决方法：">解决方法：</h5><hr>
-<p>  把<strong>主题配置</strong><code>_config.yml</code>里<code>duoshuo_info</code>下的<code>admin_enable</code>设置成<code>true</code></p>
-<hr>
-<h5 id="背景介绍+详细说明">背景介绍+详细说明</h5><ul>
-<li><p><em>背景</em>~~</p>
-<blockquote>
-<p>花了一小天时间把github和gitcafe的pages主页弄成博客<br>结果评论系统无论怎么弄都有显示问题<br>于是乎有了下面的漫长折腾之旅。</p>
-</blockquote>
-</li>
-<li><p><em>为什么不用其他评论系统</em></p>
-<blockquote>
-<p>由于主要面向国内用户，评论后台不打算用disqus，而准备采用多说(duoshuo)。</p>
-</blockquote>
-</li>
-<li><p><em>问题表现</em></p>
-<blockquote>
-<p>按照多说和next主题官方说明添加配置，能够正常显示评论界面。<br>通过登陆发表评论，点击发布后会一直显示正在发布，刷新评论界面消失，发出的评论没有显示，而在多说后台能够查询到，并无问题。</p>
-</blockquote>
-</li>
-<li><p><em>解决过程</em></p>
-<blockquote>
-<p>通过谷歌搜索了一圈，虽然有遇到相似问题的案例，但是并无半毫收获，不是没有解决，就是吐槽多说后台问题比较多，建议转投disqus。百无聊赖才想起自己也是个程序猿，虽然不是搞web前端开发，但是多少能看懂一点。于是尝试自己调试查找问题。</p>
-<ul>
-<li><em>测试验证</em><br>测试了下，只要不登陆发表评论，或者把所有登陆用户的评论删除，评论界面是可以正常显示的。打开浏览器的开发者工具，可以看到当页面有问题时<code>source/js/hook-duoshuo.js</code>脚本在<strong>18</strong>行报错找不到变量<code>duoshuo_user_ID</code>。<br>到这里，之前的所有缺少底气和担心都烟消云散。</li>
-<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;% if theme.duoshuo_info.ua_enable %&#125;</span><br><span class="line"> &#123;% if theme.duoshuo_info.admin_enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="kotlin"></span><br><span class="line"> <span class="variable"><span class="keyword">var</span> duoshuo_user_ID</span> = </span></span><span class="expression">&#123;&#123;<span class="variable">theme.duoshuo</span>_<span class="variable">info.user</span>_<span class="variable">id</span>&#125;&#125;</span><span class="xml"><span class="undefined"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可以看出如果主题配置里<code>duoshuo_info</code>的<code>ua_enable</code>设置为<code>true</code>时会往页面嵌入<code>hook-duoshuo.js</code>，而<code>admin_enable</code>设置为<code>true</code>时则会生成变量<code>duoshuo_user_ID</code>。这时才发现原来罪魁祸首是主题配置里的<code>admin_enable</code>设置成了<code>false</code>，在next官方还没修复之前，把它设置成<code>true</code>就可以完美解决了。</p>
-</blockquote>
-</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><font color="blue"><strong>2015-08-01更新：</strong>nexT官方已于0.4.5.1版本修复</font></p>
-<hr>
-<h5 id="问题说明：">问题说明：</h5><hr>
-<p><strong>hexo</stron]]>
-    </summary>
-    
-      <category term="bug" scheme="http://x8087.gitcafe.io/tags/bug/"/>
-    
-      <category term="hexo" scheme="http://x8087.gitcafe.io/tags/hexo/"/>
-    
-      <category term="next" scheme="http://x8087.gitcafe.io/tags/next/"/>
-    
-      <category term="多说" scheme="http://x8087.gitcafe.io/tags/%E5%A4%9A%E8%AF%B4/"/>
-    
-      <category term="技术" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="技术" scheme="http://x8087.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[累觉不爱的闹腾]]></title>
-    <link href="http://x8087.gitcafe.io/2015/07/28/%E7%B4%AF%E8%A7%89%E4%B8%8D%E7%88%B1%E7%9A%84%E9%97%B9%E8%85%BE/"/>
-    <id>http://x8087.gitcafe.io/2015/07/28/累觉不爱的闹腾/</id>
-    <published>2015-07-28T06:21:38.000Z</published>
-    <updated>2015-07-30T00:20:11.000Z</updated>
-    <content type="html"><![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
-<p>2015-07-29 22点 发脾气</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
-<p>2015-07-29 22点 发脾气</p>
-]]>
-    </summary>
     
-      <category term="杂感" scheme="http://x8087.gitcafe.io/tags/%E6%9D%82%E6%84%9F/"/>
-    
-      <category term="生活" scheme="http://x8087.gitcafe.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="情感" scheme="http://x8087.gitcafe.io/categories/%E6%83%85%E6%84%9F/"/>
-    
-  </entry>
+
   
-</feed>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"x8087"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 12948511
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
