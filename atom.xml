@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-07T03:32:51.000Z</updated>
+  <updated>2015-08-09T12:56:04.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -14,6 +14,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[疯狂Vim折腾之插件]]></title>
+    <link href="http://x8087.gitcafe.io/2015/08/07/%E7%96%AF%E7%8B%82Vim%E6%8A%98%E8%85%BE%E4%B9%8B%E6%8F%92%E4%BB%B6/"/>
+    <id>http://x8087.gitcafe.io/2015/08/07/疯狂Vim折腾之插件/</id>
+    <published>2015-08-07T12:20:57.000Z</published>
+    <updated>2015-08-09T12:56:04.000Z</updated>
+    <content type="html"><![CDATA[<h5 id="Mac上快速安装YouCompleteMe">Mac上快速安装<a href="https://github.com/Valloric/YouCompleteMe#general-usage" target="_blank" rel="external">YouCompleteMe</a></h5><ol>
+<li>安装<a href="https://github.com/macvim-dev/macvim/releases" target="_blank" rel="external">MacVim</a><ul>
+<li>通过brew快速安装<code>brew install macvim</code></li>
+<li>保证正确运行可复制从MacVim下载的mvim脚本文件到本地二进制输出文件夹并添加软链接</li>
+<li>控制台vim<ul>
+<li>推荐使用MacVim.app包内的vim二进制文件(MacVim.app/Contents/MacOS/Vim)</li>
+<li>由于homebrew的配置编译方法有问题，不推荐使用homebrew的vim</li>
+<li>使用homebrew的python以于MacVim可能出现编译问题或者编译后启动不了，需要运行<code>brew rm python; brew install python</code>更新到最新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通过Vundle安装YouCompleteMe<ul>
+<li>注意更新后要重新调用install.sh编译</li>
+<li>C-family completion需要最新的CLT和Xcode</li>
+</ul>
+</li>
+<li>安装CMake</li>
+<li><p><code>./install.sh</code>可选项</p>
+<ul>
+<li>C语言支持:<code>--clang-completer</code></li>
+<li>C#支持:<code>--omnisharp-completer</code></li>
+<li>Go支持:<code>--gocode-completer</code></li>
+</ul>
+</li>
+<li><p>C语言的语法补全还需要添加配置flags</p>
+</li>
+</ol>
+<h5 id="YouCompleteMe使用方法"><a href="https://github.com/Valloric/YouCompleteMe#general-usage" target="_blank" rel="external">YouCompleteMe</a>使用方法</h5><p>1.基础用法</p>
+<ul>
+<li>使入字符，自动提示。输入的字符越多，可选项越准</li>
+<li>智能大小写，大小写敏感。输入大写过滤只包含该大写字符选项，小写则包含该字符大小写选项</li>
+<li>Tab选取或遍历选项，shit-Tab反方向选取。<em>(注意：控制台下的shift-Tab按键可能无法使用，需另外关联)</em></li>
+<li>补全列表排列时，会将符合子字符项的选项排在前面。每个子字符串首字母大写，首字符为下划线时忽略下划线。   </li>
+<li>Ctrl-space快捷键可直接调出补全列表，而不需要输入任何字符。</li>
+</ul>
+<p>2.c语言补全</p>
+<ul>
+<li>YCM会自动在文件打开的目录及子目录下查找.ycm_extra_conf.py文件</li>
+<li>也可以配置全局的.ycm_extra_conf.py文件</li>
+<li>范例<a href="https://github.com/Valloric/ycmd/blob/master/cpp/ycm/.ycm_extra_conf.py" target="_blank" rel="external">.ycm_extra_conf.py</a>，仅供参考，不同项目可能不一样，大部分项目都只需要使用文件中的部分标志</li>
+<li><a href="http://clang.llvm.org/docs/JSONCompilationDatabase.html" target="_blank" rel="external">Clang’s CompilationDatabase system</a>通过CMake生成文件只需在项目的CMakeList.txt文件里加入<code>set(CMAKE_EXPORT_COMPILE_COMMANDS 1)</code></li>
+<li><a href="https://github.com/rdnetto/YCM-Generator" target="_blank" rel="external">YCM-Generator</a>ycm_extra_conf.py文件生成工具</li>
+<li>如果编译错误或者文件包含的头文件有错误，会使生成补全列表的时间比较久且生成的列表项出现很无关补全项，调用<code>:YcmDiags</code>查看错误</li>
+</ul>
+<p>3.其他语言的补全</p>
+<ul>
+<li>Pyhon,C#和Go语言各自通过<a href="https://github.com/davidhalter/jedi" target="_blank" rel="external">Jedi</a>,<a href="https://github.com/nosami/OmniSharpServer" target="_blank" rel="external">Omnisharp</a>和<a href="https://github.com/nsf/gocode" target="_blank" rel="external">GoCode</a>语言引擎提供补全，需要安装编译时添加相应选项</li>
+<li>对于没有本地语法引擎支持的文件类型，可以使用<code>omnifunc</code>(<code>:h omnifunc</code>)作为语法补全源，Vim为多种语言自带omnifuncs，类似Ruby,PHP</li>
+<li>通过[Eclim][]可以为Java和Ruby提供非常好的omnifuncs<ul>
+<li>安装完[Eclim][]后需要在Vim里输入<code>:ProjectCreate &lt;path-to-your-project&gt; -n ruby</code> (or <code>-n java</code>)创建新的Eclip项目并在.vimrc文件内加入<code>let g:EclimCompletionMethod = &#39;omnifunc&#39;</code>使Vim与Eclim更好运行 </li>
+</ul>
+</li>
+</ul>
+<p>4.编写新的语法补全</p>
+<ul>
+<li>通过编写Vim的<code>omnifunc</code>实现</li>
+<li>通过自定义YCM补全功能实现</li>
+<li>两者的不同：<ul>
+<li>omnifunc通过VimScript编写，另一个则使用Python根据YCM的API编写</li>
+<li>YCM API是一种更强大的方法和YCM集成，且提供更宽泛的功能设置</li>
+<li>YCM方案执行效率会更高</li>
+</ul>
+</li>
+<li>vim参考<code>:h complete-functions</code>，YCM参考<a href="https://github.com/Valloric/ycmd/blob/master/ycmd/completers/completer.py" target="_blank" rel="external">API文档</a></li>
+</ul>
+<h5 id="Eclim"><a href="http://eclim.org" target="_blank" rel="external">Eclim</a></h5><p>提供通过命令行或网络连接调用Eclipse代码编辑的功能，允许集成到自己喜欢的编辑器上。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h5 id="Mac上快速安装YouCompleteMe">Mac上快速安装<a href="https://github.com/Valloric/YouCompleteMe#general-usage" target="_blank" rel="external">YouC]]>
+    </summary>
+    
+      <category term="Eclim" scheme="http://x8087.gitcafe.io/tags/Eclim/"/>
+    
+      <category term="YouCompleteMe" scheme="http://x8087.gitcafe.io/tags/YouCompleteMe/"/>
+    
+      <category term="vim" scheme="http://x8087.gitcafe.io/tags/vim/"/>
+    
+      <category term="插件" scheme="http://x8087.gitcafe.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="工具" scheme="http://x8087.gitcafe.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[笔记-Vim实用技巧]]></title>
