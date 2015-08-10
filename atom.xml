@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-09T12:56:04.000Z</updated>
+  <updated>2015-08-10T09:21:30.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[如何完成一件事]]></title>
+    <link href="http://x8087.gitcafe.io/2015/08/10/%E5%A6%82%E4%BD%95%E5%AE%8C%E6%88%90%E4%B8%80%E4%BB%B6%E4%BA%8B/"/>
+    <id>http://x8087.gitcafe.io/2015/08/10/如何完成一件事/</id>
+    <published>2015-08-10T09:00:59.000Z</published>
+    <updated>2015-08-10T09:21:30.000Z</updated>
+    <content type="html"><![CDATA[<p>想做一件事<br>结果总是遇到各种困难<br>有什么困难？<br>往往自己也不清楚</p>
+<p>纠结很久<br>还是没能把困难解决<br>于是停下来<br>做另一件事<br>结果又遇到很多问题<br>然后继续悲催的纠结</p>
+<p>终于，就这样一天过去了！<br>还是什么事也没做成……</p>
+<p>程序员很多时候都会遇到这种情况<br>尤其在解决问题的时候<br>各种忙碌，却什么也没做成<br>甚至自己做过什么,遇到什么困难都不清楚</p>
+<p>那么，如何避免呢？</p>
+<p>好好列个表单<br>把要做的事情列下来<br>然后根据紧急情况和难易程度排序<br>一个个把紧急且较容易的问题优先解决<br>然后再来慢慢纠结剩下的<br>把解决过程中的问题记录下来<br>对解决不了的问题所遇到的困难更要详细描述<br>确认问题所在<br>等待以后解决</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>想做一件事<br>结果总是遇到各种困难<br>有什么困难？<br>往往自己也不清楚</p>
+<p>纠结很久<br>还是没能把困难解决<br>于是停下来<br>做另一件事<br>结果又遇到很多问题<br>然后继续悲催的纠结</p>
+<p>终于，就这样一天过去了！<br>还是什]]>
+    </summary>
+    
+      <category term="心情" scheme="http://x8087.gitcafe.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="杂感" scheme="http://x8087.gitcafe.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+      <category term="生活" scheme="http://x8087.gitcafe.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="情感" scheme="http://x8087.gitcafe.io/categories/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[疯狂Vim折腾之插件]]></title>
