@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-11T09:03:07.000Z</updated>
+  <updated>2015-08-11T09:17:47.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[琐碎问题收集]]></title>
+    <link href="http://x8087.gitcafe.io/2015/08/11/%E7%90%90%E7%A2%8E%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/"/>
+    <id>http://x8087.gitcafe.io/2015/08/11/琐碎问题收集/</id>
+    <published>2015-08-11T09:15:33.000Z</published>
+    <updated>2015-08-11T09:17:47.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
+<p>添加hosts<br>173.194.65.108 imap.gmail.com<br>173.194.65.108 pop.gmail.com<br>173.194.193.108 smtp.gmail.com</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
+<p>添加hosts<br>173.194.65.108 imap.gmail.com<br>173.194.65.108 pop.gmail.com<br>173.194]]>
+    </summary>
+    
+      <category term="Bug" scheme="http://x8087.gitcafe.io/tags/Bug/"/>
+    
+      <category term="技术" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="问题" scheme="http://x8087.gitcafe.io/categories/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[macbook pro下vim安装YouCompleteMe导致的问题]]></title>
     <link href="http://x8087.gitcafe.io/2015/08/11/macbook-pro%E4%B8%8Bvim%E5%AE%89%E8%A3%85YouCompleteMe%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://x8087.gitcafe.io/2015/08/11/macbook-pro下vim安装YouCompleteMe导致的问题/</id>
     <published>2015-08-11T02:15:11.000Z</published>
-    <updated>2015-08-11T09:03:07.000Z</updated>
+    <updated>2015-08-11T09:18:59.000Z</updated>
     <content type="html"><![CDATA[<h5 id="问题：vim下缺少一个好用的代码补全功能">问题：vim下缺少一个好用的代码补全功能</h5><p><strong>解决方案：</strong></p>
 <blockquote>
 <p>使用<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a></p>
@@ -72,7 +97,7 @@
     
       <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
     
-      <category term="Bug" scheme="http://x8087.gitcafe.io/categories/Bug/"/>
+      <category term="问题" scheme="http://x8087.gitcafe.io/categories/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   

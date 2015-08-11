@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="Eclim,YouCompleteMe,vim,插件," />
+  <meta name="keywords" content="Bug,技术,问题," />
 
 
 
@@ -37,34 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Mac上快速安装YouCompleteMe
-安装MacVim
-通过brew快速安装brew install macvim
-保证正确运行可复制从MacVim下载的mvim脚本文件到本地二进制输出文件夹并添加软链接
-控制台vim
-推荐使用MacVim.app包内的vim二进制文件(MacVim.app/Contents/MacOS/Vim)
-由于homebrew的配置编译方法有问题，不推荐使用home">
+<meta name="description" content="Gmail邮件内容加载不出
+添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com">
 <meta property="og:type" content="article">
-<meta property="og:title" content="疯狂Vim折腾之插件">
-<meta property="og:url" content="http://x8087.gitcafe.io/2015/08/07/疯狂Vim折腾之插件/index.html">
+<meta property="og:title" content="琐碎问题收集">
+<meta property="og:url" content="http://x8087.gitcafe.io/2015/08/11/琐碎问题收集/index.html">
 <meta property="og:site_name" content="假如上帝不是程序员">
-<meta property="og:description" content="Mac上快速安装YouCompleteMe
-安装MacVim
-通过brew快速安装brew install macvim
-保证正确运行可复制从MacVim下载的mvim脚本文件到本地二进制输出文件夹并添加软链接
-控制台vim
-推荐使用MacVim.app包内的vim二进制文件(MacVim.app/Contents/MacOS/Vim)
-由于homebrew的配置编译方法有问题，不推荐使用home">
-<meta property="og:updated_time" content="2015-08-09T12:56:04.000Z">
+<meta property="og:description" content="Gmail邮件内容加载不出
+添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com">
+<meta property="og:updated_time" content="2015-08-11T09:17:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂Vim折腾之插件">
-<meta name="twitter:description" content="Mac上快速安装YouCompleteMe
-安装MacVim
-通过brew快速安装brew install macvim
-保证正确运行可复制从MacVim下载的mvim脚本文件到本地二进制输出文件夹并添加软链接
-控制台vim
-推荐使用MacVim.app包内的vim二进制文件(MacVim.app/Contents/MacOS/Vim)
-由于homebrew的配置编译方法有问题，不推荐使用home">
+<meta name="twitter:title" content="琐碎问题收集">
+<meta name="twitter:description" content="Gmail邮件内容加载不出
+添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -74,7 +59,7 @@
   };
 </script>
 
-  <title> 疯狂Vim折腾之插件 | 假如上帝不是程序员 </title>
+  <title> 琐碎问题收集 | 假如上帝不是程序员 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -199,7 +184,7 @@
           
           
             
-              疯狂Vim折腾之插件
+              琐碎问题收集
             
           
         </h1>
@@ -208,8 +193,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-07T20:20:57+08:00" content="2015-08-07">
-            2015-08-07
+          <time itemprop="dateCreated" datetime="2015-08-11T17:15:33+08:00" content="2015-08-11">
+            2015-08-11
           </time>
         </span>
 
@@ -218,8 +203,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/工具/" itemprop="url" rel="index">
-                  <span itemprop="name">工具</span>
+                <a href="/categories/问题/" itemprop="url" rel="index">
+                  <span itemprop="name">问题</span>
                 </a>
               </span>
 
@@ -234,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/07/疯狂Vim折腾之插件/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/07/疯狂Vim折腾之插件/" itemprop="commentsCount"></span>
+              <a href="/2015/08/11/琐碎问题收集/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/11/琐碎问题收集/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -249,73 +234,9 @@
       
 
       
-        <span itemprop="articleBody"><h5 id="Mac上快速安装YouCompleteMe">Mac上快速安装<a href="https://github.com/Valloric/YouCompleteMe#general-usage" target="_blank" rel="external">YouCompleteMe</a></h5><ol>
-<li>安装<a href="https://github.com/macvim-dev/macvim/releases" target="_blank" rel="external">MacVim</a><ul>
-<li>通过brew快速安装<code>brew install macvim</code></li>
-<li>保证正确运行可复制从MacVim下载的mvim脚本文件到本地二进制输出文件夹并添加软链接</li>
-<li>控制台vim<ul>
-<li>推荐使用MacVim.app包内的vim二进制文件(MacVim.app/Contents/MacOS/Vim)</li>
-<li>由于homebrew的配置编译方法有问题，不推荐使用homebrew的vim</li>
-<li>使用homebrew的python以于MacVim可能出现编译问题或者编译后启动不了，需要运行<code>brew rm python; brew install python</code>更新到最新</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>通过Vundle安装YouCompleteMe<ul>
-<li>注意更新后要重新调用install.sh编译</li>
-<li>C-family completion需要最新的CLT和Xcode</li>
-</ul>
-</li>
-<li>安装CMake</li>
-<li><p><code>./install.sh</code>可选项</p>
-<ul>
-<li>C语言支持:<code>--clang-completer</code></li>
-<li>C#支持:<code>--omnisharp-completer</code></li>
-<li>Go支持:<code>--gocode-completer</code></li>
-</ul>
-</li>
-<li><p>C语言的语法补全还需要添加配置flags</p>
-</li>
-</ol>
-<h5 id="YouCompleteMe使用方法"><a href="https://github.com/Valloric/YouCompleteMe#general-usage" target="_blank" rel="external">YouCompleteMe</a>使用方法</h5><p>1.基础用法</p>
-<ul>
-<li>使入字符，自动提示。输入的字符越多，可选项越准</li>
-<li>智能大小写，大小写敏感。输入大写过滤只包含该大写字符选项，小写则包含该字符大小写选项</li>
-<li>Tab选取或遍历选项，shit-Tab反方向选取。<em>(注意：控制台下的shift-Tab按键可能无法使用，需另外关联)</em></li>
-<li>补全列表排列时，会将符合子字符项的选项排在前面。每个子字符串首字母大写，首字符为下划线时忽略下划线。   </li>
-<li>Ctrl-space快捷键可直接调出补全列表，而不需要输入任何字符。</li>
-</ul>
-<p>2.c语言补全</p>
-<ul>
-<li>YCM会自动在文件打开的目录及子目录下查找.ycm_extra_conf.py文件</li>
-<li>也可以配置全局的.ycm_extra_conf.py文件</li>
-<li>范例<a href="https://github.com/Valloric/ycmd/blob/master/cpp/ycm/.ycm_extra_conf.py" target="_blank" rel="external">.ycm_extra_conf.py</a>，仅供参考，不同项目可能不一样，大部分项目都只需要使用文件中的部分标志</li>
-<li><a href="http://clang.llvm.org/docs/JSONCompilationDatabase.html" target="_blank" rel="external">Clang’s CompilationDatabase system</a>通过CMake生成文件只需在项目的CMakeList.txt文件里加入<code>set(CMAKE_EXPORT_COMPILE_COMMANDS 1)</code></li>
-<li><a href="https://github.com/rdnetto/YCM-Generator" target="_blank" rel="external">YCM-Generator</a>ycm_extra_conf.py文件生成工具</li>
-<li>如果编译错误或者文件包含的头文件有错误，会使生成补全列表的时间比较久且生成的列表项出现很无关补全项，调用<code>:YcmDiags</code>查看错误</li>
-</ul>
-<p>3.其他语言的补全</p>
-<ul>
-<li>Pyhon,C#和Go语言各自通过<a href="https://github.com/davidhalter/jedi" target="_blank" rel="external">Jedi</a>,<a href="https://github.com/nosami/OmniSharpServer" target="_blank" rel="external">Omnisharp</a>和<a href="https://github.com/nsf/gocode" target="_blank" rel="external">GoCode</a>语言引擎提供补全，需要安装编译时添加相应选项</li>
-<li>对于没有本地语法引擎支持的文件类型，可以使用<code>omnifunc</code>(<code>:h omnifunc</code>)作为语法补全源，Vim为多种语言自带omnifuncs，类似Ruby,PHP</li>
-<li>通过[Eclim][]可以为Java和Ruby提供非常好的omnifuncs<ul>
-<li>安装完[Eclim][]后需要在Vim里输入<code>:ProjectCreate &lt;path-to-your-project&gt; -n ruby</code> (or <code>-n java</code>)创建新的Eclip项目并在.vimrc文件内加入<code>let g:EclimCompletionMethod = &#39;omnifunc&#39;</code>使Vim与Eclim更好运行 </li>
-</ul>
-</li>
-</ul>
-<p>4.编写新的语法补全</p>
-<ul>
-<li>通过编写Vim的<code>omnifunc</code>实现</li>
-<li>通过自定义YCM补全功能实现</li>
-<li>两者的不同：<ul>
-<li>omnifunc通过VimScript编写，另一个则使用Python根据YCM的API编写</li>
-<li>YCM API是一种更强大的方法和YCM集成，且提供更宽泛的功能设置</li>
-<li>YCM方案执行效率会更高</li>
-</ul>
-</li>
-<li>vim参考<code>:h complete-functions</code>，YCM参考<a href="https://github.com/Valloric/ycmd/blob/master/ycmd/completers/completer.py" target="_blank" rel="external">API文档</a></li>
-</ul>
-<h5 id="Eclim"><a href="http://eclim.org" target="_blank" rel="external">Eclim</a></h5><p>提供通过命令行或网络连接调用Eclipse代码编辑的功能，允许集成到自己喜欢的编辑器上。</p>
+        <span itemprop="articleBody"><h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
+<p>添加hosts<br>173.194.65.108 imap.gmail.com<br>173.194.65.108 pop.gmail.com<br>173.194.193.108 smtp.gmail.com</p>
+</blockquote>
 </span>
       
     </div>
@@ -324,13 +245,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Eclim/" rel="tag">#Eclim</a>
+            <a href="/tags/Bug/" rel="tag">#Bug</a>
           
-            <a href="/tags/YouCompleteMe/" rel="tag">#YouCompleteMe</a>
+            <a href="/tags/技术/" rel="tag">#技术</a>
           
-            <a href="/tags/vim/" rel="tag">#vim</a>
-          
-            <a href="/tags/插件/" rel="tag">#插件</a>
+            <a href="/tags/问题/" rel="tag">#问题</a>
           
         </div>
       
@@ -339,13 +258,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/10/如何完成一件事/" rel="prev">如何完成一件事</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/07/笔记-Vim实用技巧/" rel="next">笔记-Vim实用技巧</a>
+              <a href="/2015/08/11/macbook-pro下vim安装YouCompleteMe导致的问题/" rel="next">macbook pro下vim安装YouCompleteMe导致的问题</a>
             
           </div>
         </div>
@@ -374,8 +291,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/07/疯狂Vim折腾之插件/"
-                   data-title="疯狂Vim折腾之插件" data-url="http://x8087.gitcafe.io/2015/08/07/疯狂Vim折腾之插件/">
+              <div class="ds-thread" data-thread-key="2015/08/11/琐碎问题收集/"
+                   data-title="琐碎问题收集" data-url="http://x8087.gitcafe.io/2015/08/11/琐碎问题收集/">
               </div>
             
           </div>
@@ -480,7 +397,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Mac上快速安装YouCompleteMe"><span class="nav-number">1.</span> <span class="nav-text">Mac上快速安装YouCompleteMe</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#YouCompleteMe使用方法"><span class="nav-number">2.</span> <span class="nav-text">YouCompleteMe使用方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Eclim"><span class="nav-number">3.</span> <span class="nav-text">Eclim</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
