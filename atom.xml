@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-10T09:21:30.000Z</updated>
+  <updated>2015-08-11T03:04:44.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -14,6 +14,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[macbook pro下vim安装YouCompleteMe导致的问题]]></title>
+    <link href="http://x8087.gitcafe.io/2015/08/11/macbook-pro%E4%B8%8Bvim%E5%AE%89%E8%A3%85YouCompleteMe%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://x8087.gitcafe.io/2015/08/11/macbook-pro下vim安装YouCompleteMe导致的问题/</id>
+    <published>2015-08-11T02:15:11.000Z</published>
+    <updated>2015-08-11T03:04:44.000Z</updated>
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vim下缺少一个好用的代码补全功能</td>
+<td>使用<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a></td>
+</tr>
+<tr>
+<td>安装<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a>需要7.4版本的vim,mac os10.10自带的vim版本过低</td>
+<td>1.本地编译最新版本Vim；<br>2.通过home brew安装MacVim(<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a>与MacVim协作比vim更好);</td>
+</tr>
+<tr>
+<td>本地编译vim时会自动使用系统自带的python，但实际使用时用的是home brew的python，导致编译后的vim与<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a>的python版本不一致，结果使用不了</td>
+<td>找不到好的解决方案，放弃</td>
+</tr>
+<tr>
+<td>将MacVim.app里的vim二进制文件链接到/usr/local/bin下使用加载配置报错</td>
+<td>找不到问题所在，放弃。转而采用alias的方法链接</td>
+</tr>
+<tr>
+<td>当采用alias方法链接时，在控制台使用正常，在shell脚本使用时alias失效，调用的是系统自带的vim</td>
+<td>通过在脚本中输出Path环境变量，vim版本，以及所使用的vim位置，可以确认并没有使用alias使用的vim。由于暂时不确定什么原因导致，找不到更好的解决方法，只能在脚本中添加alias链接来解决。</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <summary type="html">
+    <![CDATA[<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vim下缺少一个好用的代码补全功能</td>
+<td>使用<a href="https://github.com/Vall]]>
+    </summary>
+    
+      <category term="YouCompleteMe" scheme="http://x8087.gitcafe.io/tags/YouCompleteMe/"/>
+    
+      <category term="bug" scheme="http://x8087.gitcafe.io/tags/bug/"/>
+    
+      <category term="macbook" scheme="http://x8087.gitcafe.io/tags/macbook/"/>
+    
+      <category term="vim" scheme="http://x8087.gitcafe.io/tags/vim/"/>
+    
+      <category term="技术" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="Bug" scheme="http://x8087.gitcafe.io/categories/Bug/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何完成一件事]]></title>
