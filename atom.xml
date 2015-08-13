@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-11T09:17:47.000Z</updated>
+  <updated>2015-08-13T15:08:39.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://x8087.gitcafe.io/2015/08/11/%E7%90%90%E7%A2%8E%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/"/>
     <id>http://x8087.gitcafe.io/2015/08/11/琐碎问题收集/</id>
     <published>2015-08-11T09:15:33.000Z</published>
-    <updated>2015-08-11T09:17:47.000Z</updated>
+    <updated>2015-08-13T15:08:39.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
 <p>添加hosts<br>173.194.65.108 imap.gmail.com<br>173.194.65.108 pop.gmail.com<br>173.194.193.108 smtp.gmail.com</p>
 </blockquote>
+<h2 id="shell后台程序管理">shell后台程序管理</h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fg</span> <span class="comment">#跳转到上一后台程序</span></span><br><span class="line"><span class="built_in">fg</span> %n <span class="comment">#跳转到第n个后台程序</span></span><br><span class="line"><span class="built_in">jobs</span> <span class="comment">#打印当前所有后台程序</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
@@ -225,7 +226,7 @@
     <link href="http://x8087.gitcafe.io/2015/08/07/%E7%AC%94%E8%AE%B0-Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/</id>
     <published>2015-08-07T01:40:52.000Z</published>
-    <updated>2015-08-07T03:32:51.000Z</updated>
+    <updated>2015-08-12T14:46:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
 <ul>
 <li>插入模式下,重复从进入到结束的所有操作(<em>移动光标会重置修改状态</em>)</li>
