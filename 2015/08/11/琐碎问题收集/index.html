@@ -40,8 +40,10 @@
 <meta name="description" content="Gmail邮件内容加载不出
 添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com
 
+
 shell后台程序管理123fg #跳转到上一后台程序fg %n #跳转到第n个后台程序jobs #打印当前所有后台程序
-vim插入模式切换到普通模式，终端下中文输入法不会自动切换">
+
+vim插入模式切换到普通模式，终端下中文输入法不会自动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="琐碎问题收集">
 <meta property="og:url" content="http://x8087.gitcafe.io/2015/08/11/琐碎问题收集/index.html">
@@ -49,16 +51,20 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动切�
 <meta property="og:description" content="Gmail邮件内容加载不出
 添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com
 
+
 shell后台程序管理123fg #跳转到上一后台程序fg %n #跳转到第n个后台程序jobs #打印当前所有后台程序
-vim插入模式切换到普通模式，终端下中文输入法不会自动切换">
-<meta property="og:updated_time" content="2015-08-26T08:57:59.000Z">
+
+vim插入模式切换到普通模式，终端下中文输入法不会自动">
+<meta property="og:updated_time" content="2015-08-27T02:14:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="琐碎问题收集">
 <meta name="twitter:description" content="Gmail邮件内容加载不出
 添加hosts173.194.65.108 imap.gmail.com173.194.65.108 pop.gmail.com173.194.193.108 smtp.gmail.com
 
+
 shell后台程序管理123fg #跳转到上一后台程序fg %n #跳转到第n个后台程序jobs #打印当前所有后台程序
-vim插入模式切换到普通模式，终端下中文输入法不会自动切换">
+
+vim插入模式切换到普通模式，终端下中文输入法不会自动">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -246,16 +252,23 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动切�
         <span itemprop="articleBody"><h2 id="Gmail邮件内容加载不出">Gmail邮件内容加载不出</h2><blockquote>
 <p>添加hosts<br>173.194.65.108 imap.gmail.com<br>173.194.65.108 pop.gmail.com<br>173.194.193.108 smtp.gmail.com</p>
 </blockquote>
+<hr>
 <h2 id="shell后台程序管理">shell后台程序管理</h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fg</span> <span class="comment">#跳转到上一后台程序</span></span><br><span class="line"><span class="built_in">fg</span> %n <span class="comment">#跳转到第n个后台程序</span></span><br><span class="line"><span class="built_in">jobs</span> <span class="comment">#打印当前所有后台程序</span></span><br></pre></td></tr></table></figure>
+<hr>
 <h2 id="vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</h2><p><a href="http://ihacklog.com/post/use-imdisable-switch-fcitx-input-method-in-vim.html" target="_blank" rel="external">对于gvim和macvim可以通过设置imd解决</a></p>
 <figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autocmd! InsertLeave *  <span class="built_in">set</span> imdisable</span><br><span class="line">autocmd! InsertEnter *  <span class="built_in">set</span> noimdisable</span><br></pre></td></tr></table></figure>
 <p><a href="https://github.com/lilydjwg/fcitx.vim" target="_blank" rel="external">对于fcitx输入法可以通过fcitx.vim解决</a><br><a href="https://github.com/vimim/vimim" target="_blank" rel="external">通过中文输入法插件vimim.vim解决</a><br>针对个人最适合的方案是：<a href="https://github.com/ybian/smartim" target="_blank" rel="external">通过插件smartim解决</a><br><a href="https://github.com/hongqn/vim-osx-ime" target="_blank" rel="external">vim-osx-ime方案</a>mac os10.10后不支持,<a href="http://www.douban.com/note/260509417/" target="_blank" rel="external">来源</a></p>
+<hr>
 <h2 id="vim插入模式切换到普通模式延迟时间长">vim插入模式切换到普通模式延迟时间长</h2><p>设置待决模式延迟时间<br>set timeoutlen=500</p>
+<hr>
 <h2 id="vim主题当前行高亮设置的问题">vim主题当前行高亮设置的问题</h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hi CursorLine cterm=bold ctermbg=<span class="number">16</span> ctermfg=NONE</span><br></pre></td></tr></table></figure>
 <p>hi: hightlight高亮样式设置<br>term: 黑白终端<br>cterm: 色彩终端,可选NONE, underline, bold, undercurl(波浪线), reverse(inverse), italic, standout<br>ctermbg: 对应背景色设置256色<br>ctermfg: 对应前景色设置256色<br>gui: GUI界面<br>guifg: 对应前景色，可选NONE，bg（使用Normal的背景色），fg（使用Normal的前景色）<br>guibg: 对应背景色<br>guisp: 对应特殊颜色</p>
+<hr>
 <h2 id="vim_auto-pairs插件导致插入文本异常问题">vim auto-pairs插件导致插入文本异常问题</h2><p>auto-pairs插件是用来自动匹配括号，引号等符号的生成。<br>问题1:在插入模式下粘贴文本时会触发导致粘贴的文本改变</p>
 <p>问题2:与Ultisnipt同时使用，导致Ultisnipt生成的文本改变</p>
 <p>移除插件后正常，未找到更好解决方案</p>
+<hr>
+<h2 id="鼠須管输入法配置问题">鼠須管输入法配置问题</h2><p><strong>导入配置</strong><br><code>import_preset</code><br><strong>简入繁出</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">engine</span>:</span><br><span class="line">  - simplifier</span><br><span class="line">  - uniquifier</span><br><span class="line"><span class="attribute">simplifier</span>:</span><br><span class="line">  <span class="attribute">opencc_config</span>: s2t.json</span><br><span class="line">  <span class="attribute">tips</span>: all</span><br><span class="line"><span class="attribute">switches</span>:</span><br><span class="line">  ...</span><br><span class="line">  - <span class="attribute">name</span>: simplification</span><br><span class="line">    <span class="attribute">reset</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">states</span>: [“漢字”, “汉字”]</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -418,7 +431,7 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动切�
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠須管输入法配置问题"><span class="nav-number">7.</span> <span class="nav-text">鼠須管输入法配置问题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
