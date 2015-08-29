@@ -55,7 +55,7 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
 shell后台程序管理123fg #跳转到上一后台程序fg %n #跳转到第n个后台程序jobs #打印当前所有后台程序
 
 vim插入模式切换到普通模式，终端下中文输入法不会自动">
-<meta property="og:updated_time" content="2015-08-27T02:14:38.000Z">
+<meta property="og:updated_time" content="2015-08-29T14:12:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="琐碎问题收集">
 <meta name="twitter:description" content="Gmail邮件内容加载不出
@@ -268,7 +268,17 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
 <p>问题2:与Ultisnipt同时使用，导致Ultisnipt生成的文本改变</p>
 <p>移除插件后正常，未找到更好解决方案</p>
 <hr>
-<h2 id="鼠須管输入法配置问题">鼠須管输入法配置问题</h2><p><strong>导入配置</strong><br><code>import_preset</code><br><strong>简入繁出</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">engine</span>:</span><br><span class="line">  - simplifier</span><br><span class="line">  - uniquifier</span><br><span class="line"><span class="attribute">simplifier</span>:</span><br><span class="line">  <span class="attribute">opencc_config</span>: s2t.json</span><br><span class="line">  <span class="attribute">tips</span>: all</span><br><span class="line"><span class="attribute">switches</span>:</span><br><span class="line">  ...</span><br><span class="line">  - <span class="attribute">name</span>: simplification</span><br><span class="line">    <span class="attribute">reset</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">states</span>: [“漢字”, “汉字”]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Squirrel鼠須管输入法配置问题">Squirrel鼠須管输入法配置问题</h2><p><strong>导入配置</strong><br><code>import_preset</code><br><strong>简入繁出</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">engine</span>:</span><br><span class="line">  - simplifier</span><br><span class="line">  - uniquifier</span><br><span class="line"><span class="attribute">simplifier</span>:</span><br><span class="line">  <span class="attribute">opencc_config</span>: s2t.json</span><br><span class="line">  <span class="attribute">tips</span>: all</span><br><span class="line"><span class="attribute">switches</span>:</span><br><span class="line">  ...</span><br><span class="line">  - <span class="attribute">name</span>: simplification</span><br><span class="line">    <span class="attribute">reset</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">states</span>: [“漢字”, “汉字”]</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="vim下markdown文件语法高亮显示异常">vim下markdown文件语法高亮显示异常</h2><p>由于使用<a href="https://github.com/tpope/vim-markdown" target="_blank" rel="external">tpope/vim-markdown</a>导致<br>改为使用<a href="http://plasticboy.com/markdown-vim-mode/" target="_blank" rel="external">plasticboy/vim-markdown</a>插件解决</p>
+<hr>
+<h2 id="vim下markdown文件输入英文单引号或双引号变中文符号的">vim下markdown文件输入英文单引号或双引号变中文符号的</h2><p>安装插件textobj-quote引起。<br>textobj-quote插件是一个匹配中文单双引号的插件，有以下4个功能：</p>
+<ol>
+<li>Educate,输入英文单引号或双引号后，自动输出为中文的单引号或双引号。</li>
+<li>Matchit,%号匹配中文的单双引号。</li>
+<li>Replace,直接替换中英文的单双引号。</li>
+<li>Surround,支持环绕功能</li>
+</ol>
 </span>
       
     </div>
@@ -431,7 +441,7 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠須管输入法配置问题"><span class="nav-number">7.</span> <span class="nav-text">鼠須管输入法配置问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Squirrel鼠須管输入法配置问题"><span class="nav-number">7.</span> <span class="nav-text">Squirrel鼠須管输入法配置问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件语法高亮显示异常"><span class="nav-number">8.</span> <span class="nav-text">vim下markdown文件语法高亮显示异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件输入英文单引号或双引号变中文符号的"><span class="nav-number">9.</span> <span class="nav-text">vim下markdown文件输入英文单引号或双引号变中文符号的</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
