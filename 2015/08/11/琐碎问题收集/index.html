@@ -55,7 +55,7 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
 shell后台程序管理123fg #跳转到上一后台程序fg %n #跳转到第n个后台程序jobs #打印当前所有后台程序
 
 vim插入模式切换到普通模式，终端下中文输入法不会自动">
-<meta property="og:updated_time" content="2015-08-29T14:12:04.000Z">
+<meta property="og:updated_time" content="2015-08-31T08:49:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="琐碎问题收集">
 <meta name="twitter:description" content="Gmail邮件内容加载不出
@@ -279,6 +279,10 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
 <li>Replace,直接替换中英文的单双引号。</li>
 <li>Surround,支持环绕功能</li>
 </ol>
+<hr>
+<h2 id="smartim中英文状态切换异常">smartim中英文状态切换异常</h2><p>vim中从插入模式切换到普通模式输入法能正常切换到英文状态，再切换回插入模式时，未能正常切换到中文状态。<br>smartim插件的SmartIM_SelectDefault方法被调用多次，导致出现问题。<br>解决方案：添加条件限制，避免多次调用修改变量</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> !<span class="keyword">exists</span>(<span class="string">"b:saved_im"</span>) || b:saved<span class="number">_</span>im == g:smartim<span class="number">_</span><span class="annotation">default</span></span><br></pre></td></tr></table></figure>
+<hr>
 </span>
       
     </div>
@@ -441,7 +445,7 @@ vim插入模式切换到普通模式，终端下中文输入法不会自动">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Squirrel鼠須管输入法配置问题"><span class="nav-number">7.</span> <span class="nav-text">Squirrel鼠須管输入法配置问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件语法高亮显示异常"><span class="nav-number">8.</span> <span class="nav-text">vim下markdown文件语法高亮显示异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件输入英文单引号或双引号变中文符号的"><span class="nav-number">9.</span> <span class="nav-text">vim下markdown文件输入英文单引号或双引号变中文符号的</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gmail邮件内容加载不出"><span class="nav-number">1.</span> <span class="nav-text">Gmail邮件内容加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell后台程序管理"><span class="nav-number">2.</span> <span class="nav-text">shell后台程序管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态"><span class="nav-number">3.</span> <span class="nav-text">vim插入模式切换到普通模式，终端下中文输入法不会自动切换到英文状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插入模式切换到普通模式延迟时间长"><span class="nav-number">4.</span> <span class="nav-text">vim插入模式切换到普通模式延迟时间长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim主题当前行高亮设置的问题"><span class="nav-number">5.</span> <span class="nav-text">vim主题当前行高亮设置的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_auto-pairs插件导致插入文本异常问题"><span class="nav-number">6.</span> <span class="nav-text">vim auto-pairs插件导致插入文本异常问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Squirrel鼠須管输入法配置问题"><span class="nav-number">7.</span> <span class="nav-text">Squirrel鼠須管输入法配置问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件语法高亮显示异常"><span class="nav-number">8.</span> <span class="nav-text">vim下markdown文件语法高亮显示异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim下markdown文件输入英文单引号或双引号变中文符号的"><span class="nav-number">9.</span> <span class="nav-text">vim下markdown文件输入英文单引号或双引号变中文符号的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#smartim中英文状态切换异常"><span class="nav-number">10.</span> <span class="nav-text">smartim中英文状态切换异常</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
