@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-08-28T09:15:17.000Z</updated>
+  <updated>2015-09-01T08:15:55.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://x8087.gitcafe.io/2015/08/17/Cocos2d-x%E5%AE%9E%E6%88%98lua%E5%8D%B7/"/>
     <id>http://x8087.gitcafe.io/2015/08/17/Cocos2d-x实战lua卷/</id>
     <published>2015-08-17T13:42:25.000Z</published>
-    <updated>2015-08-28T09:15:17.000Z</updated>
+    <updated>2015-09-01T08:15:55.000Z</updated>
     <content type="html"><![CDATA[<h3 id="基础篇">基础篇</h3><h4 id="1-_准备开始">1. 准备开始</h4><h5 id="1-1_本书学习路径图">1.1 本书学习路径图</h5><h5 id="1-2_使用实例代码">1.2 使用实例代码</h5><h4 id="2-_lua语言基础">2. lua语言基础</h4><h5 id="2-1_环境搭建">2.1 环境搭建</h5><h6 id="2-1-1_lua编辑工具">2.1.1 lua编辑工具</h6><ul>
 <li><a href="http://www.eclipse.org/koneki/ldt/" target="_blank" rel="external">Eclipse 的lua Development Tools(LDT)插件</a></li>
 <li><a href="http://download.eclipse.org/koneki/releases/stable" target="_blank" rel="external">在线安装插件地址</a></li>
@@ -130,7 +130,7 @@
     <link href="http://x8087.gitcafe.io/2015/08/16/%E5%9B%BE%E8%A7%A3%E6%94%BB%E5%BF%83%E8%AF%B4%E8%AF%9D%E6%9C%AF/"/>
     <id>http://x8087.gitcafe.io/2015/08/16/图解攻心说话术/</id>
     <published>2015-08-16T09:56:35.000Z</published>
-    <updated>2015-08-31T13:46:52.000Z</updated>
+    <updated>2015-09-02T01:40:39.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>轻松获得家人、朋友、上司、同事、下属和客喜爱与信赖的秘密！<br>从倾听与说话两方面告诉你53项实用沟通技巧，包括：反驳的要诀、说出真心话又不令人生气的技巧、听讨厌的人说话或聆听无趣内容的秘诀、边听边整理的窍门、顺利与人攀谈的技巧、听懂言外之意的诀窍、引得对方说话和让对方采取行动的发问方式、让对方爽快答应的秘诀……<br>创造好人缘的沟通金律：</p>
 <ul>
@@ -932,6 +932,87 @@
 <h5 id="4-3_从对方口中问出真心话的技巧">4.3 从对方口中问出真心话的技巧</h5><p>场面话会浮上台面，但真心话只会隐藏在背后。即使了解对方说的是场面话，但想知道对方隐藏在背后的真心话时，应该怎么做才能得到答案呢？</p>
 <ul>
 <li>让对方卸下心防</li>
+<li>向对方示弱。想要听到对方的真心话，自己也必须交出某些东西来。若能暴露自己的缺点或弱点，对方也会卸下以防，吐露出真心话。</li>
+</ul>
+<h5 id="4-4_听懂言外之意很重要">4.4 听懂言外之意很重要</h5><blockquote>
+<p>如果一句话只有一种意思，听起来就轻松多了。但事实上，一句话还包含多种言外之意，所以，如果不能正确听懂对方的意思，就无法成为倾听高手。</p>
+</blockquote>
+<ul>
+<li>字面意思与隐含意思<ul>
+<li>现场状况</li>
+<li>前后关系</li>
+<li>说话者的心情</li>
+</ul>
+</li>
+<li>了解言外之意的线索<ul>
+<li>听对方的语气</li>
+<li>看对方的表情</li>
+<li>根据当场的状况来判断</li>
+</ul>
+</li>
+<li>例</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>描述</th>
+<th>言外之意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>抱歉，你在生气吗？男性同事问\n我哪有在生气！女性同事说</td>
+<td>当然是在生气（从语气得知）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>去拜托同事担任某个大会的负责人时，同事以询问般的表情说：“就算没有我，还是有其他人可以胜任吧？”</td>
+<td>“请您务必帮忙。”他在等你说这句临门一脚的话（从表情得知）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>上司边准备车票边说：“明天又要出差了，没有人可以代替我去吗？”</td>
+<td>自认为“没有人可以取代我。”（从状况知）</td>
+</tr>
+</tbody>
+</table>
+<h5 id="4-5_接受对方的情绪，抱着同理心倾听的诀窍">4.5 接受对方的情绪，抱着同理心倾听的诀窍</h5><blockquote>
+<p>话里会隐含说话者的心情与感情。即使是没有道理的一段话，只要了解对方的心情，并保持同理心，说话者也会感到满足而使谈话顺利进行。</p>
+</blockquote>
+<ul>
+<li>如果以道理来回应，就会变成一种说教</li>
+<li>负面的发言有其理由</li>
+<li>当说话者处于慌乱状态时的倾听方式</li>
+<li>例：对正在咳嗽的同事说：“你怎么感冒了呢？”“不可以感冒吗？”这种时候应该怎么回应呢？<ul>
+<li>好的回应：先问“怎么了？”“是不是很不舒服呢？”是体会对方心情的说法。说“因为这阵子一直在加班吧？”提及背后的原因。对方也会感到愧疚，而说，“不好意思，我太烦躁了。”</li>
+<li>不好的回应：责备对方，“你说那是什么话！”说“我是因为担心你才问你的，没必要那样说吧。”接着挑对方的错。对方一直感到不满，便骂说：“基本上，你最近很傲慢喔。态度改一改吧。”</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-6_倾听抱怨的技巧">4.6 倾听抱怨的技巧</h5><blockquote>
+<p>说到抱怨，不论对说的人或被说的人来说，都不是件愉快的事。抱怨虽然是表达不满，但如果一方能将其转化为正面的说法，一方能以彼此都能满意的方式来解读，就会变成谚语所说的“转祸为福”。</p>
+</blockquote>
+<ul>
+<li>首先要清楚地开口道歉<ul>
+<li>对不起</li>
+<li>给您添麻烦了</li>
+<li>抱歉</li>
+</ul>
+</li>
+<li>用全身倾听<ul>
+<li>不要畏畏缩缩，要用全身</li>
+<li>靠近对方，行最敬礼</li>
+</ul>
+</li>
+<li>“转祸为福”以同理心倾听对方的说法<ul>
+<li>以“是的”“确实是”等说法附和</li>
+<li>在关键时看着对方的眼睛</li>
+<li>以“您说的没错。”“我也这么想。”等表示同感的话附和</li>
+<li>听完对方的话</li>
+</ul>
+</li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -1192,7 +1273,7 @@
     <link href="http://x8087.gitcafe.io/2015/08/07/%E7%AC%94%E8%AE%B0-Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/</id>
     <published>2015-08-07T01:40:52.000Z</published>
-    <updated>2015-08-29T13:44:21.000Z</updated>
+    <updated>2015-09-01T14:09:24.000Z</updated>
     <content type="html"><![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
 <ul>
 <li>插入模式下,重复从进入到结束的所有操作(<em>移动光标会重置修改状态</em>)</li>
@@ -1907,7 +1988,7 @@
 <li><code>history</code>选项，设置历史记录保存上限</li>
 <li>历史记录退出重启后仍旧存在~！[^viminfo]</li>
 <li>回溯时可以使用<code>&lt;C-p&gt;</code>或<code>&lt;C-n&gt;</code>遍历，只不过不会自动过滤</li>
-<li>通过 <code>cnoremap &lt;C-p&gt; &lt;Up&gt; cnoremap &lt;-n&gt; &lt;Down&gt;</code>可以解决过滤的问题<a href="`ex_mode/history-scrollers.vim`">^phistoryscrollers</a></li>
+<li>通过 <code>cnoremap &lt;C-p&gt; &lt;Up&gt; cnoremap &lt;-n&gt; &lt;Down&gt;</code>可以解决过滤的问题[^phistoryscrollers]</li>
 <li>命令行窗口[^cmdwin]</li>
 </ul>
 <table>
@@ -2894,133 +2975,48 @@
 <hr>
 <h2 id="8-_工具">8. 工具</h2><ul>
 <li>通过ctags建立索引，并用其浏览源代码</li>
-<li>结识ctags</li>
 </ul>
-<h3 id="8-1_安装Exuberant_Ctags">8.1 安装Exuberant Ctags</h3><ul>
+<h3 id="8-1_结识ctags">8.1 结识ctags</h3><h4 id="8-1-1_安装Exuberant_Ctags">8.1.1 安装Exuberant Ctags</h4><ul>
 <li><code>sudo apt-get install exuberant-ctags</code></li>
 <li>osx自带的是ctags的BSD</li>
 <li><code>brew install ctags</code></li>
 <li>修改$PATH使/usr/local/bin比/usr/bin优先</li>
 <li>Doctor JS,jsctags</li>
-<li>创建代码库索引<br>ctags *.rb</li>
 </ul>
-<h3 id="8-2_详解标签文件">8.2 详解标签文件</h3><ul>
+<h4 id="8-1-2_创建代码库索引">8.1.2 创建代码库索引</h4><ul>
+<li><code>ctags *.rb</code></li>
+</ul>
+<h4 id="8-1-3_详解标签文件">8.1.3 详解标签文件</h4><ul>
 <li>前几行由元数据组成</li>
 <li>此后的每一行由关键字、文件名以及关键字在源代码中的位置构成</li>
 <li>关键字按字母顺序排列</li>
-<li>用模式定位关键字，而不是行号</li>
+</ul>
+<h4 id="8-1-4_用模式定位关键字，而不是行号">8.1.4 用模式定位关键字，而不是行号</h4><ul>
 <li>关键字的地址可以是任意的Ex命令</li>
-<li>用元数据标记关键字</li>
+</ul>
+<h4 id="8-1-5_用元数据标记关键字">8.1.5 用元数据标记关键字</h4><ul>
 <li>传统由制表符分隔3组字段构成：关键字、文件名以及定位符</li>
 <li>扩展格式：末尾添加字段，为关键字提供元数据，c类，f函数</li>
-<li>配置Vim使用ctags<br>:h ‘tags’指定标签文件查找路径<br>:h tags-option<br>set tags?查看选项内容<br>；生成标签文件<br>:!ctags -R<br>—exclude=.git或—languages=-sql<br>:nnoremap <f5> :!ctags -R<cr>映射快捷键<br>；在每次保存文件时自动执行ctags<br>autocommand允许事件发生时调用一条命令<br>:autocmd BufWritePost * call system(“ctags -R”)<br>；通过版本控制工具的回调机制自动执行ctags<br>Tim Pope的&lt;<effortless ctags="" with="" git="">&gt;讲解了如何为post-commit、post-merge以及post-checkout等事件建立回调机制<br>；使用Vim的标签跳转命令，浏览关键字的定义<br><c-]>跳转到<br><c-t>跳回<br>:h tag-stack<br>:h tag-priority<br>g<c-]>可选跳转<br>:tselect :tprev :tnext :tfirst :tlast<br>:tag {keyword}等同于<c-]><br>:tjump {keyword}等同于g<c-]><br>:h :tag  :h :tjump<br>:tag /{pattern} :tjump /{pattern}<br>:pop等同于<c-t><br>；编译代码，并通过Quickfix列表浏览错误信息<br>；不用离开Vim也能编译代码<br>；准备工作<br>；在Shell中编译工程make<br>；在Vim中编译工程:make<br>:h quickfix   加快 编辑-编译-编辑 循环<br>:cnext 跳转到下一次quickfix<br>:make! 编译不自动跳转<br>；浏览Quickfix列表<br>；位置列表以l开头,quickfix只有一份，位置列表有多份<br>:lnext | :lprev | :ll N | :lmake | :lgrep | :lvimgrep</c-t></c-]></c-]></c-]></c-t></c-]></effortless></cr></f5></li>
 </ul>
-<p>；回溯以前的Quickfix列表10<br>:colder | :cnewer<br>；定制外部编译器<br>h :compiler | h: make<br>；配置:make命令，使调用JSLint来验证JavaScript文件<br>nodelint依赖Node.js,可以通过NPM命令安装<br>npm install nodelint -g<br>:h ‘makeprg’  允许指定运行:make时所调用的程序<br>:setlocal makeprg=NODE<em>DISABLE_COLORS=1\ nodelint\ %<br>；相当于在命令行执行<br>export NODE_DISABLE_COLORS=1<br>nodelint 文件路径<br>；用Nodelint的输出结果填充Quickfix列表<br>‘errorformat’选项允许我们指导Vim如何解析由:make产生的输出结果:h ‘errorformat’<br>；查看缺省选项:setglobal errorformat?<br>%f文件名，%l行号，%m错误信息 :h errorformat<br>setlocal efm=%A%f\,\ line\ %l\,\ character\ %c:%m,%Z%.%#,%-G%.%#<br>；一条命令设置’makeprg’与’errorformat’<br>:h :compiler<br>:compiler nodelint<br>:args $VIMRUNTIME/compiler/<em>.vim<br>；通过grep，vimgrep以及其他工具对整个工程进行查找<br>；不必离开Vim也能调用grep<br>:h :grep<br>-i不区分大小写<br>；定制grep程序<br>:h ‘grepprg’  $</em>代表占位符，代替参数<br>:h ‘grepformat’可以逗号分隔多组格式<br>:h errorformat<br>grepprg=”grep -n $<em> /dev/null”<br>grepformat=”%f:%l:%m,%f:%l%m,%f  %l%m”<br>；通过:grep调用ack<br>；安装ack<br>ubuntu<br>sudo apt-get install ack-prep<br>sudo ln -s /usr/bin/ack-grep /usr/local/bin/ack<br>OSX<br>brew install ack<br>:set grepprg=ack\ —nogroup —column\ $</em><br>:set grepformat=%f:%l:%c:%m<br>；其他grep插件<br>ack.vim<br>fugitive.vim  :Ggrep   git-grep<br>；使用Vim内部的Grep<br>:vim[grep][!] /{pattern}/[g][j] {file} …<br>g：允许单行多匹配<br>j:允许不自动跳转<br>:h :</em>##<br>；自动补全<br>；结识Vim关键字自动补全<br>:h ‘ignorecase’会影响自动补全<br>:h ‘infercase’避免ignorecase对自动补全的影响</p>
-<p><c-p>和<c-n>调用普通关键字自动补全</c-n></c-p></p>
-<p><c-x>    :h ins-completion</c-x></p>
-<p>；与自动补全的弹出式菜单进行交互<br>:h popupmenu-completion</p>
-<p>；掌握关键字的来龙去脉<br>:h compl-current    <c-x><c-n>当前关键字补全<br>:h compl-keyword   <c-x><c-i><br>:h ‘include’<br>:h compl-tag   <c-x><c-]><br>:h ‘complete’<br>；使用字典中的单词进行自动补全<br>:h compl-dictionary   <c-x><c-k><br>:set spell<br>:h ‘dictionary’<br>；自动补全整行文本<br>:h compl-whole-line   <c-x><c-l><br>；自动补全文件名<br>:h compl-filename  <c-x><c-f><br>:pwd<br>:cd {path}<br>:cd -      :h :cd-  切换回原来的工作目录<br>；根据上下文自动补全<br>:h compl-ommi   <c-x><c-o><br>:h compl-omni-filetypes<br>:h complete-function<br>；利用Vim的拼写检查器，查找并更正拼写错误<br>；对你的工作进行拼写检查<br>:set spell<br>[s和]s遍历拼写错误项:h ]s<br>z=获取建议项:h z=，1z=<br>zg将当前单词添加到拼写文件中<br>zw把当前单词从拼写文件中删除<br>zug撤消针对当前单词的zg或zw命令<br>；使用其他拼写字典<br>:h ‘spelllang’<br>:h spell-remarks<br>:h spelllfile.vim<br>；将单词添加到拼写文件中<br>:h ‘spellfile’<br>；在插入模式下更正拼写错误</c-o></c-x></c-f></c-x></c-l></c-x></c-k></c-x></c-]></c-x></c-i></c-x></c-n></c-x></p>
-<p><c-x>s<br>:h compl-spelling<br>；接下来干什么<br>；继续练习<br>；定制你自己的vim<br>essential.vim<br>vimcasts.org<br>moolenaar.net/habits.html<br>github.com/nelstrom/dotfiles<br>iccf-holland.org<br>；欲善其事，先利其器<br>附录A 根据个人喜好定制vim<br>；动态改变Vim的设置项<br>:h option-list<br>；选项前面加no,关闭功能<br>；选项之后加!,反转设置<br>；选项之后加?,获取选项当前状态<br>；选项之后加&amp;,重置为默认值<br>；可以set 多组选项<br>；setlocal只对当前缓冲区设置<br>；将配置信息存至vimrc文件<br>:h :source<br>:source {file}应用文件设置项<br>:h vimrc<br>:edit $MYVIMRC<br>；为特定类型的文件应用个性化设置<br>if has(“autocmd”)<br>   filetype on<br>   autocmd FileType ruby setlocal ts=2 sts=2 sw=2 et<br>   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet<br>endif<br>:h :autocmd<br>:h ftplugin-name<br>~/.vim/after/ftplugin/javascript.vim<br>filetype plugin on</c-x></p>
-<hr>
-<p>[^f]: <code>:h f</code></p>
-<p>[^hpoint]: <code>:h .</code></p>
-<p>[^hstar]: <code>:h *</code></p>
-<p>[^haw]: <code>:h aw</code></p>
-<p>[^hcount]: <code>:h count</code></p>
-<p>[^operator]: <code>:h operator</code></p>
-<p>[^mapoperator]: <code>:h :map-operator</code></p>
-<p>[^pcommentary]: 插件，用于注释，由Tim pope发布</p>
-<p>[^omapinfo]: <code>:h omap-info</code></p>
-<p>[^ptextobjentire]: 插件，用于文本操作，由Kana Natsuno发布</p>
-<p>[^gU]: <code>:h gU</code></p>
-<p>[^ctrlw]: <code>:h ctrl-w</code></p>
-<p>[^g]: <code>:h g</code></p>
-<p>[^z]: <code>:h z</code></p>
-<p>[^[]: <code>:h [</code></p>
-<p>[^K]: <code>:h K</code></p>
-<p>[^J]: <code>:h J</code></p>
-<p>[^ictrlo]: <code>:h i_CTRL-o</code>切换到插入普通模式</p>
-<p>[^ictrlr]: <code>:h i_CTRL-r</code></p>
-<p>[^ictrlrp]: <code>:h i_CTRL-r CTRL-p</code></p>
-<p>[^digraphsdefault]: <code>:h digraphs-default</code></p>
-<p>[^digraphtable]: <code>:h digraph-table</code></p>
-<p>[^r]: <code>:h r</code></p>
-<p>[^selectmode]: <code>:h Select-mode</code></p>
-<p>[^vU]: <code>:h v_U</code> <code>:h visual-repeat</code></p>
-<p>[^excmdindex]: <code>:h ex-cmd-index</code></p>
-<p>[^@:]: <code>:h @:</code></p>
-<p>[^hquoto:]: <code>:h quote_:</code></p>
-<p>[^cctrld]: <code>:h c_CTRL-D</code></p>
-<p>[^command-commplete]: <code>:h :command-complete</code></p>
-<p>[^wildmode]: <code>:h &#39;wildmode&#39;</code></p>
-<p>[^cctrlrctrlw]: <code>:h c_CTRL-R_CTRL-W</code></p>
-<p>[^viminfo]: <code>:h viminfo</code></p>
-<p>[^cmdlinespecial]: <code>:h cmdline-special</code></p>
-<p>[^cmdwin]: <code>:h cmdwin</code></p>
-<p>[^filenamemodifiers]: <code>:h filename-modifiers</code></p>
-<p>[^hshell]: <code>:h shell</code></p>
-<p>[^:!]: <code>:h :!</code></p>
-<p>[^read!]: <code>:h read!</code></p>
-<p>[^writec]: <code>:h write_c</code></p>
-<p>[^renamefiles]: <code>:h rename-files</code></p>
-<p>[^range!]: <code>:h range!</code></p>
-<p>[^!]: <code>:h !</code></p>
-<p>[^ls]: <code>:h :ls</code></p>
-<p>[^:b]: <code>:h :b</code></p>
-<p>[^:bufdo]: <code>:h :bufdo</code></p>
-<p>[^punimpaired]: <code>:h [</code> 插件unimpaired.vim,由Tim pope发布</p>
-<p>[^argsf]: <code>:h :args_f</code></p>
-<p>[^hstarstarwildcard]: <code>:h starstar-wildcard</code></p>
-<p>[^hwildcard]: <code>:h wildcard</code></p>
-<p>[^backtick-expansion]: <code>:h backtick-expansion</code></p>
-<p>[^hidden]: <code>:h hidden</code></p>
-<p>[^windowmovecursor]: <code>:h window-move-cursor</code></p>
-<p>[^mouse]: <code>:h &#39;mouse&#39;</code></p>
-<p>[^tabpage]: <code>:h tabpage</code></p>
-<p>[^ctrlwT]: <code>:h CTRL-w_T</code></p>
-<p>[^hpath]: <code>:h &#39;path&#39;</code></p>
-<p>[^filesearching]: <code>:h file-searching</code></p>
-<p>[^prails]: <code>Tim Pope的rails.vim</code></p>
-<p>[^explore]: <code>:h :Explore</code></p>
-<p>[^netrw%]: <code>:h netrw-%</code></p>
-<p>[^netrwd]: <code>:h netrw-d</code></p>
-<p>[^netrwrename]: <code>:h netrw-rename</code></p>
-<p>[^netrwdel]: <code>:h netrw-del</code></p>
-<p>[^netrwref]: <code>:h netrw-ref</code></p>
-<p>[^ctrlG]: <code>:h ctrl-G</code></p>
-<p>[^writec]: <code>:h :write_c</code></p>
-<p>[^:%]: <code>:h :%</code></p>
-<p>[^motion]: <code>:h motion.txt</code></p>
-<p>[^wordmotions]: <code>:h word-motions</code></p>
-<p>[^word]: <code>:h world</code></p>
-<p>[^WORD]: <code>:h WORD</code></p>
-<p>[^;]: <code>:h ;</code></p>
-<p>[^,]: <code>:h ,</code></p>
-<p>[^mapleader]: <code>:h mapleader</code></p>
-<p>[^exclusive]: <code>:h exclusive</code></p>
-<p>[^textobjects]: <code>:h text-objects</code></p>
-<p>[^m]: <code>:h m</code></p>
-<p>[^markmotion]: <code>:h mark-motion</code></p>
-<p>[^matchitinstall]: <code>:h matchit-install</code></p>
-<p>[^%]: <code>:h %</code></p>
-<p>[^changelist]: <code>:h changelist</code></p>
-<p>[^gi]: <code>:h gi</code></p>
-<p>[^gf]: <code>:h gf</code></p>
-<p>[^suffixesadd]: <code>:h &#39;suffixesadd&#39;</code></p>
-<p>[^path]: <code>:h &#39;path&#39;</code></p>
-<p>[^quotequote]: <code>:h quote_quote</code></p>
-<p>[^quote0]: <code>:h quote0</code></p>
-<p>[^quotealpha]: <code>:h quote_alpha</code></p>
-<p>[^quote<em>]: `:h quote</em>`</p>
-<p>[^quote+]: <code>:h quote+</code></p>
-<p>[^quotestar]: <code>:h quotestar</code></p>
-<p>[^quote=]: <code>:h quote=</code></p>
-<p>[^quote.]: <code>:h quote.</code></p>
-<p>[^p]: <code>:h p</code></p>
-<p>[^linewiseregister]: <code>:h linewise-register</code></p>
-<p>[^paste]: <code>:h &#39;paste&#39;</code></p>
-<p>[^@]: <code>:h @</code></p>
-<p>[^visualbell]: <code>:h &#39;visualbell&#39;</code></p>
+<h3 id="8-2_配置Vim使用ctags">8.2 配置Vim使用ctags</h3><ul>
+<li><code>:h &#39;tags&#39;</code>指定标签文件查找路径</li>
+<li><code>:h tags-option</code></li>
+<li><code>set tags?</code>查看选项内容</li>
+</ul>
+<h4 id="8-2-1_生成标签文件">8.2.1 生成标签文件</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!ctags -R</span><br><span class="line">-exclude=.git // or -languages=-sql</span><br><span class="line"><span class="attribute">:nnoremap &lt;f5&gt; :!ctags</span> -R&lt;CR&gt;  //映射快捷键</span><br></pre></td></tr></table></figure>
+<h4 id="8-2-2_在每次保存文件时自动执行ctags">8.2.2 在每次保存文件时自动执行ctags</h4><ul>
+<li><code>autocommand</code>允许事件发生时调用一条命令</li>
+<li><code>:autocmd BufWritePost * call system(&quot;ctags -R&quot;)</code></li>
+</ul>
+<h4 id="8-2-3_通过版本控制工具的回调机制自动执行ctags">8.2.3 通过版本控制工具的回调机制自动执行ctags</h4><blockquote>
+<p>Tim Pope的&lt;<effortless ctags="" with="" git="">&gt;讲解了如何为post-commit、post-merge、以及post-checkout等事件建立回调机制</effortless></p>
+</blockquote>
+<h3 id="8-3_使用Vim的标签中转命令，浏览关键字的定义">8.3 使用Vim的标签中转命令，浏览关键字的定义</h3><ul>
+<li><code>&lt;C-]&gt;</code>跳转到</li>
+<li><code>&lt;C-t&gt;</code>跳回</li>
+<li><code>g&lt;C-]&gt;</code>可选跳转`</li>
+<li><code>:h tag-stack</code>、<code>:h tag-priority</code></li>
+</ul>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><stron]]>
