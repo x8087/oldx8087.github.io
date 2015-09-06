@@ -1499,7 +1499,7 @@
     <link href="http://x8087.gitcafe.io/2015/08/07/%E7%AC%94%E8%AE%B0-Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://x8087.gitcafe.io/2015/08/07/笔记-Vim实用技巧/</id>
     <published>2015-08-07T01:40:52.000Z</published>
-    <updated>2015-09-06T02:57:52.000Z</updated>
+    <updated>2015-09-06T08:56:19.000Z</updated>
     <content type="html"><![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
 <ul>
 <li>插入模式下,重复从进入到结束的所有操作(<em>移动光标会重置修改状态</em>)</li>
@@ -3379,6 +3379,41 @@
 <li><code>&lt;C-x&gt;</code> <code>:h ins-completion</code></li>
 </ul>
 </li>
+<li>与自动补全的弹出式菜单进行交互<ul>
+<li><code>:h popupmenu-completion</code></li>
+</ul>
+</li>
+<li>掌握关键字的来龙去脉<ul>
+<li><code>:h compl-current &lt;C-x&gt;&lt;C-n&gt;</code>当前关键字补全</li>
+<li><code>:h compl-keyword &lt;C-x&gt;&lt;C-i&gt;</code></li>
+<li><code>:h &#39;include&#39;</code></li>
+<li><code>:h compl-tag &lt;C-x&gt;&lt;C-]&gt;</code></li>
+<li><code>:h &#39;complete&#39;</code></li>
+</ul>
+</li>
+<li>使用字典中的单词进行自动补全<ul>
+<li><code>:h compl-dictionary &lt;C-x&gt;&lt;C-k&gt;</code></li>
+<li><code>:set spell</code></li>
+<li><code>:h &#39;dictionary&#39;</code></li>
+</ul>
+</li>
+<li>自动补全整行文本<ul>
+<li><code>:h compl-whole-line &lt;C-x&gt;&lt;C-l&gt;</code></li>
+</ul>
+</li>
+<li>自动补全文件名<ul>
+<li><code>:h compl-filename &lt;C-x&gt;&lt;C-f&gt;</code></li>
+<li><code>:pwd</code></li>
+<li><code>:cd {path}</code></li>
+<li><code>:cd -</code> <code>:h :cd-</code>切换回原来的工作目录</li>
+</ul>
+</li>
+<li>根据上下文自动补全<ul>
+<li><code>:h compl-ommi &lt;C-x&gt;&lt;C-o&gt;</code></li>
+<li><code>:h compl-omni-filetypes</code></li>
+<li><code>:h complete-function</code></li>
+</ul>
+</li>
 </ul>
 <table>
 <thead>
@@ -3404,8 +3439,123 @@
 <td><c-x><c-]></c-]></c-x></td>
 <td>标签文件关键字</td>
 </tr>
+<tr>
+<td><c-x><c-k></c-k></c-x></td>
+<td>字典查找</td>
+</tr>
+<tr>
+<td><c-x><c-l></c-l></c-x></td>
+<td>整行补全</td>
+</tr>
+<tr>
+<td><c-x><c-f></c-f></c-x></td>
+<td>文件名补全</td>
+</tr>
+<tr>
+<td><c-x><c-o></c-o></c-x></td>
+<td>全能补全</td>
+</tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>按键操作</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><c-n></c-n></td>
+<td>使用来自补全列表的下一个匹配项</td>
+</tr>
+<tr>
+<td><c-p></c-p></td>
+<td>使用来自补全列表的上一个匹配项</td>
+</tr>
+<tr>
+<td><down></down></td>
+<td>选择来自补全列表的下一个匹配项</td>
+</tr>
+<tr>
+<td><up></up></td>
+<td>选择来自补全列表的上一个匹配项</td>
+</tr>
+<tr>
+<td><c-y></c-y></td>
+<td>确认使用当前选中的匹配项</td>
+</tr>
+<tr>
+<td><c-e></c-e></td>
+<td>还原最早输入的文本</td>
+</tr>
+<tr>
+<td><c-h>或<bs></bs></c-h></td>
+<td>从当前匹配项中删除一个字符</td>
+</tr>
+<tr>
+<td><c-l></c-l></td>
+<td>从当前匹配项中增加一个字符</td>
+</tr>
+<tr>
+<td>{char}</td>
+<td>中止自动补全并插入字符</td>
+</tr>
+</tbody>
+</table>
+<h4 id="8-3-4_利用Vim的拼写检查器，查找并更正拼写错误">8.3.4 利用Vim的拼写检查器，查找并更正拼写错误</h4><ul>
+<li>对你工作进行拼写检查<ul>
+<li><code>:set spell</code></li>
+<li><code>[s</code>和<code>]s</code>遍历拼写错误项<code>:h ]s</code></li>
+<li><code>z=</code>获取建议项<code>:h z=, 1z=</code></li>
+<li><code>zg</code>将当前单词添加到拼写文件中</li>
+<li><code>zw</code>把当前单词从拼写文件中删除</li>
+<li><code>zug</code>撤消针对当前单词的<code>zg</code>或<code>zw</code>命令</li>
+</ul>
+</li>
+<li>使用其他拼写字典<ul>
+<li><code>:h &#39;spelllang&#39;</code></li>
+<li><code>:h spell-remarks</code></li>
+<li><code>:h spelllfile.vim</code></li>
+</ul>
+</li>
+<li>将单词添加到拼写文件中<code>:h &#39;spellfile&#39;</code></li>
+<li>在插入模式下更正拼写错误<code>&lt;C-x&gt;s</code> <code>:h compl-spelling</code></li>
+</ul>
+<h4 id="8-3-5_接下来干什么">8.3.5 接下来干什么</h4><ul>
+<li>继续练习</li>
+<li>定制你自己的vim<ul>
+<li>essential.vim</li>
+<li>vimcasts.org</li>
+<li>moolenaar.net/habits.html</li>
+<li>github.com/nelstrom/dotfiles</li>
+<li>iccf-holland.org</li>
+</ul>
+</li>
+<li>欲善其事，先利其器</li>
+</ul>
+<h3 id="8-4_根据个人喜好定制vim">8.4 根据个人喜好定制vim</h3><h4 id="8-4-1_动态改变vim的设置项">8.4.1 动态改变vim的设置项</h4><ul>
+<li><code>:h option-list</code></li>
+<li>选项前面加no,关闭功能</li>
+<li>选项之后加!,反转设置</li>
+<li>选项之后加?,获取选项当前状态</li>
+<li>选项之后加&amp;,重置为默认值</li>
+<li>可以set多组选项</li>
+<li>setlocal只对当前缓冲区设置</li>
+</ul>
+<h4 id="8-4-2_将配置信息存至vimrc文件">8.4.2 将配置信息存至vimrc文件</h4><ul>
+<li><code>:h :source</code></li>
+<li><code>:source {file}</code>应用文件设置项</li>
+<li><code>:h vimrc</code></li>
+<li><code>:edit $MYVIMRC</code></li>
+</ul>
+<h4 id="8-4-3_为特定类型的文件应用个性化设置">8.4.3 为特定类型的文件应用个性化设置</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">has</span>(<span class="string">"autocmd"</span>)</span><br><span class="line">  <span class="keyword">filetype</span> <span class="keyword">on</span></span><br><span class="line">  <span class="keyword">autocmd</span> FileType <span class="keyword">ruby</span> <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">2</span> <span class="keyword">sts</span>=<span class="number">2</span> <span class="keyword">sw</span>=<span class="number">2</span> et</span><br><span class="line">  <span class="keyword">autocmd</span> FileType javascript <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">4</span> <span class="keyword">sts</span>=<span class="number">4</span> <span class="keyword">sw</span>=<span class="number">4</span> noet</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>:h :autocmd</code></li>
+<li><code>:h ftplugin-name</code></li>
+<li>~/.vim/after/ftplugin/javascript.vim</li>
+<li><code>filetype plugin on</code></li>
+</ul>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><stron]]>
