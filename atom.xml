@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2015-09-01T08:15:55.000Z</updated>
+  <updated>2015-09-11T02:07:05.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[zparseopts的使用帮助]]></title>
+    <link href="http://x8087.gitcafe.io/2015/09/10/zparseopts%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A9/"/>
+    <id>http://x8087.gitcafe.io/2015/09/10/zparseopts的使用帮助/</id>
+    <published>2015-09-10T01:44:06.000Z</published>
+    <updated>2015-09-11T02:07:05.000Z</updated>
+    <content type="html"><![CDATA[<p><code>zparseopts [ -DKME ] [ -a array ] [ -A assoc ] spec ...</code></p>
+<hr>
+<p>这个内部命令简化位置参数$<em>的分析。每个spec描述一个选项，且必须使用<code>opt[=array]</code>的格式。如果位置参数中包含<code>opt</code>描述的选项，该选项将复制到<code>-a array</code>指定和<code>opt</code>后<code>=array</code>指定的<code>array</code>中。<br><strong>注意：</strong>如果没用使用<code>-a</code>或<code>-A</code>选项指定<code>array</code>，且<code>spec</code>中也没有使用<code>=array</code>，命令会报错。<br>除非设置<code>-E</code>选项，分析中遇到任何一个不是描述<code>spec</code>的字符串都会停止。就算使用<code>-E</code>，分析中遇到<code>-</code>或者<code>--</code>的位置参数也会停止。<br><code>opt</code>描述必须下面中的一个。特殊字符能在前面加反斜杠显示在提供的选项名中。<br><code>name</code> <code>name+</code><br><code>name</code>是选项名去掉前缀<code>-</code>。GNU样式的长选项是特殊情况，<code>name</code>包含<code>--</code>中的一个；例如，<code>--file</code>选项的<code>name</code>相当于<code>-file</code>。<br>如果<code>name</code>后带<code>+</code>，位置参数中每次发现该选项都会添加到<code>array</code>，没有带<code>+</code>则只保存最后一个出现的选项。<br>使用这种格式，选项不带参数，所以分析时如果下一个位置参数不是以<code>-</code>开头将自动停止（除非使用<code>-E</code>选项）。<br><code>name:</code> <code>name:-</code> <code>name::</code><br>如果有<code>:</code>或者<code>::</code>，则选项带参数。一个冒号表示参数强制，两个冒号表示参数可选。<br><code>array</code>的第一个值是选项名，参数添加到选项名后。<br>可选参数和选项名放在同一个数组项（ <em>*注意</em></em> 这使得空字符串参数难以区分）。强制参数则添加到单独的数组项，除非使用<code>:-</code>才能和选项名放在同一个数组项。<br>上面描述的<code>+</code>可以出现在<code>name</code>和第一个冒号<code>:</code>中间。</p>
+<hr>
+<p><strong>zparseopts选项:</strong><br><code>-a array</code><br>如上所述，指定默认数组名，保存识别出的选项。</p>
+<p><code>-A assoc</code><br>使用该选项可以把选项和值以选项名为键选项参数为值放到关联数组内。</p>
+<p><code>-D</code><br>使用该选项可以把所有找到的调用shell和shell方法的位置参数删除。最多但是不包括任何<code>spec</code>没描述的。这和使用内部命令<code>shift</code>类似。</p>
+<p><code>-K</code><br>使用该选项可以使<code>-a</code>选项指定和<code>=array</code>格式的数组在没有<code>spec</code>使用到时保持不变。另一方面，当任何<code>spec</code>使用到时替换整个数组。通过<code>-A</code>选项指定的关联数组单独项使用<code>-K</code>保存。这使得可以在调用<code>zparseopts</code>前指派默认值到数组里。</p>
+<p><code>-M</code><br>实现相同选项名之间映射的指派规则变化。任何使用<code>=array</code>格式来选择值保存在哪里的<code>spec</code>，字符串<code>array</code>被解释为另一个<code>spec</code>的名字。如果没有找到其他<code>spec</code>，选项值按往常保存。这只是选项值保存方法的变化，不是<code>$*</code>被解析的方法，所以如果<code>name+</code>指定不一致结果将不可预知。</p>
+<p><code>-E</code><br>这改变了分析规则，在遇到首个字符串不是按<code>spec</code>中的一个描述时不停止。它可用于测试或（如果和<code>-D</code>配合使用时）提取选项和他们的参数，忽略位置参数中的其他所有选项和参数。例如:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> -bx -c y -cz baz -cend</span><br><span class="line">zparseopts a=foo <span class="tag">b</span>:=bar c+:=bar</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">foo=(-a)</span><br><span class="line">bar=(-<span class="tag">b</span> x -c y -c z)</span><br></pre></td></tr></table></figure>
+<p>‘baz’后的参数将不会用到。</p>
+<p>使用<code>-E</code>选项后：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> x -<span class="tag">b</span> y -c z arg1 arg2</span><br><span class="line">zparseopts -E -D <span class="tag">b</span>:=bar</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">bar=(-<span class="tag">b</span> y)</span><br><span class="line">set -- -<span class="tag">a</span> x -c z arg1 arg2</span><br></pre></td></tr></table></figure></p>
+<p>这就是说，选项<code>-b</code>和它的参数从位置参数提取到数组<code>bar</code>。</p>
+<p><code>-M</code>选项可以这样使用：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> -bx -c y -cz baz -cend</span><br><span class="line">zparseopts -A bar -M a=foo b+: c:=<span class="tag">b</span></span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">foo=(-a)</span><br><span class="line">bar=(-<span class="tag">a</span> <span class="string">''</span> -<span class="tag">b</span> xyz)</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>zparseopts [ -DKME ] [ -a array ] [ -A assoc ] spec ...</code></p>
+<hr>
+<p>这个内部命令简化位置参数$<em>的分析。每个spec描述一个选项，且必须使用<code>opt[=array]]]>
+    </summary>
+    
+      <category term="getopts" scheme="http://x8087.gitcafe.io/tags/getopts/"/>
+    
+      <category term="zparseopts" scheme="http://x8087.gitcafe.io/tags/zparseopts/"/>
+    
+      <category term="zsh" scheme="http://x8087.gitcafe.io/tags/zsh/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Cocos2d-x实战lua卷]]></title>
