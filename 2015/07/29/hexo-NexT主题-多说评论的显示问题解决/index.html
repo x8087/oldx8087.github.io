@@ -305,7 +305,7 @@ hexo NexT主题配置多说评论
 <p>通过谷歌搜索了一圈，虽然有遇到相似问题的案例，但是并无半毫收获，不是没有解决，就是吐槽多说后台问题比较多，建议转投disqus。百无聊赖才想起自己也是个程序猿，虽然不是搞web前端开发，但是多少能看懂一点。于是尝试自己调试查找问题。</p>
 <ul>
 <li><em>测试验证</em><br>测试了下，只要不登陆发表评论，或者把所有登陆用户的评论删除，评论界面是可以正常显示的。打开浏览器的开发者工具，可以看到当页面有问题时<code>source/js/hook-duoshuo.js</code>脚本在<strong>18</strong>行报错找不到变量<code>duoshuo_user_ID</code>。<br>到这里，之前的所有缺少底气和担心都烟消云散。</li>
-<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;% if theme.duoshuo_info.ua_enable %&#125;</span><br><span class="line"> &#123;% if theme.duoshuo_info.admin_enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="kotlin"></span><br><span class="line"> <span class="variable"><span class="keyword">var</span> duoshuo_user_ID</span> = </span></span><span class="expression">&#123;&#123;<span class="variable">theme.duoshuo</span>_<span class="variable">info.user</span>_<span class="variable">id</span>&#125;&#125;</span><span class="xml"><span class="undefined"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;% if theme.duoshuo_info.ua_enable %&#125;</span><br><span class="line"> &#123;% if theme.duoshuo_info.admin_enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript"></span><br><span class="line"> <span class="keyword">var</span> duoshuo_user_ID = </span></span><span class="expression">&#123;&#123;<span class="variable">theme.duoshuo</span>_<span class="variable">info.user</span>_<span class="variable">id</span>&#125;&#125;</span><span class="xml"><span class="undefined"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>可以看出如果主题配置里<code>duoshuo_info</code>的<code>ua_enable</code>设置为<code>true</code>时会往页面嵌入<code>hook-duoshuo.js</code>，而<code>admin_enable</code>设置为<code>true</code>时则会生成变量<code>duoshuo_user_ID</code>。这时才发现原来罪魁祸首是主题配置里的<code>admin_enable</code>设置成了<code>false</code>，在next官方还没修复之前，把它设置成<code>true</code>就可以完美解决了。</p>
@@ -415,7 +415,7 @@ hexo NexT主题配置多说评论
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -429,7 +429,7 @@ hexo NexT主题配置多说评论
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">42</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -496,8 +496,8 @@ hexo NexT主题配置多说评论
     <footer id="footer" class="footer">
       <div class="footer-inner"> <div class="copyright" >
   
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy; &nbsp;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
