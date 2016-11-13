@@ -5,7 +5,7 @@
   <subtitle><![CDATA[--存在就是最大的bug]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://x8087.gitcafe.io//"/>
-  <updated>2016-11-13T05:58:50.000Z</updated>
+  <updated>2016-11-13T06:52:03.000Z</updated>
   <id>http://x8087.gitcafe.io//</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[hexo使用publish发布草稿]]></title>
+    <link href="http://x8087.gitcafe.io/2016/11/13/hexo%E4%BD%BF%E7%94%A8publish%E5%8F%91%E5%B8%83%E8%8D%89%E7%A8%BF/"/>
+    <id>http://x8087.gitcafe.io/2016/11/13/hexo使用publish发布草稿/</id>
+    <published>2016-11-13T06:38:02.000Z</published>
+    <updated>2016-11-13T06:52:03.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="问题">问题</h2><p>hexo使用publish发布草稿时报错FATAL Something’s wrong.</p>
+<h2 id="解决">解决</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Error:</span> Draft <span class="string">"笔记-vim自动命令事件-md"</span> does not exist.</span><br><span class="line">    at <span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo/</span>lib<span class="regexp">/hexo/</span>post.<span class="string">js:</span><span class="number">197</span>:<span class="number">22</span></span><br><span class="line">    at tryCatcher (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>util.<span class="string">js:</span><span class="number">16</span>:<span class="number">23</span>)</span><br><span class="line">    at Promise._settlePromiseFromHandler (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">497</span>:<span class="number">31</span>)</span><br><span class="line">    at Promise._settlePromise (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">555</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._settlePromise0 (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">600</span>:<span class="number">10</span>)</span><br><span class="line">    at Promise._settlePromises (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">683</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._fulfill (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">624</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._resolveCallback (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">424</span>:<span class="number">57</span>)</span><br><span class="line">    at Promise._settlePromiseFromHandler (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">510</span>:<span class="number">17</span>)</span><br><span class="line">    at Promise._settlePromise (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">555</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._settlePromise0 (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">600</span>:<span class="number">10</span>)</span><br><span class="line">    at Promise._settlePromises (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">683</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._fulfill (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">624</span>:<span class="number">18</span>)</span><br><span class="line">    at Promise._resolveCallback (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">424</span>:<span class="number">57</span>)</span><br><span class="line">    at ReductionPromiseArray._resolve (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>reduce.<span class="string">js:</span><span class="number">51</span>:<span class="number">19</span>)</span><br><span class="line">    at Promise.completed [<span class="keyword">as</span> _fulfillmentHandler0] (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>reduce.<span class="string">js:</span><span class="number">112</span>:<span class="number">15</span>)</span><br><span class="line">    at Promise._settlePromise (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">552</span>:<span class="number">21</span>)</span><br><span class="line">    at Promise._settlePromise0 (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">600</span>:<span class="number">10</span>)</span><br><span class="line">    at Promise._settlePromises (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>promise.<span class="string">js:</span><span class="number">683</span>:<span class="number">18</span>)</span><br><span class="line">    at Async._drainQueue (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>async.<span class="string">js:</span><span class="number">125</span>:<span class="number">16</span>)</span><br><span class="line">    at Async._drainQueues (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>async.<span class="string">js:</span><span class="number">135</span>:<span class="number">10</span>)</span><br><span class="line">    at Immediate.Async.drainQueues [<span class="keyword">as</span> _onImmediate] (<span class="regexp">/Users/</span>user<span class="regexp">/Documents/</span>work<span class="regexp">/hexo/</span>node_modules<span class="regexp">/hexo-fs/</span>node_modules<span class="regexp">/bluebird/</span>js<span class="regexp">/release/</span>async.<span class="string">js:</span><span class="number">16</span>:<span class="number">14</span>)</span><br><span class="line">    at tryOnImmediate (timers.<span class="string">js:</span><span class="number">534</span>:<span class="number">15</span>)</span><br><span class="line">    at processImmediate [<span class="keyword">as</span> _immediateCallback] (timers.<span class="string">js:</span><span class="number">514</span>:<span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>根据报错堆栈可以确认问题是由于找不到文件导致。仔细检查文件名发现后面加了<strong>-md</strong>的文件类型后缀，调用时去掉后缀改成<code>hexo publish &quot;笔记-vim自动命令事件&quot;</code>成功发布。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="问题">问题</h2><p>hexo使用publish发布草稿时报错FATAL Something’s wrong.</p>
+<h2 id="解决">解决</h2><figure class="highlight groovy"><table><tr><td cl]]>
+    </summary>
+    
+      <category term="bug" scheme="http://x8087.gitcafe.io/tags/bug/"/>
+    
+      <category term="hexo" scheme="http://x8087.gitcafe.io/tags/hexo/"/>
+    
+      <category term="publish" scheme="http://x8087.gitcafe.io/tags/publish/"/>
+    
+      <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[笔记-vim自动命令事件整理]]></title>
     <link href="http://x8087.gitcafe.io/2016/11/12/%E7%AC%94%E8%AE%B0-vim%E8%87%AA%E5%8A%A8%E5%91%BD%E4%BB%A4%E4%BA%8B%E4%BB%B6/"/>
     <id>http://x8087.gitcafe.io/2016/11/12/笔记-vim自动命令事件/</id>
     <published>2016-11-12T07:09:00.000Z</published>
-    <updated>2016-11-13T05:58:50.000Z</updated>
+    <updated>2016-11-13T06:11:34.000Z</updated>
     <content type="html"><![CDATA[<h2 id="事件">事件</h2><h3 id="读取(Reading)">读取(Reading)</h3><h4 id="BufNewFile">BufNewFile</h4><p>starting to edit a file that doesn’t exist<br>开始编辑不存在的文件。<br>Can be used to read in a skeleton file.<br>能用在一个构架文件读取。</p>
 <h4 id="BufReadPre">BufReadPre</h4><p>starting to edit a new buffer, before reading the file<br>开始编辑一个新的缓存，读取文件之前。<br>Not used if the file doesn’t exist.<br>文件如果不存在不能使用</p>
 <h4 id="BufRead_or_BufReadPost">BufRead or BufReadPost</h4><p>starting to edit a new buffer, after reading the file<br>开始编辑一个新的缓存，读取文件之后。</p>
@@ -124,6 +149,8 @@
     </summary>
     
       <category term="vim" scheme="http://x8087.gitcafe.io/tags/vim/"/>
+    
+      <category term="帮助" scheme="http://x8087.gitcafe.io/tags/%E5%B8%AE%E5%8A%A9/"/>
     
       <category term="技巧" scheme="http://x8087.gitcafe.io/tags/%E6%8A%80%E5%B7%A7/"/>
     
@@ -5007,29 +5034,6 @@
       <category term="问题" scheme="http://x8087.gitcafe.io/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="技术" scheme="http://x8087.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[累觉不爱的闹腾]]></title>
-    <link href="http://x8087.gitcafe.io/2015/07/28/%E7%B4%AF%E8%A7%89%E4%B8%8D%E7%88%B1%E7%9A%84%E9%97%B9%E8%85%BE/"/>
-    <id>http://x8087.gitcafe.io/2015/07/28/累觉不爱的闹腾/</id>
-    <published>2015-07-28T06:21:38.000Z</published>
-    <updated>2015-07-30T00:20:11.000Z</updated>
-    <content type="html"><![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
-<p>2015-07-29 22点 发脾气</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>只希望你和我好，<br>互不猜忌，<br>也互不称誉，<br>安如平日，<br>你和我说话像对自己说话一样，<br>我和你说话也像对自己说话一样。<br><em>——write by sstny.</em></p>
-<p>2015-07-29 22点 发脾气</p>
-]]>
-    </summary>
-    
-      <category term="杂感" scheme="http://x8087.gitcafe.io/tags/%E6%9D%82%E6%84%9F/"/>
-    
-      <category term="生活" scheme="http://x8087.gitcafe.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="情感" scheme="http://x8087.gitcafe.io/categories/%E6%83%85%E6%84%9F/"/>
     
   </entry>
   
