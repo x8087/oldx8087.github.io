@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="bug,hexo,next,多说,技术,问题," />
+  <meta name="keywords" content="hexo,next,多说,问题,bug,技术," />
 
 
 
@@ -275,16 +275,16 @@ hexo NexT主题配置多说评论
       
         <span itemprop="articleBody"><p><font color="blue"><strong>2015-08-01更新：</strong>nexT官方已于0.4.5.1版本修复</font></p>
 <hr>
-<h5 id="问题说明：">问题说明：</h5><hr>
+<h5 id="问题说明："><a href="#问题说明：" class="headerlink" title="问题说明："></a>问题说明：</h5><hr>
 <p><strong>hexo</strong> <strong>NexT主题</strong>配置<strong>多说评论</strong></p>
 <ul>
 <li><strong>游客</strong>评论正常显示</li>
 <li>当有<strong>登陆用户</strong>发布评论后会导致评论无法正常显示。<br>使用了<code>hexo3.1.1</code>+<code>nexT0.3.0</code>+<code>duoshuo</code></li>
 </ul>
-<h5 id="解决方法：">解决方法：</h5><hr>
+<h5 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h5><hr>
 <p>  把<strong>主题配置</strong><code>_config.yml</code>里<code>duoshuo_info</code>下的<code>admin_enable</code>设置成<code>true</code></p>
 <hr>
-<h5 id="背景介绍+详细说明">背景介绍+详细说明</h5><ul>
+<h5 id="背景介绍-详细说明"><a href="#背景介绍-详细说明" class="headerlink" title="背景介绍+详细说明"></a>背景介绍+详细说明</h5><ul>
 <li><p><em>背景</em>~~</p>
 <blockquote>
 <p>花了一小天时间把github和gitcafe的pages主页弄成博客<br>结果评论系统无论怎么弄都有显示问题<br>于是乎有了下面的漫长折腾之旅。</p>
@@ -305,7 +305,7 @@ hexo NexT主题配置多说评论
 <p>通过谷歌搜索了一圈，虽然有遇到相似问题的案例，但是并无半毫收获，不是没有解决，就是吐槽多说后台问题比较多，建议转投disqus。百无聊赖才想起自己也是个程序猿，虽然不是搞web前端开发，但是多少能看懂一点。于是尝试自己调试查找问题。</p>
 <ul>
 <li><em>测试验证</em><br>测试了下，只要不登陆发表评论，或者把所有登陆用户的评论删除，评论界面是可以正常显示的。打开浏览器的开发者工具，可以看到当页面有问题时<code>source/js/hook-duoshuo.js</code>脚本在<strong>18</strong>行报错找不到变量<code>duoshuo_user_ID</code>。<br>到这里，之前的所有缺少底气和担心都烟消云散。</li>
-<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;% if theme.duoshuo_info.ua_enable %&#125;</span><br><span class="line"> &#123;% if theme.duoshuo_info.admin_enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript"></span><br><span class="line"> <span class="keyword">var</span> duoshuo_user_ID = </span></span><span class="expression">&#123;&#123;<span class="variable">theme.duoshuo</span>_<span class="variable">info.user</span>_<span class="variable">id</span>&#125;&#125;</span><span class="xml"><span class="undefined"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">url</span>_<span class="variable">for</span>(<span class="variable">theme.js</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<li><em>定位问题并解决</em><br>问题确定了，接下来只要找到问题的根源就可以轻松解决。在next项目目录下搜索<code>duoshuo_user_ID</code>，可以看到包含字段的几个文件。其中可以看出<code>layout/_scripts/comments/duoshuo.swig</code>文件就是这个问题关键，如下是文件的20到28行<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.duoshuo_info.ua_enable %&#125;</span><span class="xml"></span></div><div class="line"> <span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.duoshuo_info.admin_enable %&#125;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line"> <span class="keyword">var</span> duoshuo_user_ID = <span class="template-variable">&#123;&#123;theme.duoshuo_info.user_id&#125;&#125;</span><span class="xml"><span class="undefined"></span></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"</span></span><span class="template-variable">&#123;&#123; url_for(theme.js) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">/ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"</span></span><span class="template-variable">&#123;&#123; url_for(theme.js) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">/hook-duoshuo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">  <span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>可以看出如果主题配置里<code>duoshuo_info</code>的<code>ua_enable</code>设置为<code>true</code>时会往页面嵌入<code>hook-duoshuo.js</code>，而<code>admin_enable</code>设置为<code>true</code>时则会生成变量<code>duoshuo_user_ID</code>。这时才发现原来罪魁祸首是主题配置里的<code>admin_enable</code>设置成了<code>false</code>，在next官方还没修复之前，把它设置成<code>true</code>就可以完美解决了。</p>
@@ -320,17 +320,17 @@ hexo NexT主题配置多说评论
       
         <div class="post-tags">
           
-            <a href="/tags/bug/" rel="tag">#bug</a>
-          
             <a href="/tags/hexo/" rel="tag">#hexo</a>
           
             <a href="/tags/next/" rel="tag">#next</a>
           
             <a href="/tags/多说/" rel="tag">#多说</a>
           
-            <a href="/tags/技术/" rel="tag">#技术</a>
-          
             <a href="/tags/问题/" rel="tag">#问题</a>
+          
+            <a href="/tags/bug/" rel="tag">#bug</a>
+          
+            <a href="/tags/技术/" rel="tag">#技术</a>
           
         </div>
       
@@ -480,7 +480,7 @@ hexo NexT主题配置多说评论
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#问题说明："><span class="nav-number">1.</span> <span class="nav-text">问题说明：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方法："><span class="nav-number">2.</span> <span class="nav-text">解决方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#背景介绍+详细说明"><span class="nav-number">3.</span> <span class="nav-text">背景介绍+详细说明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#问题说明："><span class="nav-number">1.</span> <span class="nav-text">问题说明：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方法："><span class="nav-number">2.</span> <span class="nav-text">解决方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#背景介绍-详细说明"><span class="nav-number">3.</span> <span class="nav-text">背景介绍+详细说明</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

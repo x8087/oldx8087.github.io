@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="c++,cocos2d-x," />
+  <meta name="keywords" content="cocos2d-x,c++," />
 
 
 
@@ -37,7 +37,7 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  —&amp;gt;计算机x86架构CPU  —&amp;gt;移动设备ARM架构CPU操作系统：
+<meta name="description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  –&amp;gt;计算机x86架构CPU  –&amp;gt;移动设备ARM架构CPU操作系统：
 
 windows：windows XP（32位）、Vista（32或64位）、Windows7（32或64位）、Windows8(32或64位）
 mac：OSX 10.5.8及以上
@@ -46,7 +46,7 @@ Linux：Ubuntu 10">
 <meta property="og:title" content="Cocos2d-x实战c++卷">
 <meta property="og:url" content="http://x8087.gitcafe.io/2015/09/15/Cocos2d-x实战c-卷/index.html">
 <meta property="og:site_name" content="假如上帝不是程序员">
-<meta property="og:description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  —&amp;gt;计算机x86架构CPU  —&amp;gt;移动设备ARM架构CPU操作系统：
+<meta property="og:description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  –&amp;gt;计算机x86架构CPU  –&amp;gt;移动设备ARM架构CPU操作系统：
 
 windows：windows XP（32位）、Vista（32或64位）、Windows7（32或64位）、Windows8(32或64位）
 mac：OSX 10.5.8及以上
@@ -54,7 +54,7 @@ Linux：Ubuntu 10">
 <meta property="og:updated_time" content="2015-09-15T14:49:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cocos2d-x实战c++卷">
-<meta name="twitter:description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  —&amp;gt;计算机x86架构CPU  —&amp;gt;移动设备ARM架构CPU操作系统：
+<meta name="twitter:description" content="21.从win32到Android平台的移植21.1 搭建交叉编译和打包环境CPU指令集不同、架构不同  –&amp;gt;计算机x86架构CPU  –&amp;gt;移动设备ARM架构CPU操作系统：
 
 windows：windows XP（32位）、Vista（32或64位）、Windows7（32或64位）、Windows8(32或64位）
 mac：OSX 10.5.8及以上
@@ -228,7 +228,7 @@ Linux：Ubuntu 10">
       
 
       
-        <span itemprop="articleBody"><h3 id="21-从win32到Android平台的移植">21.从win32到Android平台的移植</h3><h4 id="21-1_搭建交叉编译和打包环境">21.1 搭建交叉编译和打包环境</h4><p>CPU指令集不同、架构不同<br>  —&gt;计算机x86架构CPU<br>  —&gt;移动设备ARM架构CPU<br>操作系统：</p>
+        <span itemprop="articleBody"><h3 id="21-从win32到Android平台的移植"><a href="#21-从win32到Android平台的移植" class="headerlink" title="21.从win32到Android平台的移植"></a>21.从win32到Android平台的移植</h3><h4 id="21-1-搭建交叉编译和打包环境"><a href="#21-1-搭建交叉编译和打包环境" class="headerlink" title="21.1 搭建交叉编译和打包环境"></a>21.1 搭建交叉编译和打包环境</h4><p>CPU指令集不同、架构不同<br>  –&gt;计算机x86架构CPU<br>  –&gt;移动设备ARM架构CPU<br>操作系统：</p>
 <ul>
 <li>windows：windows XP（32位）、Vista（32或64位）、Windows7（32或64位）、Windows8(32或64位）</li>
 <li>mac：OSX 10.5.8及以上</li>
@@ -240,9 +240,9 @@ Linux：Ubuntu 10">
 <li>Apache Ant：<a href="http://ant.apache.org/" target="_blank" rel="external">下载地址</a>需要配置环境变量，将bin目录追加到PATH环境变量。</li>
 <li>Python：<a href="https://www.python.org/" target="_blank" rel="external">下载地址</a>需要配置环境变量，Python目录追加到PATH环境变量。使用Python2</li>
 </ol>
-<h4 id="21-1-1_安装Android_SDK">21.1.1 安装Android SDK</h4><p><a href="http://developer.android.com/sdk/index.html" target="_blank" rel="external">下载地址</a><br>Download the SDK Tools for windows提供Android SDK安装文件<br>Download the SDK ADT Bundle for windows提供一个工具包，包括安装了ADT插件的Eclipe工具和Android SDK。<br>交叉编译不需要ADT和Eclipe<br>使用ADT和Eclipe能够方便管理Android应用的发布、运行和调试。方便管理Android模拟器<br>C++工具插件CDT<br>配置NDK环境<br>Cygwin</p>
-<h5 id="21-1-2_管理Android_SDK">21.1.2 管理Android SDK</h5><p>安装目录下SDK Manage文件</p>
-<h5 id="21-1-3_管理Android开发模拟器">21.1.3 管理Android开发模拟器</h5><p>AVD Manager工具创建和管理Android模拟器</p>
+<h4 id="21-1-1-安装Android-SDK"><a href="#21-1-1-安装Android-SDK" class="headerlink" title="21.1.1 安装Android SDK"></a>21.1.1 安装Android SDK</h4><p><a href="http://developer.android.com/sdk/index.html" target="_blank" rel="external">下载地址</a><br>Download the SDK Tools for windows提供Android SDK安装文件<br>Download the SDK ADT Bundle for windows提供一个工具包，包括安装了ADT插件的Eclipe工具和Android SDK。<br>交叉编译不需要ADT和Eclipe<br>使用ADT和Eclipe能够方便管理Android应用的发布、运行和调试。方便管理Android模拟器<br>C++工具插件CDT<br>配置NDK环境<br>Cygwin</p>
+<h5 id="21-1-2-管理Android-SDK"><a href="#21-1-2-管理Android-SDK" class="headerlink" title="21.1.2 管理Android SDK"></a>21.1.2 管理Android SDK</h5><p>安装目录下SDK Manage文件</p>
+<h5 id="21-1-3-管理Android开发模拟器"><a href="#21-1-3-管理Android开发模拟器" class="headerlink" title="21.1.3 管理Android开发模拟器"></a>21.1.3 管理Android开发模拟器</h5><p>AVD Manager工具创建和管理Android模拟器</p>
 </span>
       
     </div>
@@ -251,9 +251,9 @@ Linux：Ubuntu 10">
       
         <div class="post-tags">
           
-            <a href="/tags/c/" rel="tag">#c++</a>
-          
             <a href="/tags/cocos2d-x/" rel="tag">#cocos2d-x</a>
+          
+            <a href="/tags/c/" rel="tag">#c++</a>
           
         </div>
       
@@ -403,7 +403,7 @@ Linux：Ubuntu 10">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-从win32到Android平台的移植"><span class="nav-number">1.</span> <span class="nav-text">21.从win32到Android平台的移植</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#21-1_搭建交叉编译和打包环境"><span class="nav-number">1.1.</span> <span class="nav-text">21.1 搭建交叉编译和打包环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-1-1_安装Android_SDK"><span class="nav-number">1.2.</span> <span class="nav-text">21.1.1 安装Android SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#21-1-2_管理Android_SDK"><span class="nav-number">1.2.1.</span> <span class="nav-text">21.1.2 管理Android SDK</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#21-1-3_管理Android开发模拟器"><span class="nav-number">1.2.2.</span> <span class="nav-text">21.1.3 管理Android开发模拟器</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-从win32到Android平台的移植"><span class="nav-number">1.</span> <span class="nav-text">21.从win32到Android平台的移植</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#21-1-搭建交叉编译和打包环境"><span class="nav-number">1.1.</span> <span class="nav-text">21.1 搭建交叉编译和打包环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-1-1-安装Android-SDK"><span class="nav-number">1.2.</span> <span class="nav-text">21.1.1 安装Android SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#21-1-2-管理Android-SDK"><span class="nav-number">1.2.1.</span> <span class="nav-text">21.1.2 管理Android SDK</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#21-1-3-管理Android开发模拟器"><span class="nav-number">1.2.2.</span> <span class="nav-text">21.1.3 管理Android开发模拟器</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

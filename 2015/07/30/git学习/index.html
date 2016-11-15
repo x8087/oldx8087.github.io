@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="git,版本控制,笔记," />
+  <meta name="keywords" content="git,笔记,版本控制," />
 
 
 
@@ -255,15 +255,15 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="1-_取得项目的Git仓库">1. 取得项目的Git仓库</h3><ul>
+        <span itemprop="articleBody"><h3 id="1-取得项目的Git仓库"><a href="#1-取得项目的Git仓库" class="headerlink" title="1. 取得项目的Git仓库"></a>1. 取得项目的Git仓库</h3><ul>
 <li>在工作目录中初始化新仓库<br><code>git init</code><br><code>git add</code></li>
 <li>从现有仓库克隆<br><code>git clone [url]</code><br><code>git clone [url] [addr]</code></li>
 </ul>
 <hr>
-<h3 id="2-_记录每次更新到仓库">2. 记录每次更新到仓库</h3><ul>
+<h3 id="2-记录每次更新到仓库"><a href="#2-记录每次更新到仓库" class="headerlink" title="2. 记录每次更新到仓库"></a>2. 记录每次更新到仓库</h3><ul>
 <li>文件状态 <code>untracked 未跟踪</code>, <code>unmodified 未修改</code>, <code>modified 已修改</code>, <code>staged 已缓存</code></li>
 </ul>
-<h5 id="2-1_检查当前文件状态_git_status">2.1 检查当前文件状态 <code>git status</code></h5><h5 id="2-2_跟踪新文件git_add">2.2 跟踪新文件<code>git add</code></h5><h5 id="2-3_暂存已修改文件git_add">2.3 暂存已修改文件<code>git add</code></h5><h5 id="2-4_忽略某些文件-gitignore">2.4 忽略某些文件<code>.gitignore</code></h5><ul>
+<h5 id="2-1-检查当前文件状态-git-status"><a href="#2-1-检查当前文件状态-git-status" class="headerlink" title="2.1 检查当前文件状态 git status"></a>2.1 检查当前文件状态 <code>git status</code></h5><h5 id="2-2-跟踪新文件git-add"><a href="#2-2-跟踪新文件git-add" class="headerlink" title="2.2 跟踪新文件git add"></a>2.2 跟踪新文件<code>git add</code></h5><h5 id="2-3-暂存已修改文件git-add"><a href="#2-3-暂存已修改文件git-add" class="headerlink" title="2.3 暂存已修改文件git add"></a>2.3 暂存已修改文件<code>git add</code></h5><h5 id="2-4-忽略某些文件-gitignore"><a href="#2-4-忽略某些文件-gitignore" class="headerlink" title="2.4 忽略某些文件.gitignore"></a>2.4 忽略某些文件<code>.gitignore</code></h5><ul>
 <li>忽略空行及<code>#</code>开头的行</li>
 <li>后跟<code>/</code>表示目录</li>
 <li>模式前加<code>!</code>表示取反，忽略模式以外的文件或目录</li>
@@ -277,26 +277,26 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-5_查看已暂存和未暂存的文件">2.5 查看已暂存和未暂存的文件</h5><ul>
+<h5 id="2-5-查看已暂存和未暂存的文件"><a href="#2-5-查看已暂存和未暂存的文件" class="headerlink" title="2.5 查看已暂存和未暂存的文件"></a>2.5 查看已暂存和未暂存的文件</h5><ul>
 <li><code>git diff</code>比较工作目录中当前文件与暂存文件之间的差异 </li>
 <li><code>git diff --cached</code>或<code>git diff --staged</code>（1.6.1以上版本，效果一样）比较暂存文件与上次提交文件之间的差异</li>
 </ul>
-<h5 id="2-6_提交更新">2.6 提交更新</h5><ul>
+<h5 id="2-6-提交更新"><a href="#2-6-提交更新" class="headerlink" title="2.6 提交更新"></a>2.6 提交更新</h5><ul>
 <li><code>git commit</code></li>
 <li><code>git config --global core.editor</code>设定编辑器</li>
 <li><code>-v</code>显示详细差异</li>
 </ul>
-<h5 id="2-7_跳过使用暂存区域">2.7 跳过使用暂存区域</h5><ul>
+<h5 id="2-7-跳过使用暂存区域"><a href="#2-7-跳过使用暂存区域" class="headerlink" title="2.7 跳过使用暂存区域"></a>2.7 跳过使用暂存区域</h5><ul>
 <li><code>git commit -a</code></li>
 </ul>
-<h5 id="2-8_移除文件">2.8 移除文件</h5><ul>
+<h5 id="2-8-移除文件"><a href="#2-8-移除文件" class="headerlink" title="2.8 移除文件"></a>2.8 移除文件</h5><ul>
 <li><code>git rm</code></li>
 <li><code>git rm -f</code>强制删除包含在暂存区的文件</li>
 <li><code>git rm --cached</code>删除版本控制，保留本地文件</li>
 <li>后面可跟文件或者目录的名字，也可以使用glob模式</li>
 <li>模式前加反斜杠<code>\</code>，使用git自身的文件模式扩展匹配方式，<code>*</code>会递归匹配</li>
 </ul>
-<h5 id="2-9_移动文件">2.9 移动文件</h5><ul>
+<h5 id="2-9-移动文件"><a href="#2-9-移动文件" class="headerlink" title="2.9 移动文件"></a>2.9 移动文件</h5><ul>
 <li><code>git mv file_from file_to</code></li>
 </ul>
 </span>
@@ -309,9 +309,9 @@
           
             <a href="/tags/git/" rel="tag">#git</a>
           
-            <a href="/tags/版本控制/" rel="tag">#版本控制</a>
-          
             <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/版本控制/" rel="tag">#版本控制</a>
           
         </div>
       
@@ -461,7 +461,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_取得项目的Git仓库"><span class="nav-number">1.</span> <span class="nav-text">1. 取得项目的Git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_记录每次更新到仓库"><span class="nav-number">2.</span> <span class="nav-text">2. 记录每次更新到仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1_检查当前文件状态_git_status"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1 检查当前文件状态 git status</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2_跟踪新文件git_add"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2 跟踪新文件git add</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3_暂存已修改文件git_add"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.3 暂存已修改文件git add</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4_忽略某些文件-gitignore"><span class="nav-number">2.0.4.</span> <span class="nav-text">2.4 忽略某些文件.gitignore</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5_查看已暂存和未暂存的文件"><span class="nav-number">2.0.5.</span> <span class="nav-text">2.5 查看已暂存和未暂存的文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6_提交更新"><span class="nav-number">2.0.6.</span> <span class="nav-text">2.6 提交更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7_跳过使用暂存区域"><span class="nav-number">2.0.7.</span> <span class="nav-text">2.7 跳过使用暂存区域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-8_移除文件"><span class="nav-number">2.0.8.</span> <span class="nav-text">2.8 移除文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-9_移动文件"><span class="nav-number">2.0.9.</span> <span class="nav-text">2.9 移动文件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-取得项目的Git仓库"><span class="nav-number">1.</span> <span class="nav-text">1. 取得项目的Git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-记录每次更新到仓库"><span class="nav-number">2.</span> <span class="nav-text">2. 记录每次更新到仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-检查当前文件状态-git-status"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1 检查当前文件状态 git status</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-跟踪新文件git-add"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2 跟踪新文件git add</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-暂存已修改文件git-add"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.3 暂存已修改文件git add</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-忽略某些文件-gitignore"><span class="nav-number">2.0.4.</span> <span class="nav-text">2.4 忽略某些文件.gitignore</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-查看已暂存和未暂存的文件"><span class="nav-number">2.0.5.</span> <span class="nav-text">2.5 查看已暂存和未暂存的文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6-提交更新"><span class="nav-number">2.0.6.</span> <span class="nav-text">2.6 提交更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-跳过使用暂存区域"><span class="nav-number">2.0.7.</span> <span class="nav-text">2.7 跳过使用暂存区域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-8-移除文件"><span class="nav-number">2.0.8.</span> <span class="nav-text">2.8 移除文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-9-移动文件"><span class="nav-number">2.0.9.</span> <span class="nav-text">2.9 移动文件</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

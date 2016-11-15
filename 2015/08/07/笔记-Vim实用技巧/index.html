@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="vim,技巧,笔记," />
+  <meta name="keywords" content="vim,笔记,技巧," />
 
 
 
@@ -315,7 +315,7 @@ dd
       
 
       
-        <span itemprop="articleBody"><h2 id="0-_Vim解决问题的方式">0. Vim解决问题的方式</h2><h3 id="结识-_[^hpoint]_命令">结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
+        <span itemprop="articleBody"><h2 id="0-Vim解决问题的方式"><a href="#0-Vim解决问题的方式" class="headerlink" title="0. Vim解决问题的方式"></a>0. Vim解决问题的方式</h2><h3 id="结识-hpoint-命令"><a href="#结识-hpoint-命令" class="headerlink" title="结识. [^hpoint] 命令"></a>结识<code>.</code> [^hpoint] 命令</h3><p><strong>功能</strong> 重复上次修改<br><strong>注意</strong> </p>
 <ul>
 <li>插入模式下,重复从进入到结束的所有操作(<em>移动光标会重置修改状态</em>)</li>
 <li><code>.</code>命令事实上是一个微型的宏</li>
@@ -342,14 +342,14 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="不要自我重复">不要自我重复</h3><h4 id="减少无关移动">减少无关移动</h4><p><font color="green"><strong>example1:</strong>在行末添加分号</font><br>方法1</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$</span><br><span class="line"><span class="keyword">a</span>;&lt;Esc&gt;</span><br><span class="line"><span class="keyword">j</span>$.</span><br></pre></td></tr></table></figure>
+<h3 id="不要自我重复"><a href="#不要自我重复" class="headerlink" title="不要自我重复"></a>不要自我重复</h3><h4 id="减少无关移动"><a href="#减少无关移动" class="headerlink" title="减少无关移动"></a>减少无关移动</h4><p><font color="green"><strong>example1:</strong>在行末添加分号</font><br>方法1</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$</div><div class="line">a;&lt;Esc&gt;</div><div class="line">j$.</div></pre></td></tr></table></figure>
 <p>方法2:</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A;&lt;Esc&gt;</span><br><span class="line"><span class="keyword">j</span>.</span><br></pre></td></tr></table></figure>
-<h4 id="复合命令">复合命令</h4><blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">A;&lt;Esc&gt;</div><div class="line">j.</div></pre></td></tr></table></figure>
+<h4 id="复合命令"><a href="#复合命令" class="headerlink" title="复合命令"></a>复合命令</h4><blockquote>
 <p>执行动作的同时自动从普通模式切换到插入模式</p>
 </blockquote>
-<h4 id="常用复合命令">常用复合命令</h4><table>
+<h4 id="常用复合命令"><a href="#常用复合命令" class="headerlink" title="常用复合命令"></a>常用复合命令</h4><table>
 <thead>
 <tr>
 <th style="text-align:center">复合命令</th>
@@ -387,8 +387,8 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="以退为进">以退为进</h3><p>使移动可重复<code>f{char}</code>[^f] <code>;</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f&#123;char&#125;</span><br><span class="line">&#123;operation&#125;&lt;Esc&gt;</span><br><span class="line">;.</span><br></pre></td></tr></table></figure></p>
-<h3 id="执行、重复、回退">执行、重复、回退</h3><table>
+<h3 id="以退为进"><a href="#以退为进" class="headerlink" title="以退为进"></a>以退为进</h3><p>使移动可重复<code>f{char}</code>[^f] <code>;</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">f&#123;char&#125;</div><div class="line">&#123;operation&#125;&lt;Esc&gt;</div><div class="line">;.</div></pre></td></tr></table></figure></p>
+<h3 id="执行、重复、回退"><a href="#执行、重复、回退" class="headerlink" title="执行、重复、回退"></a>执行、重复、回退</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">操作</th>
@@ -468,7 +468,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="查找并手动替换">查找并手动替换</h3><table>
+<h3 id="查找并手动替换"><a href="#查找并手动替换" class="headerlink" title="查找并手动替换"></a>查找并手动替换</h3><table>
 <thead>
 <tr>
 <th>功能</th>
@@ -490,10 +490,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="结识-范式">结识<code>.</code>范式</h3><blockquote>
+<h3 id="结识-范式"><a href="#结识-范式" class="headerlink" title="结识.范式"></a>结识<code>.</code>范式</h3><blockquote>
 <p><strong>用一键移动,另一键执行</strong></p>
 </blockquote>
-<h2 id="2-_模式">2. 模式</h2><h3 id="2-1-_普通">2.1. 普通</h3><h4 id="2-1-1-_把撤消单元切成块，普通模式和插入模式之间切换的粒度,">2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,</h4><h4 id="2-1-2-_构造可重复的修改:">2.1.2. 构造可重复的修改:</h4><table>
+<h2 id="2-模式"><a href="#2-模式" class="headerlink" title="2. 模式"></a>2. 模式</h2><h3 id="2-1-普通"><a href="#2-1-普通" class="headerlink" title="2.1. 普通"></a>2.1. 普通</h3><h4 id="2-1-1-把撤消单元切成块，普通模式和插入模式之间切换的粒度"><a href="#2-1-1-把撤消单元切成块，普通模式和插入模式之间切换的粒度" class="headerlink" title="2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,"></a>2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,</h4><h4 id="2-1-2-构造可重复的修改"><a href="#2-1-2-构造可重复的修改" class="headerlink" title="2.1.2. 构造可重复的修改:"></a>2.1.2. 构造可重复的修改:</h4><table>
 <thead>
 <tr>
 <th>操作</th>
@@ -515,7 +515,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-1-3-_用次数做简单的算术运算">2.1.3. 用次数做简单的算术运算</h4><ul>
+<h4 id="2-1-3-用次数做简单的算术运算"><a href="#2-1-3-用次数做简单的算术运算" class="headerlink" title="2.1.3. 用次数做简单的算术运算"></a>2.1.3. 用次数做简单的算术运算</h4><ul>
 <li><strong>执行次数</strong>[^hcount] 大部分普通模式命令都可以带一个次数前缀</li>
 <li><strong>八进制</strong> 以0开头的数字</li>
 </ul>
@@ -549,10 +549,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-1-4-_能够重复，就别用次数">2.1.4. 能够重复，就别用次数</h4><blockquote>
+<h4 id="2-1-4-能够重复，就别用次数"><a href="#2-1-4-能够重复，就别用次数" class="headerlink" title="2.1.4. 能够重复，就别用次数"></a>2.1.4. 能够重复，就别用次数</h4><blockquote>
 <p><strong>执行，重复，回退，在必要时使用次数</strong></p>
 </blockquote>
-<h4 id="2-1-5-_双剑合璧，天下无敌">2.1.5. 双剑合璧，天下无敌</h4><ul>
+<h4 id="2-1-5-双剑合璧，天下无敌"><a href="#2-1-5-双剑合璧，天下无敌" class="headerlink" title="2.1.5. 双剑合璧，天下无敌"></a>2.1.5. 双剑合璧，天下无敌</h4><ul>
 <li>操作符[^operator] + 动作命令 = 操作</li>
 <li>自定义操作符[^mapoperator]，参考已有插件commentary.vim[^pcommentary]</li>
 <li>自定义动作命令与已有操作符协同工作[^omapinfo]，参考已有插件textobj-entire[^ptextobjentire]</li>
@@ -633,7 +633,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="2-2-_插入">2.2. 插入</h3><h4 id="2-2-1-_在插入模式中即时更正错误">2.2.1. 在插入模式中即时更正错误</h4><table>
+<h3 id="2-2-插入"><a href="#2-2-插入" class="headerlink" title="2.2. 插入"></a>2.2. 插入</h3><h4 id="2-2-1-在插入模式中即时更正错误"><a href="#2-2-1-在插入模式中即时更正错误" class="headerlink" title="2.2.1. 在插入模式中即时更正错误"></a>2.2.1. 在插入模式中即时更正错误</h4><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -655,7 +655,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-2-2-_返回普通模式">2.2.2. 返回普通模式</h4><table>
+<h4 id="2-2-2-返回普通模式"><a href="#2-2-2-返回普通模式" class="headerlink" title="2.2.2. 返回普通模式"></a>2.2.2. 返回普通模式</h4><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -681,7 +681,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-2-3-_不离开插入模式，粘贴寄存器中的文本">2.2.3. 不离开插入模式，粘贴寄存器中的文本</h4><ul>
+<h4 id="2-2-3-不离开插入模式，粘贴寄存器中的文本"><a href="#2-2-3-不离开插入模式，粘贴寄存器中的文本" class="headerlink" title="2.2.3. 不离开插入模式，粘贴寄存器中的文本"></a>2.2.3. 不离开插入模式，粘贴寄存器中的文本</h4><ul>
 <li><strong>插入模式下粘贴大量文本会有延时，因此相当于逐个输入</strong></li>
 <li><strong>插入模式下小心操作</strong><code>K</code>[^K],<code>J</code>[^J]</li>
 </ul>
@@ -703,10 +703,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-2-4-_随时随地做运算">2.2.4. 随时随地做运算</h4><blockquote>
+<h4 id="2-2-4-随时随地做运算"><a href="#2-2-4-随时随地做运算" class="headerlink" title="2.2.4. 随时随地做运算"></a>2.2.4. 随时随地做运算</h4><blockquote>
 <p>表达式寄存器<c-r>=</c-r></p>
 </blockquote>
-<h4 id="2-2-5-_用字符编码插入非常用字符">2.2.5. 用字符编码插入非常用字符</h4><table>
+<h4 id="2-2-5-用字符编码插入非常用字符"><a href="#2-2-5-用字符编码插入非常用字符" class="headerlink" title="2.2.5. 用字符编码插入非常用字符"></a>2.2.5. 用字符编码插入非常用字符</h4><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -736,10 +736,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-2-6-_用二合字母[^digraphsdefault]插入非常用字符">2.2.6. 用二合字母[^digraphsdefault]插入非常用字符</h4><blockquote>
+<h4 id="2-2-6-用二合字母-digraphsdefault-插入非常用字符"><a href="#2-2-6-用二合字母-digraphsdefault-插入非常用字符" class="headerlink" title="2.2.6. 用二合字母[^digraphsdefault]插入非常用字符"></a>2.2.6. 用二合字母[^digraphsdefault]插入非常用字符</h4><blockquote>
 <p><code>:digraphs</code>[^digraphtable] 查看可用的二合字母表</p>
 </blockquote>
-<h4 id="2-2-7-_用替换模式替换已有文本">2.2.7. 用替换模式替换已有文本</h4><table>
+<h4 id="2-2-7-用替换模式替换已有文本"><a href="#2-2-7-用替换模式替换已有文本" class="headerlink" title="2.2.7. 用替换模式替换已有文本"></a>2.2.7. 用替换模式替换已有文本</h4><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -765,10 +765,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="2-3-_可视">2.3. 可视</h3><h4 id="2-3-1-_深入理解可视模式">2.3.1. 深入理解可视模式</h4><blockquote>
+<h3 id="2-3-可视"><a href="#2-3-可视" class="headerlink" title="2.3. 可视"></a>2.3. 可视</h3><h4 id="2-3-1-深入理解可视模式"><a href="#2-3-1-深入理解可视模式" class="headerlink" title="2.3.1. 深入理解可视模式"></a>2.3.1. 深入理解可视模式</h4><blockquote>
 <p>选择模式[^selectmode]<br><code>&lt;C-g&gt;</code> —<em>VISUAL</em>—  —<em>SELECT</em>—</p>
 </blockquote>
-<h4 id="2-3-2-_选择高亮选区">2.3.2. 选择高亮选区</h4><ul>
+<h4 id="2-3-2-选择高亮选区"><a href="#2-3-2-选择高亮选区" class="headerlink" title="2.3.2. 选择高亮选区"></a>2.3.2. 选择高亮选区</h4><ul>
 <li>面向字符的模式</li>
 <li>面向行的模式</li>
 <li>面向列块的模式</li>
@@ -836,7 +836,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-3-3-_重复执行面向行的可视命令">2.3.3. 重复执行面向行的可视命令</h4><blockquote>
+<h4 id="2-3-3-重复执行面向行的可视命令"><a href="#2-3-3-重复执行面向行的可视命令" class="headerlink" title="2.3.3. 重复执行面向行的可视命令"></a>2.3.3. 重复执行面向行的可视命令</h4><blockquote>
 <p>缩进:</p>
 <ul>
 <li><code>shiftwidth</code></li>
@@ -846,13 +846,13 @@ dd
 </ul>
 <p>面向行的可视命令适合<code>.</code>重复操作</p>
 </blockquote>
-<h4 id="2-3-4-_只要可能，最好用操作符命令，而不是可视命令">2.3.4. 只要可能，最好用操作符命令，而不是可视命令</h4><blockquote>
+<h4 id="2-3-4-只要可能，最好用操作符命令，而不是可视命令"><a href="#2-3-4-只要可能，最好用操作符命令，而不是可视命令" class="headerlink" title="2.3.4. 只要可能，最好用操作符命令，而不是可视命令"></a>2.3.4. 只要可能，最好用操作符命令，而不是可视命令</h4><blockquote>
 <p>可视模式操作，不适合重复[^vU]</p>
 </blockquote>
-<h4 id="2-3-5-_用面向列块的可视模式编辑表格数据">2.3.5. 用面向列块的可视模式编辑表格数据</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;C-<span class="keyword">v</span>&gt;<span class="number">3</span><span class="keyword">j</span></span><br><span class="line"><span class="keyword">x</span>...</span><br><span class="line"><span class="keyword">gv</span></span><br><span class="line"><span class="keyword">r</span>|</span><br><span class="line">yyp</span><br><span class="line">Vr-</span><br></pre></td></tr></table></figure>
-<h4 id="2-3-6-_修改列文本">2.3.6. 修改列文本</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;C-<span class="keyword">v</span>&gt;jje</span><br><span class="line"><span class="keyword">c</span></span><br><span class="line">components</span><br><span class="line">&lt;Esc&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="2-3-7-_在长短不一的高亮块后添加文本">2.3.7. 在长短不一的高亮块后添加文本</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;C-<span class="keyword">v</span>&gt;jj$</span><br><span class="line">A;</span><br><span class="line">&lt;Esc&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-4_命令行">2.4 命令行</h3><h4 id="2-4-1_结识vim的命令行模式">2.4.1 结识vim的命令行模式</h4><ul>
+<h4 id="2-3-5-用面向列块的可视模式编辑表格数据"><a href="#2-3-5-用面向列块的可视模式编辑表格数据" class="headerlink" title="2.3.5. 用面向列块的可视模式编辑表格数据"></a>2.3.5. 用面向列块的可视模式编辑表格数据</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="symbol">&lt;C-v&gt;</span><span class="number">3</span><span class="keyword">j</span></div><div class="line"><span class="keyword">x</span>...</div><div class="line"><span class="keyword">gv</span></div><div class="line">r|</div><div class="line">yyp</div><div class="line">Vr-</div></pre></td></tr></table></figure>
+<h4 id="2-3-6-修改列文本"><a href="#2-3-6-修改列文本" class="headerlink" title="2.3.6. 修改列文本"></a>2.3.6. 修改列文本</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">&lt;C-v&gt;</span>jje</div><div class="line"><span class="keyword">c</span></div><div class="line">components</div><div class="line"><span class="symbol">&lt;Esc&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="2-3-7-在长短不一的高亮块后添加文本"><a href="#2-3-7-在长短不一的高亮块后添加文本" class="headerlink" title="2.3.7. 在长短不一的高亮块后添加文本"></a>2.3.7. 在长短不一的高亮块后添加文本</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;C-v&gt;jj$</div><div class="line">A;</div><div class="line">&lt;Esc&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-4-命令行"><a href="#2-4-命令行" class="headerlink" title="2.4 命令行"></a>2.4 命令行</h3><h4 id="2-4-1-结识vim的命令行模式"><a href="#2-4-1-结识vim的命令行模式" class="headerlink" title="2.4.1 结识vim的命令行模式"></a>2.4.1 结识vim的命令行模式</h4><ul>
 <li>vim历史：<strong>ed</strong> —&gt; <strong>ex</strong> —&gt; <strong>vi</strong> —&gt; <strong>vim</strong></li>
 <li>命令行模式类型<ol>
 <li>:ex命令[^excmdindex]</li>
@@ -937,7 +937,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-4-2_在一行或多个连续行上执行命令">2.4.2 在一行或多个连续行上执行命令</h4><ul>
+<h4 id="2-4-2-在一行或多个连续行上执行命令"><a href="#2-4-2-在一行或多个连续行上执行命令" class="headerlink" title="2.4.2 在一行或多个连续行上执行命令"></a>2.4.2 在一行或多个连续行上执行命令</h4><ul>
 <li>可以用<strong>行号</strong>，<strong>位置标记</strong>或<strong>查找模式</strong>来指定范围开始结束位置，[range]</li>
 <li><code>:print</code>打印命令</li>
 <li>行号指定范围：<ul>
@@ -994,15 +994,15 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-4-3_使用:t和:m命令复制和移动行">2.4.3 使用<code>:t</code>和<code>:m</code>命令复制和移动行</h4><ul>
+<h4 id="2-4-3-使用-t和-m命令复制和移动行"><a href="#2-4-3-使用-t和-m命令复制和移动行" class="headerlink" title="2.4.3 使用:t和:m命令复制和移动行"></a>2.4.3 使用<code>:t</code>和<code>:m</code>命令复制和移动行</h4><ul>
 <li><code>:[range]copy {address}</code>（<code>:[range]t {address}</code>）</li>
 <li><code>:[range]move {address}</code></li>
 <li><strong>Ex命令影响范围广且距离远</strong></li>
 </ul>
-<h4 id="2-4-4_在指定范围上执行普通模式命令">2.4.4 在指定范围上执行普通模式命令</h4><ul>
+<h4 id="2-4-4-在指定范围上执行普通模式命令"><a href="#2-4-4-在指定范围上执行普通模式命令" class="headerlink" title="2.4.4 在指定范围上执行普通模式命令"></a>2.4.4 在指定范围上执行普通模式命令</h4><ul>
 <li><code>:[range]normal {commands}</code></li>
 </ul>
-<h4 id="2-4-5_重复上次的Ex命令">2.4.5 重复上次的Ex命令</h4><ul>
+<h4 id="2-4-5-重复上次的Ex命令"><a href="#2-4-5-重复上次的Ex命令" class="headerlink" title="2.4.5 重复上次的Ex命令"></a>2.4.5 重复上次的Ex命令</h4><ul>
 <li><code>@:</code>[^@:]</li>
 <li><code>:</code>[^hquote:]寄存器总是保存着最后执行的命令行命令</li>
 <li><code>@@</code>调用上次执行的寄存器宏</li>
@@ -1010,7 +1010,7 @@ dd
 <li><code>:bn[ext]</code>缓冲区正向移动</li>
 <li><code>bp[revious]</code>缓冲区反向移动</li>
 </ul>
-<h4 id="2-4-6_自动补全Ex命令[^commandcomplete]">2.4.6 自动补全Ex命令[^commandcomplete]</h4><ul>
+<h4 id="2-4-6-自动补全Ex命令-commandcomplete"><a href="#2-4-6-自动补全Ex命令-commandcomplete" class="headerlink" title="2.4.6 自动补全Ex命令[^commandcomplete]"></a>2.4.6 自动补全Ex命令[^commandcomplete]</h4><ul>
 <li><code>&lt;Tab&gt;</code>，<code>&lt;S-Tab&gt;</code>自动补全</li>
 <li><code>&lt;C-d&gt;</code>[^cctrld]显示可用补全列表</li>
 <li>自定义补全行为[^wildmode]</li>
@@ -1018,12 +1018,12 @@ dd
 <li><strong>zsh</strong> <code>set wildmenu wildmode=full</code></li>
 <li><strong>wildmenu</strong>启用时<code>&lt;Tab&gt;</code> <code>&lt;C-n&gt;</code> <code>&lt;Right&gt;</code>与<code>&lt;S-Tab&gt;</code> <code>&lt;C-p&gt;</code> <code>&lt;Left&gt;</code>遍历</li>
 </ul>
-<h4 id="2-4-7_把当前单词插入到命令行">2.4.7 把当前单词插入到命令行</h4><ul>
+<h4 id="2-4-7-把当前单词插入到命令行"><a href="#2-4-7-把当前单词插入到命令行" class="headerlink" title="2.4.7 把当前单词插入到命令行"></a>2.4.7 把当前单词插入到命令行</h4><ul>
 <li><code>&lt;C-r&gt;&lt;C-w&gt;</code>复制光标下单词并插入命令行</li>
 <li><code>*</code>命令等效于输入<code>/\&lt;&lt;C-r&gt;&lt;C-w&gt;\&gt;&lt;CR&gt;</code></li>
 <li><code>&lt;C-r&gt;&lt;C-a&gt;</code>[^cctrlrctrlw]插入光标下的字符串到命令行</li>
 </ul>
-<h4 id="2-4-8_回溯历史命令">2.4.8 回溯历史命令</h4><ul>
+<h4 id="2-4-8-回溯历史命令"><a href="#2-4-8-回溯历史命令" class="headerlink" title="2.4.8 回溯历史命令"></a>2.4.8 回溯历史命令</h4><ul>
 <li><code>:</code> —&gt; <code>&lt;Up&gt;</code> or <code>&lt;Down&gt;</code>遍历命令历史，可加字符过滤</li>
 <li><code>/</code> —&gt; <code>&lt;Up&gt;</code> or <code>&lt;Down&gt;</code>遍历查找历史，可加字符过滤</li>
 <li><code>history</code>选项，设置历史记录保存上限</li>
@@ -1062,7 +1062,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="2-4-9_运行Shell命令">2.4.9 运行Shell命令</h4><ul>
+<h4 id="2-4-9-运行Shell命令"><a href="#2-4-9-运行Shell命令" class="headerlink" title="2.4.9 运行Shell命令"></a>2.4.9 运行Shell命令</h4><ul>
 <li><code>%</code>代表当前文件名[^cmdlinespecial]</li>
 <li>文件名修饰符[^filenamemodifiers]</li>
 <li><code>&lt;C-z&gt;</code>在shell的vim中转入后台</li>
@@ -1111,12 +1111,12 @@ dd
 </tr>
 </tbody>
 </table>
-<h2 id="3-_管理多个文件">3. 管理多个文件</h2><h3 id="3-1_用缓冲区列表管理打开的文件">3.1 用缓冲区列表管理打开的文件</h3><h4 id="3-1-1_ls列出缓冲区列表[^ls]">3.1.1 <code>ls</code>列出缓冲区列表[^ls]</h4><ul>
+<h2 id="3-管理多个文件"><a href="#3-管理多个文件" class="headerlink" title="3. 管理多个文件"></a>3. 管理多个文件</h2><h3 id="3-1-用缓冲区列表管理打开的文件"><a href="#3-1-用缓冲区列表管理打开的文件" class="headerlink" title="3.1 用缓冲区列表管理打开的文件"></a>3.1 用缓冲区列表管理打开的文件</h3><h4 id="3-1-1-ls列出缓冲区列表-ls"><a href="#3-1-1-ls列出缓冲区列表-ls" class="headerlink" title="3.1.1 ls列出缓冲区列表[^ls]"></a>3.1.1 <code>ls</code>列出缓冲区列表[^ls]</h4><ul>
 <li><code>%</code>当前窗口可见</li>
 <li><code>#</code>轮换文件</li>
 <li><code>&lt;C-^&gt;</code>轮换文件间快速切换</li>
 </ul>
-<h4 id="3-1-2_使用缓冲区列表：">3.1.2 使用缓冲区列表：</h4><ul>
+<h4 id="3-1-2-使用缓冲区列表："><a href="#3-1-2-使用缓冲区列表：" class="headerlink" title="3.1.2 使用缓冲区列表："></a>3.1.2 使用缓冲区列表：</h4><ul>
 <li><code>:bprev</code></li>
 <li><code>:bnext</code></li>
 <li><code>:bfirst</code></li>
@@ -1132,18 +1132,18 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="3-1-3_删除缓冲区">3.1.3 删除缓冲区</h4><ul>
+<h4 id="3-1-3-删除缓冲区"><a href="#3-1-3-删除缓冲区" class="headerlink" title="3.1.3 删除缓冲区"></a>3.1.3 删除缓冲区</h4><ul>
 <li><code>:bdelete N1 N2 N3</code></li>
 <li><code>:N,M bdelete</code></li>
 </ul>
-<h3 id="3-2_用参数列表将缓冲区分组">3.2 用参数列表将缓冲区分组</h3><ul>
+<h3 id="3-2-用参数列表将缓冲区分组"><a href="#3-2-用参数列表将缓冲区分组" class="headerlink" title="3.2 用参数列表将缓冲区分组"></a>3.2 用参数列表将缓冲区分组</h3><ul>
 <li><code>:args</code>显示参数列表</li>
 <li><code>:args {arglist}</code>[^argsf]接填充参数列表</li>
 <li><code>:args *</code>用Glob(通配符)<code>*</code>[^hwildcard] <code>**</code>[^hstarstarwildcard]指定文件</li>
 <li><code>:args `{shell commands}` </code>用反引号结构指定文件[^backtick-expansion]</li>
 <li>使用参数列表<code>:next</code>，<code>:prev</code>，<code>:argdo</code></li>
 </ul>
-<h3 id="3-3_管理隐藏缓冲区">3.3 管理隐藏缓冲区</h3><table>
+<h3 id="3-3-管理隐藏缓冲区"><a href="#3-3-管理隐藏缓冲区" class="headerlink" title="3.3 管理隐藏缓冲区"></a>3.3 管理隐藏缓冲区</h3><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -1181,7 +1181,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="3-4_将工作区切分成窗口">3.4 将工作区切分成窗口</h3><table>
+<h3 id="3-4-将工作区切分成窗口"><a href="#3-4-将工作区切分成窗口" class="headerlink" title="3.4 将工作区切分成窗口"></a>3.4 将工作区切分成窗口</h3><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -1263,7 +1263,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h3 id="3-5_用标签页将窗口分组[^tabpage]">3.5 用标签页将窗口分组[^tabpage]</h3><table>
+<h3 id="3-5-用标签页将窗口分组-tabpage"><a href="#3-5-用标签页将窗口分组-tabpage" class="headerlink" title="3.5 用标签页将窗口分组[^tabpage]"></a>3.5 用标签页将窗口分组[^tabpage]</h3><table>
 <thead>
 <tr>
 <th>按键操作</th>
@@ -1313,7 +1313,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h2 id="4-_打开和保存文件">4. 打开和保存文件</h2><h3 id="4-1_用edit命令打开文件">4.1 用edit命令打开文件</h3><ul>
+<h2 id="4-打开和保存文件"><a href="#4-打开和保存文件" class="headerlink" title="4. 打开和保存文件"></a>4. 打开和保存文件</h2><h3 id="4-1-用edit命令打开文件"><a href="#4-1-用edit命令打开文件" class="headerlink" title="4.1 用edit命令打开文件"></a>4.1 用edit命令打开文件</h3><ul>
 <li><code>:pwd</code>显示当前目录print working directory</li>
 <li><strong>tab</strong>键展开</li>
 <li><code>:edit %:h&lt;Tab&gt;</code>相对于活动目录打开文件<blockquote>
@@ -1321,12 +1321,12 @@ dd
 </blockquote>
 </li>
 </ul>
-<h3 id="4-2_使用find打开文件">4.2 使用find打开文件</h3><ul>
+<h3 id="4-2-使用find打开文件"><a href="#4-2-使用find打开文件" class="headerlink" title="4.2 使用find打开文件"></a>4.2 使用find打开文件</h3><ul>
 <li><code>:find</code>允许通过文件名打开文件</li>
 <li><code>set path+=app/**</code>配置’path’路径[^hpath][^filesearching]</li>
 <li>rails的智能路径管理[^prails]</li>
 </ul>
-<h3 id="4-3_使用netrw管理文件系统">4.3 使用netrw管理文件系统</h3><ul>
+<h3 id="4-3-使用netrw管理文件系统"><a href="#4-3-使用netrw管理文件系统" class="headerlink" title="4.3 使用netrw管理文件系统"></a>4.3 使用netrw管理文件系统</h3><ul>
 <li>准备工作：<code>set nocompatible  filetype plugin on</code></li>
 <li><code>-</code>返回上级目录</li>
 <li><p>打开文件管理目录</p>
@@ -1347,29 +1347,29 @@ dd
 </ul>
 </li>
 </ul>
-<h3 id="4-4_把文件保存到不存在的目录中">4.4 把文件保存到不存在的目录中</h3><ul>
+<h3 id="4-4-把文件保存到不存在的目录中"><a href="#4-4-把文件保存到不存在的目录中" class="headerlink" title="4.4 把文件保存到不存在的目录中"></a>4.4 把文件保存到不存在的目录中</h3><ul>
 <li><code>&lt;C-g&gt;</code>显示当前文件的文件名及状态[^ctrlG]（</li>
 <li><code>:!mkdir -p %:h</code></li>
 <li><code>:write</code></li>
 </ul>
-<h3 id="4-5_以超级用户权限保存文件">4.5 以超级用户权限保存文件</h3><ul>
+<h3 id="4-5-以超级用户权限保存文件"><a href="#4-5-以超级用户权限保存文件" class="headerlink" title="4.5 以超级用户权限保存文件"></a>4.5 以超级用户权限保存文件</h3><ul>
 <li><code>ls -al /etc/|grep hosts</code>，<code>whoami</code></li>
 <li><code>:w !sudo tee % &gt; /dev/null</code>[^writec][^:%]</li>
 </ul>
 <hr>
-<h2 id="5-_移动跳转[^motion]">5. 移动跳转[^motion]</h2><h3 id="5-1_用动作命令在文档中移动">5.1 用动作命令在文档中移动</h3><h4 id="5-1-1_让手指保持在本位行上">5.1.1 让手指保持在本位行上</h4><blockquote>
+<h2 id="5-移动跳转-motion"><a href="#5-移动跳转-motion" class="headerlink" title="5. 移动跳转[^motion]"></a>5. 移动跳转[^motion]</h2><h3 id="5-1-用动作命令在文档中移动"><a href="#5-1-用动作命令在文档中移动" class="headerlink" title="5.1 用动作命令在文档中移动"></a>5.1 用动作命令在文档中移动</h3><h4 id="5-1-1-让手指保持在本位行上"><a href="#5-1-1-让手指保持在本位行上" class="headerlink" title="5.1.1 让手指保持在本位行上"></a>5.1.1 让手指保持在本位行上</h4><blockquote>
 <p>hjkl;</p>
 </blockquote>
-<h4 id="5-1-2_区分实际行与屏幕行">5.1.2 区分实际行与屏幕行</h4><ul>
+<h4 id="5-1-2-区分实际行与屏幕行"><a href="#5-1-2-区分实际行与屏幕行" class="headerlink" title="5.1.2 区分实际行与屏幕行"></a>5.1.2 区分实际行与屏幕行</h4><ul>
 <li><code>&#39;wrap&#39;</code>，<code>&#39;number&#39;</code></li>
 <li><code>j</code>，<code>k</code>，<code>0</code>，<code>^</code>，<code>$</code>，<code>gj</code>，<code>gk</code>，<code>g0</code>，<code>g^</code>，<code>g$</code></li>
 </ul>
-<h4 id="5-1-3_基于单词移动[^wordmotions]">5.1.3 基于单词移动[^wordmotions]</h4><ul>
+<h4 id="5-1-3-基于单词移动-wordmotions"><a href="#5-1-3-基于单词移动-wordmotions" class="headerlink" title="5.1.3 基于单词移动[^wordmotions]"></a>5.1.3 基于单词移动[^wordmotions]</h4><ul>
 <li><code>w</code>，<code>b</code>，<code>e</code>，<code>g</code>e面向单词移动，词首词尾，正向反向</li>
 <li><code>W</code>,<code>B</code>,<code>E</code>,<code>gE</code>面向字串移动</li>
 <li>理解单词(word)[^word]与字串(WORD)[^WORD]</li>
 </ul>
-<h4 id="5-1-4_对字符进行查找">5.1.4 对字符进行查找</h4><ul>
+<h4 id="5-1-4-对字符进行查找"><a href="#5-1-4-对字符进行查找" class="headerlink" title="5.1.4 对字符进行查找"></a>5.1.4 对字符进行查找</h4><ul>
 <li><code>f</code>[^f] <code>;</code>[^;] <code>,</code>[^,]</li>
 <li><code>noremap &lt;Leader&gt;n nzz</code></li>
 <li><p><code>noremap &lt;Leader&gt;N Nzz</code></p>
@@ -1382,7 +1382,7 @@ dd
 <li><p><code>f{motion}</code>，<code>F{motion}</code>，<code>t{motion}</code>，<code>T{motion}</code>，<code>;</code>，<code>,</code></p>
 </li>
 </ul>
-<h4 id="5-1-5_通过查找进行移动">5.1.5 通过查找进行移动</h4><ul>
+<h4 id="5-1-5-通过查找进行移动"><a href="#5-1-5-通过查找进行移动" class="headerlink" title="5.1.5 通过查找进行移动"></a>5.1.5 通过查找进行移动</h4><ul>
 <li><code>/{char}&lt;CR&gt;</code></li>
 <li><code>n</code></li>
 <li><code>N</code></li>
@@ -1394,7 +1394,7 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="5-1-6_用精确的文本对象选择选区[^textobjects]">5.1.6 用精确的文本对象选择选区[^textobjects]</h4><table>
+<h4 id="5-1-6-用精确的文本对象选择选区-textobjects"><a href="#5-1-6-用精确的文本对象选择选区-textobjects" class="headerlink" title="5.1.6 用精确的文本对象选择选区[^textobjects]"></a>5.1.6 用精确的文本对象选择选区[^textobjects]</h4><table>
 <thead>
 <tr>
 <th>文本对象</th>
@@ -1468,7 +1468,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="5-1-7_删除周边，修改内部">5.1.7 删除周边，修改内部</h4><ul>
+<h4 id="5-1-7-删除周边，修改内部"><a href="#5-1-7-删除周边，修改内部" class="headerlink" title="5.1.7 删除周边，修改内部"></a>5.1.7 删除周边，修改内部</h4><ul>
 <li>分隔符文本对象，块对象</li>
 <li>范围文本对象，非块对象</li>
 <li>d配a,c配i</li>
@@ -1515,7 +1515,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="5-1-8_设置位置标记[^markmotion]，以便快速跳回">5.1.8 设置位置标记[^markmotion]，以便快速跳回</h4><ul>
+<h4 id="5-1-8-设置位置标记-markmotion-，以便快速跳回"><a href="#5-1-8-设置位置标记-markmotion-，以便快速跳回" class="headerlink" title="5.1.8 设置位置标记[^markmotion]，以便快速跳回"></a>5.1.8 设置位置标记[^markmotion]，以便快速跳回</h4><ul>
 <li><code>m{a-zA-Z}</code>[^m]小写缓冲区局部可见，大写全局可见</li>
 <li><code>`{mark}</code>跳转到位置标记所在行，首个非空字符上</li>
 <li><code>&#39;{mark}</code>跳转到位置标记所在位置</li>
@@ -1559,15 +1559,15 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="5-1-9_在匹配括号间跳转">5.1.9 在匹配括号间跳转</h4><ul>
+<h4 id="5-1-9-在匹配括号间跳转"><a href="#5-1-9-在匹配括号间跳转" class="headerlink" title="5.1.9 在匹配括号间跳转"></a>5.1.9 在匹配括号间跳转</h4><ul>
 <li><strong>matchit.vim</strong>插件，对tags的跳转[^matchitinstall]</li>
 </ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="keyword">on</span></span><br><span class="line"><span class="keyword">runtime</span> macros/matchit.<span class="keyword">vim</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible</div><div class="line"><span class="keyword">filetype</span> plugin <span class="keyword">on</span></div><div class="line"><span class="keyword">runtime</span> macros/matchit.<span class="keyword">vim</span></div></pre></td></tr></table></figure>
 <ul>
 <li>%对一组开、闭括号间跳转[^%]</li>
 <li>Surround.vim，给选中的文本加分隔符<code>S&quot;</code></li>
 </ul>
-<h3 id="5-2_在文件间跳转">5.2 在文件间跳转</h3><h4 id="5-2-1_遍历跳转列表">5.2.1 遍历跳转列表</h4><ul>
+<h3 id="5-2-在文件间跳转"><a href="#5-2-在文件间跳转" class="headerlink" title="5.2 在文件间跳转"></a>5.2 在文件间跳转</h3><h4 id="5-2-1-遍历跳转列表"><a href="#5-2-1-遍历跳转列表" class="headerlink" title="5.2.1 遍历跳转列表"></a>5.2.1 遍历跳转列表</h4><ul>
 <li><code>:jumps</code>显示跳转列表</li>
 <li><strong>大范围动作命令会被当成跳转，小范围的动作命令只算移动</strong></li>
 <li>每个单独窗口拥有一份跳转列表</li>
@@ -1620,29 +1620,29 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="5-2-2_遍历改变列表">5.2.2 遍历改变列表</h4><ul>
+<h4 id="5-2-2-遍历改变列表"><a href="#5-2-2-遍历改变列表" class="headerlink" title="5.2.2 遍历改变列表"></a>5.2.2 遍历改变列表</h4><ul>
 <li><code>:changes</code>[^changelist]显示编辑会话期间维护的改变列表</li>
 <li><code>g;</code>和<code>g,</code>遍历改变列表，类似<code>u&lt;C-r&gt;</code></li>
 <li><code>:h &#39;.</code> <code>:h &#39;^</code> </li>
 <li><code>gi</code>[^gi]回到退出的地方继续编辑</li>
 <li>每个缓冲区单独维护一张表</li>
 </ul>
-<h4 id="5-2-3_跳转到光标下的文件[^gf]">5.2.3 跳转到光标下的文件[^gf]</h4><ul>
+<h4 id="5-2-3-跳转到光标下的文件-gf"><a href="#5-2-3-跳转到光标下的文件-gf" class="headerlink" title="5.2.3 跳转到光标下的文件[^gf]"></a>5.2.3 跳转到光标下的文件[^gf]</h4><ul>
 <li>指定文件扩展名<code>set suffixesadd+=.rb</code>[^suffixesadd]</li>
 <li>指定要搜寻的目录[^path]<code>set path?</code>显示值</li>
 <li>bundler.vim 使用工程的Gemfile自动生成”path”设置</li>
-<li><code>vim -u NONE -N {file}</code>不加载任何插件启动vim<h4 id="5-2-4_用全局位置标记在文件间快速跳转">5.2.4 用全局位置标记在文件间快速跳转</h4></li>
+<li><code>vim -u NONE -N {file}</code>不加载任何插件启动vim<h4 id="5-2-4-用全局位置标记在文件间快速跳转"><a href="#5-2-4-用全局位置标记在文件间快速跳转" class="headerlink" title="5.2.4 用全局位置标记在文件间快速跳转"></a>5.2.4 用全局位置标记在文件间快速跳转</h4></li>
 </ul>
 <blockquote>
 <p>在浏览代码前先设置一个全局标记<code>:h &#39;</code> <code>:h m</code> <code>:h &#39;viminfo&#39;</code></p>
 </blockquote>
 <hr>
-<h2 id="6-_寄存器">6. 寄存器</h2><h3 id="6-1_复制与粘贴">6.1 复制与粘贴</h3><h4 id="6-1-1_用无名寄存器实现删除、复制与粘贴操作">6.1.1 用无名寄存器实现删除、复制与粘贴操作</h4><ul>
+<h2 id="6-寄存器"><a href="#6-寄存器" class="headerlink" title="6. 寄存器"></a>6. 寄存器</h2><h3 id="6-1-复制与粘贴"><a href="#6-1-复制与粘贴" class="headerlink" title="6.1 复制与粘贴"></a>6.1 复制与粘贴</h3><h4 id="6-1-1-用无名寄存器实现删除、复制与粘贴操作"><a href="#6-1-1-用无名寄存器实现删除、复制与粘贴操作" class="headerlink" title="6.1.1 用无名寄存器实现删除、复制与粘贴操作"></a>6.1.1 用无名寄存器实现删除、复制与粘贴操作</h4><ul>
 <li><code>xp</code></li>
 <li><code>ddp</code></li>
 <li><code>yyp</code></li>
 </ul>
-<h4 id="6-1-2_深入理解Vim寄存器">6.1.2 深入理解Vim寄存器</h4><ul>
+<h4 id="6-1-2-深入理解Vim寄存器"><a href="#6-1-2-深入理解Vim寄存器" class="headerlink" title="6.1.2 深入理解Vim寄存器"></a>6.1.2 深入理解Vim寄存器</h4><ul>
 <li>引用一个寄存器<code>&quot;{register}</code>，缺省使用无名寄存器<code>&quot;&quot;</code></li>
 <li>vim术语对照剪切(cut)=delete,复制(copy)=yank,粘贴(paste)=put</li>
 <li><p>无名寄存器（<code>&quot;&quot;</code>）[^quotequote]</p>
@@ -1665,44 +1665,44 @@ dd
 <li>其他寄存器，只读，(<code>&quot;.</code>)[^quote.]</li>
 <li><code>&quot;%</code>，<code>&quot;#</code>，<code>&quot;.</code>，<code>&quot;:</code>，<code>&quot;/</code></li>
 </ul>
-<h4 id="6-1-3_用寄存器中的内容替换高亮选区的文本">6.1.3 用寄存器中的内容替换高亮选区的文本</h4><blockquote>
+<h4 id="6-1-3-用寄存器中的内容替换高亮选区的文本"><a href="#6-1-3-用寄存器中的内容替换高亮选区的文本" class="headerlink" title="6.1.3 用寄存器中的内容替换高亮选区的文本"></a>6.1.3 用寄存器中的内容替换高亮选区的文本</h4><blockquote>
 <p><code>:h v_p</code></p>
 </blockquote>
-<h4 id="6-1-4_把寄存器的内容粘贴出来[^p]">6.1.4 把寄存器的内容粘贴出来[^p]</h4><ul>
+<h4 id="6-1-4-把寄存器的内容粘贴出来-p"><a href="#6-1-4-把寄存器的内容粘贴出来-p" class="headerlink" title="6.1.4 把寄存器的内容粘贴出来[^p]"></a>6.1.4 把寄存器的内容粘贴出来[^p]</h4><ul>
 <li>面向行还是面向字符[^linewiseregister]</li>
 <li><code>&lt;C-r&gt;{register}</code>总插入到光标之前</li>
 <li><code>gp</code>，<code>gP</code>，粘贴后光标在文本之后，更适合操作</li>
 </ul>
-<h4 id="6-1-5_与系统剪贴板进行交互[^paste]">6.1.5 与系统剪贴板进行交互[^paste]</h4><ul>
+<h4 id="6-1-5-与系统剪贴板进行交互-paste"><a href="#6-1-5-与系统剪贴板进行交互-paste" class="headerlink" title="6.1.5 与系统剪贴板进行交互[^paste]"></a>6.1.5 与系统剪贴板进行交互[^paste]</h4><ul>
 <li><code>:set pastetoggle=&lt;f5&gt;</code>使用f5切换”paste”选项</li>
 <li>使用加号寄存器进行粘贴可以避免</li>
 </ul>
 <hr>
-<h3 id="6-2_宏">6.2 宏</h3><h4 id="6-2-1_宏的读取与执行">6.2.1 宏的读取与执行</h4><ul>
+<h3 id="6-2-宏"><a href="#6-2-宏" class="headerlink" title="6.2 宏"></a>6.2 宏</h3><h4 id="6-2-1-宏的读取与执行"><a href="#6-2-1-宏的读取与执行" class="headerlink" title="6.2.1 宏的读取与执行"></a>6.2.1 宏的读取与执行</h4><ul>
 <li><code>q{register}</code>,按<code>q</code>停止</li>
 <li><code>@{register}</code>执行[^@],<code>@@</code>重复最近调用过的宏</li>
 <li>串行，并行</li>
 </ul>
-<h4 id="6-2-2_规范光标位置、直达目标以及中止宏">6.2.2 规范光标位置、直达目标以及中止宏</h4><ul>
+<h4 id="6-2-2-规范光标位置、直达目标以及中止宏"><a href="#6-2-2-规范光标位置、直达目标以及中止宏" class="headerlink" title="6.2.2 规范光标位置、直达目标以及中止宏"></a>6.2.2 规范光标位置、直达目标以及中止宏</h4><ul>
 <li>确保每条命令都可被重复执行</li>
 <li>规范光标的位置，更容易正确执行</li>
 <li>用可重复的动作命令直达目标</li>
 <li>当动作命令失败时，宏将中止执行[^visualbell]</li>
 </ul>
-<h4 id="6-2-3_加次数回放宏">6.2.3 加次数回放宏</h4><blockquote>
+<h4 id="6-2-3-加次数回放宏"><a href="#6-2-3-加次数回放宏" class="headerlink" title="6.2.3 加次数回放宏"></a>6.2.3 加次数回放宏</h4><blockquote>
 <p><code>n@{register}</code></p>
 </blockquote>
-<h4 id="6-2-4_在连续的文件行上重复修改">6.2.4 在连续的文件行上重复修改</h4><ul>
+<h4 id="6-2-4-在连续的文件行上重复修改"><a href="#6-2-4-在连续的文件行上重复修改" class="headerlink" title="6.2.4 在连续的文件行上重复修改"></a>6.2.4 在连续的文件行上重复修改</h4><ul>
 <li>串行：<code>n@{register}</code></li>
 <li>并行：<code>:’&lt;,’&gt;normal @{register}</code></li>
 </ul>
-<h4 id="6-2-5_给宏追加命令">6.2.5 给宏追加命令</h4><blockquote>
+<h4 id="6-2-5-给宏追加命令"><a href="#6-2-5-给宏追加命令" class="headerlink" title="6.2.5 给宏追加命令"></a>6.2.5 给宏追加命令</h4><blockquote>
 <p>使用大写字母</p>
 </blockquote>
-<h4 id="6-2-6_在一组文件中执行宏">6.2.6 在一组文件中执行宏</h4><ul>
+<h4 id="6-2-6-在一组文件中执行宏"><a href="#6-2-6-在一组文件中执行宏" class="headerlink" title="6.2.6 在一组文件中执行宏"></a>6.2.6 在一组文件中执行宏</h4><ul>
 <li>准备工作</li>
 </ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"><span class="keyword">set</span> hidden</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">has</span>(<span class="string">"autocmd"</span>)</span><br><span class="line"><span class="keyword">autocmd</span> fileType <span class="keyword">ruby</span> <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">2</span> <span class="keyword">sts</span>=<span class="number">2</span> <span class="keyword">sw</span>=<span class="number">2</span> expandtab</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible</div><div class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></div><div class="line"><span class="keyword">set</span> hidden</div><div class="line"><span class="keyword">if</span> <span class="built_in">has</span>(<span class="string">"autocmd"</span>)</div><div class="line"><span class="keyword">autocmd</span> fileType <span class="keyword">ruby</span> <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">2</span> <span class="keyword">sts</span>=<span class="number">2</span> <span class="keyword">sw</span>=<span class="number">2</span> expandtab</div><div class="line"><span class="keyword">endif</span></div></pre></td></tr></table></figure>
 <ul>
 <li>启用”hidden”</li>
 <li>建立目标文件列表<code>:args *.rb</code></li>
@@ -1712,14 +1712,14 @@ dd
 <li><code>qA :next q 22@a</code>串行执行宏</li>
 <li>保存所有文件改动<code>:h</code> <code>:wa</code> <code>:argdo write</code> <code>:h :wn</code></li>
 </ul>
-<h4 id="6-2-7_用迭代求值的方式给列表编号">6.2.7 用迭代求值的方式给列表编号</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:let i=1</span><br><span class="line">qa</span><br><span class="line">I&lt;C-r&gt;=i&lt;CR&gt;)&lt;Esc&gt;</span><br><span class="line">:let i+= 1</span><br><span class="line">q</span><br><span class="line">jVG</span><br><span class="line">:normal @a</span><br></pre></td></tr></table></figure>
-<h4 id="6-2-8_编辑宏的内容">6.2.8 编辑宏的内容</h4><ul>
+<h4 id="6-2-7-用迭代求值的方式给列表编号"><a href="#6-2-7-用迭代求值的方式给列表编号" class="headerlink" title="6.2.7 用迭代求值的方式给列表编号"></a>6.2.7 用迭代求值的方式给列表编号</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">:<span class="keyword">let</span> i=<span class="number">1</span></div><div class="line"><span class="keyword">qa</span></div><div class="line">I<span class="symbol">&lt;C-r&gt;</span>=i<span class="symbol">&lt;CR&gt;</span>)<span class="symbol">&lt;Esc&gt;</span></div><div class="line">:<span class="keyword">let</span> i+= <span class="number">1</span></div><div class="line">q</div><div class="line">jVG</div><div class="line">:<span class="keyword">normal</span> @a</div></pre></td></tr></table></figure>
+<h4 id="6-2-8-编辑宏的内容"><a href="#6-2-8-编辑宏的内容" class="headerlink" title="6.2.8 编辑宏的内容"></a>6.2.8 编辑宏的内容</h4><ul>
 <li><code>:put a</code>（put 总会将内容粘贴到下一行)</li>
 <li><code>&quot;ay$</code>（dd会留下^J）</li>
 <li><code>let @a=substitute(@a, &#39;\~&#39;, &#39;vU&#39;, &#39;g&#39;)</code>（:h substitute()）（:h function-list）</li>
 </ul>
 <hr>
-<h2 id="7-_匹配">7. 匹配</h2><h3 id="7-1_按模式匹配及按原义匹配">7.1 按模式匹配及按原义匹配</h3><h4 id="7-1-1_调整查找模式的大小写敏感性">7.1.1 调整查找模式的大小写敏感性</h4><ul>
+<h2 id="7-匹配"><a href="#7-匹配" class="headerlink" title="7. 匹配"></a>7. 匹配</h2><h3 id="7-1-按模式匹配及按原义匹配"><a href="#7-1-按模式匹配及按原义匹配" class="headerlink" title="7.1 按模式匹配及按原义匹配"></a>7.1 按模式匹配及按原义匹配</h3><h4 id="7-1-1-调整查找模式的大小写敏感性"><a href="#7-1-1-调整查找模式的大小写敏感性" class="headerlink" title="7.1.1 调整查找模式的大小写敏感性"></a>7.1.1 调整查找模式的大小写敏感性</h4><ul>
 <li>全局设置大小写敏感性”<code>ignorecase</code>“（会影响关键字自动补全行为）</li>
 <li><p>每次查找时设置大小写敏感（可以出现在元字符的任何位置）</p>
 <ul>
@@ -1730,21 +1730,21 @@ dd
 <li><p>启用更智能的大小写敏感设置”<code>smartcase</code>“(:h /ignorecase)</p>
 </li>
 </ul>
-<h4 id="7-1-2_按正则表达式查找时，使用\v模式开关">7.1.2 按正则表达式查找时，使用<code>\v</code>模式开关</h4><ul>
+<h4 id="7-1-2-按正则表达式查找时，使用-v模式开关"><a href="#7-1-2-按正则表达式查找时，使用-v模式开关" class="headerlink" title="7.1.2 按正则表达式查找时，使用\v模式开关"></a>7.1.2 按正则表达式查找时，使用<code>\v</code>模式开关</h4><ul>
 <li><strong>magic</strong>模式下，方括号具有特殊含义，不用转义，圆括号开闭都要转义，花括号只需开括号转义</li>
 <li><strong>very magic</strong>模式除_ ，大小写字母以及数字0到9之外的所有字符都具有特殊意义（:h \v）</li>
 <li><code>:h /character-classes</code></li>
 <li><code>:h /\\</code>任何还未具有特殊含义的字符都被保留以被将来扩展时使用</li>
 <li><code>\v</code> <strong>very magic</strong> <code>\V</code>原义 <code>\m</code> magic(<code>.</code>，<code>*</code>,方括号具有特殊含义） <code>\M</code> nomadic（一些字符具有特殊含义，<code>^</code>与<code>$</code>）</li>
 </ul>
-<h4 id="7-1-3_按原义查找文本时，使用\V原义开关">7.1.3 按原义查找文本时，使用<code>\V</code>原义开关</h4><blockquote>
+<h4 id="7-1-3-按原义查找文本时，使用-V原义开关"><a href="#7-1-3-按原义查找文本时，使用-V原义开关" class="headerlink" title="7.1.3 按原义查找文本时，使用\V原义开关"></a>7.1.3 按原义查找文本时，使用<code>\V</code>原义开关</h4><blockquote>
 <p><code>:h /\V</code></p>
 </blockquote>
-<h4 id="7-1-4_使用圆括号捕获子匹配">7.1.4 使用圆括号捕获子匹配</h4><ul>
+<h4 id="7-1-4-使用圆括号捕获子匹配"><a href="#7-1-4-使用圆括号捕获子匹配" class="headerlink" title="7.1.4 使用圆括号捕获子匹配"></a>7.1.4 使用圆括号捕获子匹配</h4><ul>
 <li><code>\0</code>全匹配，<code>\1</code>-<code>\9</code>匹配捕获的文本</li>
 <li><code>:h /\_</code> <code>:h 27.8</code></li>
 </ul>
-<h4 id="7-1-5_界定单词的边界">7.1.5 界定单词的边界</h4><ul>
+<h4 id="7-1-5-界定单词的边界"><a href="#7-1-5-界定单词的边界" class="headerlink" title="7.1.5 界定单词的边界"></a>7.1.5 界定单词的边界</h4><ul>
 <li><code>&lt;</code>与<code>&gt;</code>符号表示单词定界符</li>
 <li>使用圆括号但不捕获内容在括号前加<code>%</code></li>
 <li><code>\W\ze\w</code>模拟元字符<code>&lt;</code>，<code>\w\ze\W</code>表示元字符<code>&gt;</code></li>
@@ -1753,21 +1753,21 @@ dd
 <li><code>g*</code>与<code>g#</code>同上，但不使用单词定界符</li>
 <li>零宽度元字符，本身不匹配字符，表示单词与围绕此单词的空白字符之间的边界</li>
 </ul>
-<h4 id="7-1-6_界定匹配的边界">7.1.6 界定匹配的边界</h4><ul>
+<h4 id="7-1-6-界定匹配的边界"><a href="#7-1-6-界定匹配的边界" class="headerlink" title="7.1.6 界定匹配的边界"></a>7.1.6 界定匹配的边界</h4><ul>
 <li><code>\zs</code>匹配开始<code>:h /\zs</code></li>
 <li><code>\ze</code>匹配结束</li>
 </ul>
-<h4 id="7-1-7_转义问题字符">7.1.7 转义问题字符</h4><ul>
+<h4 id="7-1-7-转义问题字符"><a href="#7-1-7-转义问题字符" class="headerlink" title="7.1.7 转义问题字符"></a>7.1.7 转义问题字符</h4><ul>
 <li><code>\V</code>下正向查找需转义<code>/</code>与<code>\</code></li>
 <li><code>\V</code>下反向查找需转义<code>?</code>与<code>\</code></li>
 <li>用编程的方式转义字符<code>:h escape()</code> <code>:h getcmdtype()</code></li>
 </ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/\V&lt;C-<span class="keyword">r</span>&gt;=</span><br><span class="line">=<span class="built_in">escape</span>(@u, <span class="built_in">getcmdtype</span>().’\’)</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/\V<span class="symbol">&lt;C-r&gt;</span>=</div><div class="line">=<span class="built_in">escape</span>(@u, <span class="built_in">getcmdtype</span>().’\’)</div></pre></td></tr></table></figure>
 <ul>
 <li><code>/vim/e&lt;CR&gt;</code></li>
 <li>GVim <code>:promptfind</code>（:h :promptfind）</li>
 </ul>
-<h3 id="7-2_查找">7.2 查找</h3><h4 id="7-2-1_结识查找命令">7.2.1 结识查找命令</h4><p>“<code>wrapscan</code>“  <code>:h &#39;wrapscan&#39;</code></p>
+<h3 id="7-2-查找"><a href="#7-2-查找" class="headerlink" title="7.2 查找"></a>7.2 查找</h3><h4 id="7-2-1-结识查找命令"><a href="#7-2-1-结识查找命令" class="headerlink" title="7.2.1 结识查找命令"></a>7.2.1 结识查找命令</h4><p>“<code>wrapscan</code>“  <code>:h &#39;wrapscan&#39;</code></p>
 <table>
 <thead>
 <tr>
@@ -1794,46 +1794,46 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="7-2-2_高亮查找匹配">7.2.2 高亮查找匹配</h4><ul>
+<h4 id="7-2-2-高亮查找匹配"><a href="#7-2-2-高亮查找匹配" class="headerlink" title="7.2.2 高亮查找匹配"></a>7.2.2 高亮查找匹配</h4><ul>
 <li><code>:h &#39;hlsearch&#39;</code> 启用匹配高亮</li>
 <li><code>:set nohlsearch</code>(<code>:se hls!</code>) 禁用匹配高亮</li>
 <li><code>:nohlsearch</code> <code>:h noh</code> 临时关闭匹配高亮</li>
 <li><code>nnoremap &lt;silent&gt; &lt;C-l&gt; :&lt;C-u&gt;nohlsearch&lt;CR&gt;&lt;C-l&gt;(:h CTRL-L)</code></li>
 </ul>
-<h4 id="7-2-3_在执行查找前预览第一处匹配">7.2.3 在执行查找前预览第一处匹配</h4><ul>
+<h4 id="7-2-3-在执行查找前预览第一处匹配"><a href="#7-2-3-在执行查找前预览第一处匹配" class="headerlink" title="7.2.3 在执行查找前预览第一处匹配"></a>7.2.3 在执行查找前预览第一处匹配</h4><ul>
 <li><code>:h &#39;incsearch&#39;</code> 增量匹配</li>
 <li><code>&lt;C-r&gt;&lt;C-w&gt;</code>查找域自动补全</li>
 </ul>
-<h4 id="7-2-4_统计当前模式的匹配个数">7.2.4 统计当前模式的匹配个数</h4><blockquote>
+<h4 id="7-2-4-统计当前模式的匹配个数"><a href="#7-2-4-统计当前模式的匹配个数" class="headerlink" title="7.2.4 统计当前模式的匹配个数"></a>7.2.4 统计当前模式的匹配个数</h4><blockquote>
 <p><code>:%s///gn</code></p>
 </blockquote>
-<h4 id="7-2-5_将光标偏移到查找匹配结尾">7.2.5 将光标偏移到查找匹配结尾</h4><ul>
+<h4 id="7-2-5-将光标偏移到查找匹配结尾"><a href="#7-2-5-将光标偏移到查找匹配结尾" class="headerlink" title="7.2.5 将光标偏移到查找匹配结尾"></a>7.2.5 将光标偏移到查找匹配结尾</h4><ul>
 <li><code>:h search-offset</code></li>
 <li><code>/{pattern}/e&lt;CR&gt;</code></li>
 </ul>
-<h4 id="7-2-6_对完整的查找匹配进行操作">7.2.6 对完整的查找匹配进行操作</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/\vX(ht)?ml\C&lt;CR&gt;</span><br><span class="line">gU//<span class="keyword">e</span>&lt;CR&gt;</span><br><span class="line">//&lt;CR&gt;</span><br><span class="line">.</span><br><span class="line">//&lt;CR&gt;.</span><br></pre></td></tr></table></figure>
+<h4 id="7-2-6-对完整的查找匹配进行操作"><a href="#7-2-6-对完整的查找匹配进行操作" class="headerlink" title="7.2.6 对完整的查找匹配进行操作"></a>7.2.6 对完整的查找匹配进行操作</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/\vX(ht)?ml\C<span class="symbol">&lt;CR&gt;</span></div><div class="line">gU//<span class="keyword">e</span><span class="symbol">&lt;CR&gt;</span></div><div class="line">//<span class="symbol">&lt;CR&gt;</span></div><div class="line">.</div><div class="line">//<span class="symbol">&lt;CR&gt;</span>.</div></pre></td></tr></table></figure>
 <ul>
 <li><code>//&lt;CR&gt;</code>,<code>n</code>会重复<code>//e&lt;CR&gt;</code>所以不适合点范式</li>
 <li>Natsuno textobj-laastpat插件<code>gUi/</code>解决了上面问题</li>
 </ul>
-<h4 id="7-2-7_利用查找历史，迭代完成复杂的模式">7.2.7 利用查找历史，迭代完成复杂的模式</h4><ul>
+<h4 id="7-2-7-利用查找历史，迭代完成复杂的模式"><a href="#7-2-7-利用查找历史，迭代完成复杂的模式" class="headerlink" title="7.2.7 利用查找历史，迭代完成复杂的模式"></a>7.2.7 利用查找历史，迭代完成复杂的模式</h4><ul>
 <li><code>/&lt;UP&gt;</code>遍历查找历史</li>
 <li><code>q/</code>在命令行窗口修改</li>
 <li><code>c%(&lt;C-r&gt;&quot;)&lt;Esc&gt;</code></li>
 <li><code>:%s//&quot;\1&quot;/g</code></li>
 </ul>
-<h4 id="7-2-8_查找当前高亮选区中的文本">7.2.8 查找当前高亮选区中的文本</h4><ul>
+<h4 id="7-2-8-查找当前高亮选区中的文本"><a href="#7-2-8-查找当前高亮选区中的文本" class="headerlink" title="7.2.8 查找当前高亮选区中的文本"></a>7.2.8 查找当前高亮选区中的文本</h4><ul>
 <li><code>:h visual-search</code></li>
 <li><code>:vmap X y/&lt;C-R&gt;&quot;&lt;CR&gt;</code>（某些特殊字符”<code>.</code>“或”<code>*</code>“通常会引起问题）</li>
 <li>解决方案：</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xnoremap *:&lt;C-u&gt;call &lt;SID&gt;VSetSearch()&lt;CR&gt;/&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">xnoremap #:&lt;C-u&gt;call &lt;SID&gt;VSetSearch()&lt;CR&gt;?&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">function! s:VsetSearch()</span><br><span class="line">   let temp = @s</span><br><span class="line">   norm! gv"sy</span><br><span class="line">   let @/ = '\V' .substitute(escape(@s, '/\'), '\n', '\\n', 'g')</span><br><span class="line">   let @s = temp</span><br><span class="line">endfunction</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">xnoremap *:&lt;C-u&gt;call &lt;SID&gt;VSetSearch()&lt;CR&gt;/&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;</div><div class="line">xnoremap #:&lt;C-u&gt;call &lt;SID&gt;VSetSearch()&lt;CR&gt;?&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;</div><div class="line">function! s:VsetSearch()</div><div class="line">   let temp = @s</div><div class="line">   norm! gv"sy</div><div class="line">   let @/ = '\V' .substitute(escape(@s, '/\'), '\n', '\\n', 'g')</div><div class="line">   let @s = temp</div><div class="line">endfunction</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>visual star search</strong>插件</li>
 <li><code>xnoremap</code>关键字指明映射项只在可视模式下有效，不包括选择模式</li>
 <li><code>:h mapmode-x</code></li>
 </ul>
-<h3 id="7-3_替换">7.3 替换</h3><h4 id="7-3-1_结识substitute命令">7.3.1 结识substitute命令</h4><ul>
+<h3 id="7-3-替换"><a href="#7-3-替换" class="headerlink" title="7.3 替换"></a>7.3 替换</h3><h4 id="7-3-1-结识substitute命令"><a href="#7-3-1-结识substitute命令" class="headerlink" title="7.3.1 结识substitute命令"></a>7.3.1 结识substitute命令</h4><ul>
 <li><code>:[range]s[ubstitute]/{pattern}/{string}/[flags]</code></li>
 <li><p>标志位<code>:h s_flags</code></p>
 <ul>
@@ -1889,10 +1889,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="7-3-2_在文件范围内查找并替换每一处匹配">7.3.2 在文件范围内查找并替换每一处匹配</h4><ul>
+<h4 id="7-3-2-在文件范围内查找并替换每一处匹配"><a href="#7-3-2-在文件范围内查找并替换每一处匹配" class="headerlink" title="7.3.2 在文件范围内查找并替换每一处匹配"></a>7.3.2 在文件范围内查找并替换每一处匹配</h4><ul>
 <li>标志位<code>g</code></li>
 </ul>
-<h4 id="7-3-3_手动控制每一次替换操作">7.3.3 手动控制每一次替换操作</h4><ul>
+<h4 id="7-3-3-手动控制每一次替换操作"><a href="#7-3-3-手动控制每一次替换操作" class="headerlink" title="7.3.3 手动控制每一次替换操作"></a>7.3.3 手动控制每一次替换操作</h4><ul>
 <li>标志位<code>c</code>   <code>:h :s_c</code></li>
 </ul>
 <table>
@@ -1917,11 +1917,11 @@ dd
 </tr>
 <tr>
 <td><code>l</code></td>
-<td>“last”—替换此处匹配后退出</td>
+<td>“last”–替换此处匹配后退出</td>
 </tr>
 <tr>
 <td><code>a</code></td>
-<td>“all”—替换此处与之后所有的匹配</td>
+<td>“all”–替换此处与之后所有的匹配</td>
 </tr>
 <tr>
 <td><code>&lt;C-e&gt;</code></td>
@@ -1933,29 +1933,29 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="7-3-4_重用上次的查找模式">7.3.4 重用上次的查找模式</h4><ul>
+<h4 id="7-3-4-重用上次的查找模式"><a href="#7-3-4-重用上次的查找模式" class="headerlink" title="7.3.4 重用上次的查找模式"></a>7.3.4 重用上次的查找模式</h4><ul>
 <li>查找域留空</li>
 <li><code>:h cmdline-history</code></li>
 <li><code>&lt;C-r&gt;/</code>在命令历史中创建完整的记录</li>
 </ul>
-<h4 id="7-3-5_用寄存器的内容替换">7.3.5 用寄存器的内容替换</h4><ul>
+<h4 id="7-3-5-用寄存器的内容替换"><a href="#7-3-5-用寄存器的内容替换" class="headerlink" title="7.3.5 用寄存器的内容替换"></a>7.3.5 用寄存器的内容替换</h4><ul>
 <li>传值：通过<code>&lt;C-r&gt;{register}</code>插入寄存器内容到替换域</li>
 <li>引用：通过<code>\=@{register}</code>引用寄存器内容到替换域</li>
 <li>比较：<code>:let @/=&#39;……&#39;</code>  <code>:let @a=&#39;……..&#39;</code>  <code>:%s//\=@a/g</code></li>
 </ul>
-<h4 id="7-3-6_重复上一次Substitute命令">7.3.6 重复上一次Substitute命令</h4><ul>
+<h4 id="7-3-6-重复上一次Substitute命令"><a href="#7-3-6-重复上一次Substitute命令" class="headerlink" title="7.3.6 重复上一次Substitute命令"></a>7.3.6 重复上一次Substitute命令</h4><ul>
 <li><code>g&amp;</code>整个文件范围内执行上一次<code>substitute</code>命令 <code>:h g&amp;</code></li>
 <li><code>:&amp;</code> 重复上一次<code>substitute</code>命令  <code>:h :&amp;</code></li>
 <li><code>:&amp;&amp;</code> 后面的<code>&amp;</code>重复上一次的标志位</li>
 <li><code>gv</code>  激活可视模式并选中上次高亮位置</li>
 <li>修正<code>&amp;</code>命令</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nnoremap &amp; :&amp;&amp;&lt;CR&gt;</span><br><span class="line">xnoremap &amp; :&amp;&amp;&lt;CR&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="7-3-7_使用子匹配重排CSV文件的字段">7.3.7 使用子匹配重排CSV文件的字段</h4><ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">nnoremap</span> &amp; :&amp;&amp;<span class="symbol">&lt;CR&gt;</span></div><div class="line"><span class="keyword">xnoremap</span> &amp; :&amp;&amp;<span class="symbol">&lt;CR&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="7-3-7-使用子匹配重排CSV文件的字段"><a href="#7-3-7-使用子匹配重排CSV文件的字段" class="headerlink" title="7.3.7 使用子匹配重排CSV文件的字段"></a>7.3.7 使用子匹配重排CSV文件的字段</h4><ul>
 <li><code>\n</code></li>
 </ul>
-<h4 id="7-3-8_在替换过程中执行算术运算">7.3.8 在替换过程中执行算术运算</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/\v\&lt;\/?h\zs\d</span><br><span class="line">:%s//\=submatch(0) - 1/g</span><br></pre></td></tr></table></figure>
-<h4 id="7-3-9_交换两个或更多的单词">7.3.9 交换两个或更多的单词</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/\v(&lt;man&gt;|&lt;dog&gt;)</span><br><span class="line">:%s//\=&#123;"dog":"man","man":"dog"&#125;[submatch(1)]/g</span><br></pre></td></tr></table></figure>
+<h4 id="7-3-8-在替换过程中执行算术运算"><a href="#7-3-8-在替换过程中执行算术运算" class="headerlink" title="7.3.8 在替换过程中执行算术运算"></a>7.3.8 在替换过程中执行算术运算</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/\v\&lt;\/?h\zs\d</div><div class="line">:%s//\=<span class="built_in">submatch</span>(<span class="number">0</span>) - <span class="number">1</span>/g</div></pre></td></tr></table></figure>
+<h4 id="7-3-9-交换两个或更多的单词"><a href="#7-3-9-交换两个或更多的单词" class="headerlink" title="7.3.9 交换两个或更多的单词"></a>7.3.9 交换两个或更多的单词</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/\v(<span class="symbol">&lt;man&gt;</span>|<span class="symbol">&lt;dog&gt;</span>)</div><div class="line">:%s//\=&#123;<span class="string">"dog"</span>:<span class="string">"man"</span>,<span class="string">"man"</span>:<span class="string">"dog"</span>&#125;[<span class="built_in">submatch</span>(<span class="number">1</span>)]/g</div></pre></td></tr></table></figure>
 <ul>
 <li><code>:h submatch()</code></li>
 <li><strong>Abolish.vim</strong>:超级<code>substitute</code>命令<ul>
@@ -1964,19 +1964,19 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="7-3-10_在多个文件中执行查找与替换">7.3.10 在多个文件中执行查找与替换</h4><ul>
+<h4 id="7-3-10-在多个文件中执行查找与替换"><a href="#7-3-10-在多个文件中执行查找与替换" class="headerlink" title="7.3.10 在多个文件中执行查找与替换"></a>7.3.10 在多个文件中执行查找与替换</h4><ul>
 <li>散射法</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/Pragmatic\ze Vim</span><br><span class="line">:%s//Practical/g</span><br><span class="line">:args **/*.txt</span><br><span class="line">:set hidden</span><br><span class="line">:argdo %s//Practical/ge</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/Pragmatic\ze Vim</div><div class="line">:%s//Practical/g</div><div class="line">:<span class="keyword">args</span> **/*.txt</div><div class="line">:<span class="keyword">set</span> hidden</div><div class="line">:<span class="keyword">argdo</span> %s//Practical/ge</div></pre></td></tr></table></figure>
 <ul>
 <li>创建只包含目标的文件列表</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/Pragmatic\ze Vim</span><br><span class="line">:vimgrep /&lt;C-r&gt;// **/*.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Pragmatic\ze Vim</div><div class="line">:<span class="keyword">vimgrep</span> /<span class="symbol">&lt;C-r&gt;</span>// **/*.txt</div></pre></td></tr></table></figure>
 <ul>
 <li><code>:copen</code> 打开quickfix列表</li>
 <li><strong>substitution/qargs.vim</strong></li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">command! -nargs=0 -bar Qargs execute 'args' QuickfixFileName()</span><br><span class="line">function! QuickfixFilenames()</span><br><span class="line">   let buffer_numbers = &#123;&#125;</span><br><span class="line">   for quickfix_item in getqflist()</span><br><span class="line">       let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])</span><br><span class="line">   endfor</span><br><span class="line">   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))</span><br><span class="line">endfunction</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">command! -nargs=<span class="number">0</span> -bar Qargs <span class="keyword">execute</span> <span class="string">'args'</span> QuickfixFileName()</div><div class="line"><span class="function"><span class="keyword">function</span>! <span class="title">QuickfixFilenames</span><span class="params">()</span></span></div><div class="line">   <span class="keyword">let</span> buffer_numbers = &#123;&#125;</div><div class="line">   <span class="keyword">for</span> quickfix_item in <span class="built_in">getqflist</span>()</div><div class="line">       <span class="keyword">let</span> buffer_numbers[quickfix_item[<span class="string">'bufnr'</span>]] = <span class="built_in">bufname</span>(quickfix_item[<span class="string">'bufnr'</span>])</div><div class="line">   <span class="keyword">endfor</span></div><div class="line">   <span class="keyword">return</span> <span class="keyword">join</span>(<span class="keyword">map</span>(<span class="built_in">values</span>(buffer_numbers), <span class="string">'fnameescape(v:val)'</span>))</div><div class="line"><span class="keyword">endfunction</span></div></pre></td></tr></table></figure>
 <ul>
 <li><code>:Qargs</code> 把quickfix列表中的文件加至参数列表</li>
 <li><code>:argdo %s//Practical/g</code></li>
@@ -1984,12 +1984,12 @@ dd
 <li><code>:Qargs | argdo %s//Practical/g | update</code></li>
 <li><code>:h :bar</code></li>
 </ul>
-<h3 id="7-4_global命令">7.4 global命令</h3><h4 id="7-4-1_结识global命令">7.4.1 结识global命令</h4><ul>
+<h3 id="7-4-global命令"><a href="#7-4-global命令" class="headerlink" title="7.4 global命令"></a>7.4 global命令</h3><h4 id="7-4-1-结识global命令"><a href="#7-4-1-结识global命令" class="headerlink" title="7.4.1 结识global命令"></a>7.4.1 结识global命令</h4><ul>
 <li><code>:h :g</code></li>
 <li><code>:[range]global[!] /{pattern}/ [cmd]</code></li>
 <li><code>:global!  :vglobal</code></li>
 </ul>
-<h4 id="7-4-2_删除所有包含模式的文本行">7.4.2 删除所有包含模式的文本行</h4><ul>
+<h4 id="7-4-2-删除所有包含模式的文本行"><a href="#7-4-2-删除所有包含模式的文本行" class="headerlink" title="7.4.2 删除所有包含模式的文本行"></a>7.4.2 删除所有包含模式的文本行</h4><ul>
 <li><p><code>:g/re/d</code></p>
 <ul>
 <li><code>/\v\&lt;\/?\w+&gt;</code></li>
@@ -2002,8 +2002,8 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="7-4-3_将ToDo项收集至寄存器">7.4.3 将ToDo项收集至寄存器</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qaq</span><br><span class="line">:g/TODO/yank A</span><br><span class="line">:g/TODO/t$</span><br></pre></td></tr></table></figure>
-<h4 id="7-4-4_将CSS文件中所有规则的属性按照字母排序">7.4.4 将CSS文件中所有规则的属性按照字母排序</h4><ul>
+<h4 id="7-4-3-将ToDo项收集至寄存器"><a href="#7-4-3-将ToDo项收集至寄存器" class="headerlink" title="7.4.3 将ToDo项收集至寄存器"></a>7.4.3 将ToDo项收集至寄存器</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">qaq</div><div class="line">:g/TODO/<span class="keyword">yank</span> A</div><div class="line">:g/TODO/t$</div></pre></td></tr></table></figure>
+<h4 id="7-4-4-将CSS文件中所有规则的属性按照字母排序"><a href="#7-4-4-将CSS文件中所有规则的属性按照字母排序" class="headerlink" title="7.4.4 将CSS文件中所有规则的属性按照字母排序"></a>7.4.4 将CSS文件中所有规则的属性按照字母排序</h4><ul>
 <li><code>:h :sort</code></li>
 <li><code>vi{ | :’&lt;,’&gt;sort</code></li>
 <li><code>:g/{/ .+1,/}/-1 sort</code></li>
@@ -2014,40 +2014,40 @@ dd
 <li><code>:g/{/sil .+1,/}/-1 &gt;</code></li>
 </ul>
 <hr>
-<h2 id="8-_工具">8. 工具</h2><h3 id="8-1_过ctags建立索引，并用其浏览源代码">8.1 过ctags建立索引，并用其浏览源代码</h3><h4 id="8-1-1_结识ctags">8.1.1 结识ctags</h4><h5 id="8-1-1-1_安装Exuberant_Ctags">8.1.1.1 安装Exuberant Ctags</h5><ul>
+<h2 id="8-工具"><a href="#8-工具" class="headerlink" title="8. 工具"></a>8. 工具</h2><h3 id="8-1-过ctags建立索引，并用其浏览源代码"><a href="#8-1-过ctags建立索引，并用其浏览源代码" class="headerlink" title="8.1 过ctags建立索引，并用其浏览源代码"></a>8.1 过ctags建立索引，并用其浏览源代码</h3><h4 id="8-1-1-结识ctags"><a href="#8-1-1-结识ctags" class="headerlink" title="8.1.1 结识ctags"></a>8.1.1 结识ctags</h4><h5 id="8-1-1-1-安装Exuberant-Ctags"><a href="#8-1-1-1-安装Exuberant-Ctags" class="headerlink" title="8.1.1.1 安装Exuberant Ctags"></a>8.1.1.1 安装Exuberant Ctags</h5><ul>
 <li><code>sudo apt-get install exuberant-ctags</code></li>
 <li>osx自带的是ctags的BSD</li>
 <li><code>brew install ctags</code></li>
 <li>修改$PATH使/usr/local/bin比/usr/bin优先</li>
 <li>Doctor JS,jsctags</li>
 </ul>
-<h5 id="8-1-1-2_创建代码库索引">8.1.1.2 创建代码库索引</h5><ul>
+<h5 id="8-1-1-2-创建代码库索引"><a href="#8-1-1-2-创建代码库索引" class="headerlink" title="8.1.1.2 创建代码库索引"></a>8.1.1.2 创建代码库索引</h5><ul>
 <li><code>ctags *.rb</code></li>
 </ul>
-<h5 id="8-1-1-3_详解标签文件">8.1.1.3 详解标签文件</h5><ul>
+<h5 id="8-1-1-3-详解标签文件"><a href="#8-1-1-3-详解标签文件" class="headerlink" title="8.1.1.3 详解标签文件"></a>8.1.1.3 详解标签文件</h5><ul>
 <li>前几行由元数据组成</li>
 <li>此后的每一行由关键字、文件名以及关键字在源代码中的位置构成</li>
-<li>关键字按字母顺序排列<h5 id="8-1-1-4_用模式定位关键字，而不是行号">8.1.1.4 用模式定位关键字，而不是行号</h5></li>
+<li>关键字按字母顺序排列<h5 id="8-1-1-4-用模式定位关键字，而不是行号"><a href="#8-1-1-4-用模式定位关键字，而不是行号" class="headerlink" title="8.1.1.4 用模式定位关键字，而不是行号"></a>8.1.1.4 用模式定位关键字，而不是行号</h5></li>
 <li>关键字的地址可以是任意的Ex命令</li>
 </ul>
-<h5 id="8-1-1-5_用元数据标记关键字">8.1.1.5 用元数据标记关键字</h5><ul>
+<h5 id="8-1-1-5-用元数据标记关键字"><a href="#8-1-1-5-用元数据标记关键字" class="headerlink" title="8.1.1.5 用元数据标记关键字"></a>8.1.1.5 用元数据标记关键字</h5><ul>
 <li>传统由制表符分隔3组字段构成：关键字、文件名以及定位符</li>
 <li>扩展格式：末尾添加字段，为关键字提供元数据，c类，f函数</li>
 </ul>
-<h4 id="8-1-2_配置Vim使用ctags">8.1.2 配置Vim使用ctags</h4><ul>
+<h4 id="8-1-2-配置Vim使用ctags"><a href="#8-1-2-配置Vim使用ctags" class="headerlink" title="8.1.2 配置Vim使用ctags"></a>8.1.2 配置Vim使用ctags</h4><ul>
 <li><code>:h &#39;tags&#39;</code>指定标签文件查找路径</li>
 <li><code>:h tags-option</code></li>
 <li><code>set tags?</code>查看选项内容</li>
 </ul>
-<h5 id="8-1-2-1_生成标签文件">8.1.2.1 生成标签文件</h5><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!ctags -R</span><br><span class="line">-exclude=.git // or -languages=-sql</span><br><span class="line"><span class="attribute">:nnoremap &lt;f5&gt; :!ctags</span> -R&lt;CR&gt;  //映射快捷键</span><br></pre></td></tr></table></figure>
-<h5 id="8-1-2-2_在每次保存文件时自动执行ctags">8.1.2.2 在每次保存文件时自动执行ctags</h5><ul>
+<h5 id="8-1-2-1-生成标签文件"><a href="#8-1-2-1-生成标签文件" class="headerlink" title="8.1.2.1 生成标签文件"></a>8.1.2.1 生成标签文件</h5><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!ctags -R</div><div class="line">-exclude=.git // or -languages=-sql</div><div class="line"><span class="meta">:nnoremap &lt;f5&gt; :!ctags</span> -R&lt;CR&gt;  //映射快捷键</div></pre></td></tr></table></figure>
+<h5 id="8-1-2-2-在每次保存文件时自动执行ctags"><a href="#8-1-2-2-在每次保存文件时自动执行ctags" class="headerlink" title="8.1.2.2 在每次保存文件时自动执行ctags"></a>8.1.2.2 在每次保存文件时自动执行ctags</h5><ul>
 <li><code>autocommand</code>允许事件发生时调用一条命令</li>
 <li><code>:autocmd BufWritePost * call system(&quot;ctags -R&quot;)</code></li>
 </ul>
-<h5 id="8-1-2-3_通过版本控制工具的回调机制自动执行ctags">8.1.2.3 通过版本控制工具的回调机制自动执行ctags</h5><blockquote>
+<h5 id="8-1-2-3-通过版本控制工具的回调机制自动执行ctags"><a href="#8-1-2-3-通过版本控制工具的回调机制自动执行ctags" class="headerlink" title="8.1.2.3 通过版本控制工具的回调机制自动执行ctags"></a>8.1.2.3 通过版本控制工具的回调机制自动执行ctags</h5><blockquote>
 <p>Tim Pope的&lt;<effortless ctags="" with="" git="">&gt;讲解了如何为post-commit、post-merge、以及post-checkout等事件建立回调机制</effortless></p>
 </blockquote>
-<h4 id="8-1-3_使用Vim的标签中转命令，浏览关键字的定义">8.1.3 使用Vim的标签中转命令，浏览关键字的定义</h4><ul>
+<h4 id="8-1-3-使用Vim的标签中转命令，浏览关键字的定义"><a href="#8-1-3-使用Vim的标签中转命令，浏览关键字的定义" class="headerlink" title="8.1.3 使用Vim的标签中转命令，浏览关键字的定义"></a>8.1.3 使用Vim的标签中转命令，浏览关键字的定义</h4><ul>
 <li><code>&lt;C-]&gt;</code>跳转到</li>
 <li><code>&lt;C-t&gt;</code>跳回</li>
 <li><code>g&lt;C-]&gt;</code>可选跳转</li>
@@ -2059,7 +2059,7 @@ dd
 <li><code>:tag /{pattern}</code> <code>:tjump /{pattern}</code></li>
 <li><code>:pop</code>等同于<code>&lt;C-t&gt;</code></li>
 </ul>
-<h3 id="8-2_编译代码，并通过Quickfix列表浏览错误信息">8.2 编译代码，并通过Quickfix列表浏览错误信息</h3><h4 id="8-2-1_不用离开Vim也能编译代码">8.2.1 不用离开Vim也能编译代码</h4><ul>
+<h3 id="8-2-编译代码，并通过Quickfix列表浏览错误信息"><a href="#8-2-编译代码，并通过Quickfix列表浏览错误信息" class="headerlink" title="8.2 编译代码，并通过Quickfix列表浏览错误信息"></a>8.2 编译代码，并通过Quickfix列表浏览错误信息</h3><h4 id="8-2-1-不用离开Vim也能编译代码"><a href="#8-2-1-不用离开Vim也能编译代码" class="headerlink" title="8.2.1 不用离开Vim也能编译代码"></a>8.2.1 不用离开Vim也能编译代码</h4><ul>
 <li>准备工作</li>
 <li>在Shell中编译工程<code>make</code></li>
 <li>在Vim中编译工程<code>:make</code><ul>
@@ -2069,7 +2069,7 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="8-2-2_浏览Quickfix列表">8.2.2 浏览Quickfix列表</h4><h5 id="8-2-2-1_位置列表以|开头，quickfix只有一份，位置列表有多份">8.2.2.1 位置列表以|开头，quickfix只有一份，位置列表有多份</h5><ul>
+<h4 id="8-2-2-浏览Quickfix列表"><a href="#8-2-2-浏览Quickfix列表" class="headerlink" title="8.2.2 浏览Quickfix列表"></a>8.2.2 浏览Quickfix列表</h4><h5 id="8-2-2-1-位置列表以-开头，quickfix只有一份，位置列表有多份"><a href="#8-2-2-1-位置列表以-开头，quickfix只有一份，位置列表有多份" class="headerlink" title="8.2.2.1 位置列表以|开头，quickfix只有一份，位置列表有多份"></a>8.2.2.1 位置列表以|开头，quickfix只有一份，位置列表有多份</h5><ul>
 <li><code>:lnext</code> <code>:lprev</code> <code>:ll N</code> <code>:lmake</code> <code>:lgrep</code> <code>:lvimgrep</code></li>
 </ul>
 <table>
@@ -2118,10 +2118,10 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="8-2-3_回溯以前的Quickfix列表">8.2.3 回溯以前的Quickfix列表</h4><ul>
+<h4 id="8-2-3-回溯以前的Quickfix列表"><a href="#8-2-3-回溯以前的Quickfix列表" class="headerlink" title="8.2.3 回溯以前的Quickfix列表"></a>8.2.3 回溯以前的Quickfix列表</h4><ul>
 <li><code>:colder</code> <code>:cnewer</code></li>
 </ul>
-<h4 id="8-2-4_定制外部编译器">8.2.4 定制外部编译器</h4><ul>
+<h4 id="8-2-4-定制外部编译器"><a href="#8-2-4-定制外部编译器" class="headerlink" title="8.2.4 定制外部编译器"></a>8.2.4 定制外部编译器</h4><ul>
 <li><code>:h :compiler</code> <code>:h :make</code></li>
 <li>配置<code>:make</code>命令，使调用JSLint来验证JavaScript文件<ul>
 <li>nodelint依赖Node.js，可以通过NPM命令安装<code>npm install nodelint -g</code></li>
@@ -2146,11 +2146,11 @@ dd
 </ul>
 </li>
 </ul>
-<h3 id="8-3_通过grep,vimgrep以及其他工具对整个工程进行查找">8.3 通过grep,vimgrep以及其他工具对整个工程进行查找</h3><h4 id="8-3-1_不必离开Vim也能调用grep">8.3.1 不必离开Vim也能调用grep</h4><ul>
+<h3 id="8-3-通过grep-vimgrep以及其他工具对整个工程进行查找"><a href="#8-3-通过grep-vimgrep以及其他工具对整个工程进行查找" class="headerlink" title="8.3 通过grep,vimgrep以及其他工具对整个工程进行查找"></a>8.3 通过grep,vimgrep以及其他工具对整个工程进行查找</h3><h4 id="8-3-1-不必离开Vim也能调用grep"><a href="#8-3-1-不必离开Vim也能调用grep" class="headerlink" title="8.3.1 不必离开Vim也能调用grep"></a>8.3.1 不必离开Vim也能调用grep</h4><ul>
 <li><code>:h :grep</code></li>
 <li><code>-i</code>不区分大小写</li>
 </ul>
-<h4 id="8-3-2_定制grep程序">8.3.2 定制grep程序</h4><ul>
+<h4 id="8-3-2-定制grep程序"><a href="#8-3-2-定制grep程序" class="headerlink" title="8.3.2 定制grep程序"></a>8.3.2 定制grep程序</h4><ul>
 <li><code>:h &#39;grepprg&#39;</code> <code>$*</code>代表占位符，代替参数</li>
 <li><code>:h &#39;grepformat&#39;</code>可以逗号分隔多组格式</li>
 <li><code>:h errorformat</code></li>
@@ -2186,7 +2186,7 @@ dd
 </ul>
 </li>
 </ul>
-<h4 id="8-3-3_自动补全">8.3.3 自动补全</h4><ul>
+<h4 id="8-3-3-自动补全"><a href="#8-3-3-自动补全" class="headerlink" title="8.3.3 自动补全"></a>8.3.3 自动补全</h4><ul>
 <li>结识Vim关键字自动补全<ul>
 <li><code>:h &#39;ignorecase&#39;</code>会影响自动补全</li>
 <li><code>:h &#39;inercase&#39;</code>避免<code>ignorecase</code>对自动补全的影响</li>
@@ -2318,7 +2318,7 @@ dd
 </tr>
 </tbody>
 </table>
-<h4 id="8-3-4_利用Vim的拼写检查器，查找并更正拼写错误">8.3.4 利用Vim的拼写检查器，查找并更正拼写错误</h4><ul>
+<h4 id="8-3-4-利用Vim的拼写检查器，查找并更正拼写错误"><a href="#8-3-4-利用Vim的拼写检查器，查找并更正拼写错误" class="headerlink" title="8.3.4 利用Vim的拼写检查器，查找并更正拼写错误"></a>8.3.4 利用Vim的拼写检查器，查找并更正拼写错误</h4><ul>
 <li>对你工作进行拼写检查<ul>
 <li><code>:set spell</code></li>
 <li><code>[s</code>和<code>]s</code>遍历拼写错误项<code>:h ]s</code></li>
@@ -2337,7 +2337,7 @@ dd
 <li>将单词添加到拼写文件中<code>:h &#39;spellfile&#39;</code></li>
 <li>在插入模式下更正拼写错误<code>&lt;C-x&gt;s</code> <code>:h compl-spelling</code></li>
 </ul>
-<h4 id="8-3-5_接下来干什么">8.3.5 接下来干什么</h4><ul>
+<h4 id="8-3-5-接下来干什么"><a href="#8-3-5-接下来干什么" class="headerlink" title="8.3.5 接下来干什么"></a>8.3.5 接下来干什么</h4><ul>
 <li>继续练习</li>
 <li>定制你自己的vim<ul>
 <li>essential.vim</li>
@@ -2349,7 +2349,7 @@ dd
 </li>
 <li>欲善其事，先利其器</li>
 </ul>
-<h3 id="8-4_根据个人喜好定制vim">8.4 根据个人喜好定制vim</h3><h4 id="8-4-1_动态改变vim的设置项">8.4.1 动态改变vim的设置项</h4><ul>
+<h3 id="8-4-根据个人喜好定制vim"><a href="#8-4-根据个人喜好定制vim" class="headerlink" title="8.4 根据个人喜好定制vim"></a>8.4 根据个人喜好定制vim</h3><h4 id="8-4-1-动态改变vim的设置项"><a href="#8-4-1-动态改变vim的设置项" class="headerlink" title="8.4.1 动态改变vim的设置项"></a>8.4.1 动态改变vim的设置项</h4><ul>
 <li><code>:h option-list</code></li>
 <li>选项前面加no,关闭功能</li>
 <li>选项之后加!,反转设置</li>
@@ -2358,13 +2358,13 @@ dd
 <li>可以set多组选项</li>
 <li>setlocal只对当前缓冲区设置</li>
 </ul>
-<h4 id="8-4-2_将配置信息存至vimrc文件">8.4.2 将配置信息存至vimrc文件</h4><ul>
+<h4 id="8-4-2-将配置信息存至vimrc文件"><a href="#8-4-2-将配置信息存至vimrc文件" class="headerlink" title="8.4.2 将配置信息存至vimrc文件"></a>8.4.2 将配置信息存至vimrc文件</h4><ul>
 <li><code>:h :source</code></li>
 <li><code>:source {file}</code>应用文件设置项</li>
 <li><code>:h vimrc</code></li>
 <li><code>:edit $MYVIMRC</code></li>
 </ul>
-<h4 id="8-4-3_为特定类型的文件应用个性化设置">8.4.3 为特定类型的文件应用个性化设置</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">has</span>(<span class="string">"autocmd"</span>)</span><br><span class="line">  <span class="keyword">filetype</span> <span class="keyword">on</span></span><br><span class="line">  <span class="keyword">autocmd</span> FileType <span class="keyword">ruby</span> <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">2</span> <span class="keyword">sts</span>=<span class="number">2</span> <span class="keyword">sw</span>=<span class="number">2</span> et</span><br><span class="line">  <span class="keyword">autocmd</span> FileType javascript <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">4</span> <span class="keyword">sts</span>=<span class="number">4</span> <span class="keyword">sw</span>=<span class="number">4</span> noet</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<h4 id="8-4-3-为特定类型的文件应用个性化设置"><a href="#8-4-3-为特定类型的文件应用个性化设置" class="headerlink" title="8.4.3 为特定类型的文件应用个性化设置"></a>8.4.3 为特定类型的文件应用个性化设置</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="built_in">has</span>(<span class="string">"autocmd"</span>)</div><div class="line">  <span class="keyword">filetype</span> <span class="keyword">on</span></div><div class="line">  <span class="keyword">autocmd</span> FileType <span class="keyword">ruby</span> <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">2</span> <span class="keyword">sts</span>=<span class="number">2</span> <span class="keyword">sw</span>=<span class="number">2</span> et</div><div class="line">  <span class="keyword">autocmd</span> FileType javascript <span class="keyword">setlocal</span> <span class="keyword">ts</span>=<span class="number">4</span> <span class="keyword">sts</span>=<span class="number">4</span> <span class="keyword">sw</span>=<span class="number">4</span> noet</div><div class="line"><span class="keyword">endif</span></div></pre></td></tr></table></figure>
 <ul>
 <li><code>:h :autocmd</code></li>
 <li><code>:h ftplugin-name</code></li>
@@ -2381,9 +2381,9 @@ dd
           
             <a href="/tags/vim/" rel="tag">#vim</a>
           
-            <a href="/tags/技巧/" rel="tag">#技巧</a>
-          
             <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/技巧/" rel="tag">#技巧</a>
           
         </div>
       
@@ -2533,7 +2533,7 @@ dd
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-_Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">0. Vim解决问题的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-_[^hpoint]_命令"><span class="nav-number">1.1.</span> <span class="nav-text">结识. [^hpoint] 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要自我重复"><span class="nav-number">1.2.</span> <span class="nav-text">不要自我重复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#减少无关移动"><span class="nav-number">1.2.1.</span> <span class="nav-text">减少无关移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复合命令"><span class="nav-number">1.2.2.</span> <span class="nav-text">复合命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用复合命令"><span class="nav-number">1.2.3.</span> <span class="nav-text">常用复合命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以退为进"><span class="nav-number">1.3.</span> <span class="nav-text">以退为进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行、重复、回退"><span class="nav-number">1.4.</span> <span class="nav-text">执行、重复、回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找并手动替换"><span class="nav-number">1.5.</span> <span class="nav-text">查找并手动替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-范式"><span class="nav-number">1.6.</span> <span class="nav-text">结识.范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_模式"><span class="nav-number">2.</span> <span class="nav-text">2. 模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-_普通"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. 普通</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-_把撤消单元切成块，普通模式和插入模式之间切换的粒度,"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-_构造可重复的修改:"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2. 构造可重复的修改:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-_用次数做简单的算术运算"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3. 用次数做简单的算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-_能够重复，就别用次数"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4. 能够重复，就别用次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-_双剑合璧，天下无敌"><span class="nav-number">2.1.5.</span> <span class="nav-text">2.1.5. 双剑合璧，天下无敌</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-_插入"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 插入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-_在插入模式中即时更正错误"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1. 在插入模式中即时更正错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-_返回普通模式"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2. 返回普通模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-_不离开插入模式，粘贴寄存器中的文本"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3. 不离开插入模式，粘贴寄存器中的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-_随时随地做运算"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4. 随时随地做运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-_用字符编码插入非常用字符"><span class="nav-number">2.2.5.</span> <span class="nav-text">2.2.5. 用字符编码插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-_用二合字母[^digraphsdefault]插入非常用字符"><span class="nav-number">2.2.6.</span> <span class="nav-text">2.2.6. 用二合字母[^digraphsdefault]插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-_用替换模式替换已有文本"><span class="nav-number">2.2.7.</span> <span class="nav-text">2.2.7. 用替换模式替换已有文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-_可视"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 可视</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-_深入理解可视模式"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1. 深入理解可视模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-_选择高亮选区"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2. 选择高亮选区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-_重复执行面向行的可视命令"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3. 重复执行面向行的可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-_只要可能，最好用操作符命令，而不是可视命令"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.4. 只要可能，最好用操作符命令，而不是可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-_用面向列块的可视模式编辑表格数据"><span class="nav-number">2.3.5.</span> <span class="nav-text">2.3.5. 用面向列块的可视模式编辑表格数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-6-_修改列文本"><span class="nav-number">2.3.6.</span> <span class="nav-text">2.3.6. 修改列文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-7-_在长短不一的高亮块后添加文本"><span class="nav-number">2.3.7.</span> <span class="nav-text">2.3.7. 在长短不一的高亮块后添加文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4_命令行"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1_结识vim的命令行模式"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 结识vim的命令行模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2_在一行或多个连续行上执行命令"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 在一行或多个连续行上执行命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3_使用:t和:m命令复制和移动行"><span class="nav-number">2.4.3.</span> <span class="nav-text">2.4.3 使用:t和:m命令复制和移动行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4_在指定范围上执行普通模式命令"><span class="nav-number">2.4.4.</span> <span class="nav-text">2.4.4 在指定范围上执行普通模式命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-5_重复上次的Ex命令"><span class="nav-number">2.4.5.</span> <span class="nav-text">2.4.5 重复上次的Ex命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-6_自动补全Ex命令[^commandcomplete]"><span class="nav-number">2.4.6.</span> <span class="nav-text">2.4.6 自动补全Ex命令[^commandcomplete]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-7_把当前单词插入到命令行"><span class="nav-number">2.4.7.</span> <span class="nav-text">2.4.7 把当前单词插入到命令行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-8_回溯历史命令"><span class="nav-number">2.4.8.</span> <span class="nav-text">2.4.8 回溯历史命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-9_运行Shell命令"><span class="nav-number">2.4.9.</span> <span class="nav-text">2.4.9 运行Shell命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-_管理多个文件"><span class="nav-number">3.</span> <span class="nav-text">3. 管理多个文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1_用缓冲区列表管理打开的文件"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 用缓冲区列表管理打开的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1_ls列出缓冲区列表[^ls]"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 ls列出缓冲区列表[^ls]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2_使用缓冲区列表："><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 使用缓冲区列表：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3_删除缓冲区"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 删除缓冲区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2_用参数列表将缓冲区分组"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 用参数列表将缓冲区分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3_管理隐藏缓冲区"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 管理隐藏缓冲区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4_将工作区切分成窗口"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 将工作区切分成窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5_用标签页将窗口分组[^tabpage]"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 用标签页将窗口分组[^tabpage]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-_打开和保存文件"><span class="nav-number">4.</span> <span class="nav-text">4. 打开和保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1_用edit命令打开文件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 用edit命令打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2_使用find打开文件"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 使用find打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3_使用netrw管理文件系统"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 使用netrw管理文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4_把文件保存到不存在的目录中"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 把文件保存到不存在的目录中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5_以超级用户权限保存文件"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 以超级用户权限保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-_移动跳转[^motion]"><span class="nav-number">5.</span> <span class="nav-text">5. 移动跳转[^motion]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1_用动作命令在文档中移动"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 用动作命令在文档中移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1_让手指保持在本位行上"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 让手指保持在本位行上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2_区分实际行与屏幕行"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 区分实际行与屏幕行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3_基于单词移动[^wordmotions]"><span class="nav-number">5.1.3.</span> <span class="nav-text">5.1.3 基于单词移动[^wordmotions]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4_对字符进行查找"><span class="nav-number">5.1.4.</span> <span class="nav-text">5.1.4 对字符进行查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-5_通过查找进行移动"><span class="nav-number">5.1.5.</span> <span class="nav-text">5.1.5 通过查找进行移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-6_用精确的文本对象选择选区[^textobjects]"><span class="nav-number">5.1.6.</span> <span class="nav-text">5.1.6 用精确的文本对象选择选区[^textobjects]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-7_删除周边，修改内部"><span class="nav-number">5.1.7.</span> <span class="nav-text">5.1.7 删除周边，修改内部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-8_设置位置标记[^markmotion]，以便快速跳回"><span class="nav-number">5.1.8.</span> <span class="nav-text">5.1.8 设置位置标记[^markmotion]，以便快速跳回</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-9_在匹配括号间跳转"><span class="nav-number">5.1.9.</span> <span class="nav-text">5.1.9 在匹配括号间跳转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2_在文件间跳转"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 在文件间跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1_遍历跳转列表"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 遍历跳转列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2_遍历改变列表"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 遍历改变列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3_跳转到光标下的文件[^gf]"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3 跳转到光标下的文件[^gf]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4_用全局位置标记在文件间快速跳转"><span class="nav-number">5.2.4.</span> <span class="nav-text">5.2.4 用全局位置标记在文件间快速跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-_寄存器"><span class="nav-number">6.</span> <span class="nav-text">6. 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1_复制与粘贴"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 复制与粘贴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1_用无名寄存器实现删除、复制与粘贴操作"><span class="nav-number">6.1.1.</span> <span class="nav-text">6.1.1 用无名寄存器实现删除、复制与粘贴操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2_深入理解Vim寄存器"><span class="nav-number">6.1.2.</span> <span class="nav-text">6.1.2 深入理解Vim寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3_用寄存器中的内容替换高亮选区的文本"><span class="nav-number">6.1.3.</span> <span class="nav-text">6.1.3 用寄存器中的内容替换高亮选区的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-4_把寄存器的内容粘贴出来[^p]"><span class="nav-number">6.1.4.</span> <span class="nav-text">6.1.4 把寄存器的内容粘贴出来[^p]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-5_与系统剪贴板进行交互[^paste]"><span class="nav-number">6.1.5.</span> <span class="nav-text">6.1.5 与系统剪贴板进行交互[^paste]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2_宏"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-1_宏的读取与执行"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.2.1 宏的读取与执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-2_规范光标位置、直达目标以及中止宏"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.2.2 规范光标位置、直达目标以及中止宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-3_加次数回放宏"><span class="nav-number">6.2.3.</span> <span class="nav-text">6.2.3 加次数回放宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-4_在连续的文件行上重复修改"><span class="nav-number">6.2.4.</span> <span class="nav-text">6.2.4 在连续的文件行上重复修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-5_给宏追加命令"><span class="nav-number">6.2.5.</span> <span class="nav-text">6.2.5 给宏追加命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-6_在一组文件中执行宏"><span class="nav-number">6.2.6.</span> <span class="nav-text">6.2.6 在一组文件中执行宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-7_用迭代求值的方式给列表编号"><span class="nav-number">6.2.7.</span> <span class="nav-text">6.2.7 用迭代求值的方式给列表编号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-8_编辑宏的内容"><span class="nav-number">6.2.8.</span> <span class="nav-text">6.2.8 编辑宏的内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-_匹配"><span class="nav-number">7.</span> <span class="nav-text">7. 匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1_按模式匹配及按原义匹配"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 按模式匹配及按原义匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-1_调整查找模式的大小写敏感性"><span class="nav-number">7.1.1.</span> <span class="nav-text">7.1.1 调整查找模式的大小写敏感性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-2_按正则表达式查找时，使用\v模式开关"><span class="nav-number">7.1.2.</span> <span class="nav-text">7.1.2 按正则表达式查找时，使用\v模式开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3_按原义查找文本时，使用\V原义开关"><span class="nav-number">7.1.3.</span> <span class="nav-text">7.1.3 按原义查找文本时，使用\V原义开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-4_使用圆括号捕获子匹配"><span class="nav-number">7.1.4.</span> <span class="nav-text">7.1.4 使用圆括号捕获子匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-5_界定单词的边界"><span class="nav-number">7.1.5.</span> <span class="nav-text">7.1.5 界定单词的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-6_界定匹配的边界"><span class="nav-number">7.1.6.</span> <span class="nav-text">7.1.6 界定匹配的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-7_转义问题字符"><span class="nav-number">7.1.7.</span> <span class="nav-text">7.1.7 转义问题字符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2_查找"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-1_结识查找命令"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.2.1 结识查找命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-2_高亮查找匹配"><span class="nav-number">7.2.2.</span> <span class="nav-text">7.2.2 高亮查找匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-3_在执行查找前预览第一处匹配"><span class="nav-number">7.2.3.</span> <span class="nav-text">7.2.3 在执行查找前预览第一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-4_统计当前模式的匹配个数"><span class="nav-number">7.2.4.</span> <span class="nav-text">7.2.4 统计当前模式的匹配个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-5_将光标偏移到查找匹配结尾"><span class="nav-number">7.2.5.</span> <span class="nav-text">7.2.5 将光标偏移到查找匹配结尾</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-6_对完整的查找匹配进行操作"><span class="nav-number">7.2.6.</span> <span class="nav-text">7.2.6 对完整的查找匹配进行操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-7_利用查找历史，迭代完成复杂的模式"><span class="nav-number">7.2.7.</span> <span class="nav-text">7.2.7 利用查找历史，迭代完成复杂的模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-8_查找当前高亮选区中的文本"><span class="nav-number">7.2.8.</span> <span class="nav-text">7.2.8 查找当前高亮选区中的文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3_替换"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 替换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-1_结识substitute命令"><span class="nav-number">7.3.1.</span> <span class="nav-text">7.3.1 结识substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-2_在文件范围内查找并替换每一处匹配"><span class="nav-number">7.3.2.</span> <span class="nav-text">7.3.2 在文件范围内查找并替换每一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-3_手动控制每一次替换操作"><span class="nav-number">7.3.3.</span> <span class="nav-text">7.3.3 手动控制每一次替换操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-4_重用上次的查找模式"><span class="nav-number">7.3.4.</span> <span class="nav-text">7.3.4 重用上次的查找模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-5_用寄存器的内容替换"><span class="nav-number">7.3.5.</span> <span class="nav-text">7.3.5 用寄存器的内容替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-6_重复上一次Substitute命令"><span class="nav-number">7.3.6.</span> <span class="nav-text">7.3.6 重复上一次Substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-7_使用子匹配重排CSV文件的字段"><span class="nav-number">7.3.7.</span> <span class="nav-text">7.3.7 使用子匹配重排CSV文件的字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-8_在替换过程中执行算术运算"><span class="nav-number">7.3.8.</span> <span class="nav-text">7.3.8 在替换过程中执行算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-9_交换两个或更多的单词"><span class="nav-number">7.3.9.</span> <span class="nav-text">7.3.9 交换两个或更多的单词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-10_在多个文件中执行查找与替换"><span class="nav-number">7.3.10.</span> <span class="nav-text">7.3.10 在多个文件中执行查找与替换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4_global命令"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 global命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-1_结识global命令"><span class="nav-number">7.4.1.</span> <span class="nav-text">7.4.1 结识global命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-2_删除所有包含模式的文本行"><span class="nav-number">7.4.2.</span> <span class="nav-text">7.4.2 删除所有包含模式的文本行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-3_将ToDo项收集至寄存器"><span class="nav-number">7.4.3.</span> <span class="nav-text">7.4.3 将ToDo项收集至寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-4_将CSS文件中所有规则的属性按照字母排序"><span class="nav-number">7.4.4.</span> <span class="nav-text">7.4.4 将CSS文件中所有规则的属性按照字母排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-_工具"><span class="nav-number">8.</span> <span class="nav-text">8. 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1_过ctags建立索引，并用其浏览源代码"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 过ctags建立索引，并用其浏览源代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1_结识ctags"><span class="nav-number">8.1.1.</span> <span class="nav-text">8.1.1 结识ctags</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-1_安装Exuberant_Ctags"><span class="nav-number">8.1.1.1.</span> <span class="nav-text">8.1.1.1 安装Exuberant Ctags</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-2_创建代码库索引"><span class="nav-number">8.1.1.2.</span> <span class="nav-text">8.1.1.2 创建代码库索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-3_详解标签文件"><span class="nav-number">8.1.1.3.</span> <span class="nav-text">8.1.1.3 详解标签文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-4_用模式定位关键字，而不是行号"><span class="nav-number">8.1.1.4.</span> <span class="nav-text">8.1.1.4 用模式定位关键字，而不是行号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-5_用元数据标记关键字"><span class="nav-number">8.1.1.5.</span> <span class="nav-text">8.1.1.5 用元数据标记关键字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2_配置Vim使用ctags"><span class="nav-number">8.1.2.</span> <span class="nav-text">8.1.2 配置Vim使用ctags</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-1_生成标签文件"><span class="nav-number">8.1.2.1.</span> <span class="nav-text">8.1.2.1 生成标签文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-2_在每次保存文件时自动执行ctags"><span class="nav-number">8.1.2.2.</span> <span class="nav-text">8.1.2.2 在每次保存文件时自动执行ctags</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-3_通过版本控制工具的回调机制自动执行ctags"><span class="nav-number">8.1.2.3.</span> <span class="nav-text">8.1.2.3 通过版本控制工具的回调机制自动执行ctags</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3_使用Vim的标签中转命令，浏览关键字的定义"><span class="nav-number">8.1.3.</span> <span class="nav-text">8.1.3 使用Vim的标签中转命令，浏览关键字的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2_编译代码，并通过Quickfix列表浏览错误信息"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 编译代码，并通过Quickfix列表浏览错误信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1_不用离开Vim也能编译代码"><span class="nav-number">8.2.1.</span> <span class="nav-text">8.2.1 不用离开Vim也能编译代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2_浏览Quickfix列表"><span class="nav-number">8.2.2.</span> <span class="nav-text">8.2.2 浏览Quickfix列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-1_位置列表以|开头，quickfix只有一份，位置列表有多份"><span class="nav-number">8.2.2.1.</span> <span class="nav-text">8.2.2.1 位置列表以|开头，quickfix只有一份，位置列表有多份</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3_回溯以前的Quickfix列表"><span class="nav-number">8.2.3.</span> <span class="nav-text">8.2.3 回溯以前的Quickfix列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4_定制外部编译器"><span class="nav-number">8.2.4.</span> <span class="nav-text">8.2.4 定制外部编译器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3_通过grep,vimgrep以及其他工具对整个工程进行查找"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 通过grep,vimgrep以及其他工具对整个工程进行查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-1_不必离开Vim也能调用grep"><span class="nav-number">8.3.1.</span> <span class="nav-text">8.3.1 不必离开Vim也能调用grep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-2_定制grep程序"><span class="nav-number">8.3.2.</span> <span class="nav-text">8.3.2 定制grep程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-3_自动补全"><span class="nav-number">8.3.3.</span> <span class="nav-text">8.3.3 自动补全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-4_利用Vim的拼写检查器，查找并更正拼写错误"><span class="nav-number">8.3.4.</span> <span class="nav-text">8.3.4 利用Vim的拼写检查器，查找并更正拼写错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-5_接下来干什么"><span class="nav-number">8.3.5.</span> <span class="nav-text">8.3.5 接下来干什么</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4_根据个人喜好定制vim"><span class="nav-number">8.4.</span> <span class="nav-text">8.4 根据个人喜好定制vim</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-1_动态改变vim的设置项"><span class="nav-number">8.4.1.</span> <span class="nav-text">8.4.1 动态改变vim的设置项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-2_将配置信息存至vimrc文件"><span class="nav-number">8.4.2.</span> <span class="nav-text">8.4.2 将配置信息存至vimrc文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-3_为特定类型的文件应用个性化设置"><span class="nav-number">8.4.3.</span> <span class="nav-text">8.4.3 为特定类型的文件应用个性化设置</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">0. Vim解决问题的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-hpoint-命令"><span class="nav-number">1.1.</span> <span class="nav-text">结识. [^hpoint] 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要自我重复"><span class="nav-number">1.2.</span> <span class="nav-text">不要自我重复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#减少无关移动"><span class="nav-number">1.2.1.</span> <span class="nav-text">减少无关移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复合命令"><span class="nav-number">1.2.2.</span> <span class="nav-text">复合命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用复合命令"><span class="nav-number">1.2.3.</span> <span class="nav-text">常用复合命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以退为进"><span class="nav-number">1.3.</span> <span class="nav-text">以退为进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行、重复、回退"><span class="nav-number">1.4.</span> <span class="nav-text">执行、重复、回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找并手动替换"><span class="nav-number">1.5.</span> <span class="nav-text">查找并手动替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结识-范式"><span class="nav-number">1.6.</span> <span class="nav-text">结识.范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-模式"><span class="nav-number">2.</span> <span class="nav-text">2. 模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-普通"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. 普通</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-把撤消单元切成块，普通模式和插入模式之间切换的粒度"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1. 把撤消单元切成块，普通模式和插入模式之间切换的粒度,</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-构造可重复的修改"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2. 构造可重复的修改:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-用次数做简单的算术运算"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3. 用次数做简单的算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-能够重复，就别用次数"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4. 能够重复，就别用次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-双剑合璧，天下无敌"><span class="nav-number">2.1.5.</span> <span class="nav-text">2.1.5. 双剑合璧，天下无敌</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-插入"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 插入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-在插入模式中即时更正错误"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1. 在插入模式中即时更正错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-返回普通模式"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2. 返回普通模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-不离开插入模式，粘贴寄存器中的文本"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3. 不离开插入模式，粘贴寄存器中的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-随时随地做运算"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4. 随时随地做运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-用字符编码插入非常用字符"><span class="nav-number">2.2.5.</span> <span class="nav-text">2.2.5. 用字符编码插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-用二合字母-digraphsdefault-插入非常用字符"><span class="nav-number">2.2.6.</span> <span class="nav-text">2.2.6. 用二合字母[^digraphsdefault]插入非常用字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-用替换模式替换已有文本"><span class="nav-number">2.2.7.</span> <span class="nav-text">2.2.7. 用替换模式替换已有文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-可视"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 可视</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-深入理解可视模式"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1. 深入理解可视模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-选择高亮选区"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2. 选择高亮选区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-重复执行面向行的可视命令"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3. 重复执行面向行的可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-只要可能，最好用操作符命令，而不是可视命令"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.4. 只要可能，最好用操作符命令，而不是可视命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-用面向列块的可视模式编辑表格数据"><span class="nav-number">2.3.5.</span> <span class="nav-text">2.3.5. 用面向列块的可视模式编辑表格数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-6-修改列文本"><span class="nav-number">2.3.6.</span> <span class="nav-text">2.3.6. 修改列文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-7-在长短不一的高亮块后添加文本"><span class="nav-number">2.3.7.</span> <span class="nav-text">2.3.7. 在长短不一的高亮块后添加文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-命令行"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-结识vim的命令行模式"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 结识vim的命令行模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-在一行或多个连续行上执行命令"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 在一行或多个连续行上执行命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3-使用-t和-m命令复制和移动行"><span class="nav-number">2.4.3.</span> <span class="nav-text">2.4.3 使用:t和:m命令复制和移动行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4-在指定范围上执行普通模式命令"><span class="nav-number">2.4.4.</span> <span class="nav-text">2.4.4 在指定范围上执行普通模式命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-5-重复上次的Ex命令"><span class="nav-number">2.4.5.</span> <span class="nav-text">2.4.5 重复上次的Ex命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-6-自动补全Ex命令-commandcomplete"><span class="nav-number">2.4.6.</span> <span class="nav-text">2.4.6 自动补全Ex命令[^commandcomplete]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-7-把当前单词插入到命令行"><span class="nav-number">2.4.7.</span> <span class="nav-text">2.4.7 把当前单词插入到命令行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-8-回溯历史命令"><span class="nav-number">2.4.8.</span> <span class="nav-text">2.4.8 回溯历史命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-9-运行Shell命令"><span class="nav-number">2.4.9.</span> <span class="nav-text">2.4.9 运行Shell命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-管理多个文件"><span class="nav-number">3.</span> <span class="nav-text">3. 管理多个文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-用缓冲区列表管理打开的文件"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 用缓冲区列表管理打开的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-ls列出缓冲区列表-ls"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 ls列出缓冲区列表[^ls]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-使用缓冲区列表："><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 使用缓冲区列表：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-删除缓冲区"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 删除缓冲区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-用参数列表将缓冲区分组"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 用参数列表将缓冲区分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-管理隐藏缓冲区"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 管理隐藏缓冲区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-将工作区切分成窗口"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 将工作区切分成窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-用标签页将窗口分组-tabpage"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 用标签页将窗口分组[^tabpage]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-打开和保存文件"><span class="nav-number">4.</span> <span class="nav-text">4. 打开和保存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-用edit命令打开文件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 用edit命令打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-使用find打开文件"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 使用find打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-使用netrw管理文件系统"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 使用netrw管理文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-把文件保存到不存在的目录中"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 把文件保存到不存在的目录中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-以超级用户权限保存文件"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 以超级用户权限保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-移动跳转-motion"><span class="nav-number">5.</span> <span class="nav-text">5. 移动跳转[^motion]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-用动作命令在文档中移动"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 用动作命令在文档中移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-让手指保持在本位行上"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 让手指保持在本位行上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-区分实际行与屏幕行"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 区分实际行与屏幕行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-基于单词移动-wordmotions"><span class="nav-number">5.1.3.</span> <span class="nav-text">5.1.3 基于单词移动[^wordmotions]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-对字符进行查找"><span class="nav-number">5.1.4.</span> <span class="nav-text">5.1.4 对字符进行查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-5-通过查找进行移动"><span class="nav-number">5.1.5.</span> <span class="nav-text">5.1.5 通过查找进行移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-6-用精确的文本对象选择选区-textobjects"><span class="nav-number">5.1.6.</span> <span class="nav-text">5.1.6 用精确的文本对象选择选区[^textobjects]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-7-删除周边，修改内部"><span class="nav-number">5.1.7.</span> <span class="nav-text">5.1.7 删除周边，修改内部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-8-设置位置标记-markmotion-，以便快速跳回"><span class="nav-number">5.1.8.</span> <span class="nav-text">5.1.8 设置位置标记[^markmotion]，以便快速跳回</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-9-在匹配括号间跳转"><span class="nav-number">5.1.9.</span> <span class="nav-text">5.1.9 在匹配括号间跳转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-在文件间跳转"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 在文件间跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-遍历跳转列表"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 遍历跳转列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-遍历改变列表"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 遍历改变列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3-跳转到光标下的文件-gf"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3 跳转到光标下的文件[^gf]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4-用全局位置标记在文件间快速跳转"><span class="nav-number">5.2.4.</span> <span class="nav-text">5.2.4 用全局位置标记在文件间快速跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-寄存器"><span class="nav-number">6.</span> <span class="nav-text">6. 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-复制与粘贴"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 复制与粘贴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-用无名寄存器实现删除、复制与粘贴操作"><span class="nav-number">6.1.1.</span> <span class="nav-text">6.1.1 用无名寄存器实现删除、复制与粘贴操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2-深入理解Vim寄存器"><span class="nav-number">6.1.2.</span> <span class="nav-text">6.1.2 深入理解Vim寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3-用寄存器中的内容替换高亮选区的文本"><span class="nav-number">6.1.3.</span> <span class="nav-text">6.1.3 用寄存器中的内容替换高亮选区的文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-4-把寄存器的内容粘贴出来-p"><span class="nav-number">6.1.4.</span> <span class="nav-text">6.1.4 把寄存器的内容粘贴出来[^p]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-5-与系统剪贴板进行交互-paste"><span class="nav-number">6.1.5.</span> <span class="nav-text">6.1.5 与系统剪贴板进行交互[^paste]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-宏"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 宏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-1-宏的读取与执行"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.2.1 宏的读取与执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-2-规范光标位置、直达目标以及中止宏"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.2.2 规范光标位置、直达目标以及中止宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-3-加次数回放宏"><span class="nav-number">6.2.3.</span> <span class="nav-text">6.2.3 加次数回放宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-4-在连续的文件行上重复修改"><span class="nav-number">6.2.4.</span> <span class="nav-text">6.2.4 在连续的文件行上重复修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-5-给宏追加命令"><span class="nav-number">6.2.5.</span> <span class="nav-text">6.2.5 给宏追加命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-6-在一组文件中执行宏"><span class="nav-number">6.2.6.</span> <span class="nav-text">6.2.6 在一组文件中执行宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-7-用迭代求值的方式给列表编号"><span class="nav-number">6.2.7.</span> <span class="nav-text">6.2.7 用迭代求值的方式给列表编号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-8-编辑宏的内容"><span class="nav-number">6.2.8.</span> <span class="nav-text">6.2.8 编辑宏的内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-匹配"><span class="nav-number">7.</span> <span class="nav-text">7. 匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-按模式匹配及按原义匹配"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 按模式匹配及按原义匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-1-调整查找模式的大小写敏感性"><span class="nav-number">7.1.1.</span> <span class="nav-text">7.1.1 调整查找模式的大小写敏感性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-2-按正则表达式查找时，使用-v模式开关"><span class="nav-number">7.1.2.</span> <span class="nav-text">7.1.2 按正则表达式查找时，使用\v模式开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3-按原义查找文本时，使用-V原义开关"><span class="nav-number">7.1.3.</span> <span class="nav-text">7.1.3 按原义查找文本时，使用\V原义开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-4-使用圆括号捕获子匹配"><span class="nav-number">7.1.4.</span> <span class="nav-text">7.1.4 使用圆括号捕获子匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-5-界定单词的边界"><span class="nav-number">7.1.5.</span> <span class="nav-text">7.1.5 界定单词的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-6-界定匹配的边界"><span class="nav-number">7.1.6.</span> <span class="nav-text">7.1.6 界定匹配的边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-7-转义问题字符"><span class="nav-number">7.1.7.</span> <span class="nav-text">7.1.7 转义问题字符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-查找"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-1-结识查找命令"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.2.1 结识查找命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-2-高亮查找匹配"><span class="nav-number">7.2.2.</span> <span class="nav-text">7.2.2 高亮查找匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-3-在执行查找前预览第一处匹配"><span class="nav-number">7.2.3.</span> <span class="nav-text">7.2.3 在执行查找前预览第一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-4-统计当前模式的匹配个数"><span class="nav-number">7.2.4.</span> <span class="nav-text">7.2.4 统计当前模式的匹配个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-5-将光标偏移到查找匹配结尾"><span class="nav-number">7.2.5.</span> <span class="nav-text">7.2.5 将光标偏移到查找匹配结尾</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-6-对完整的查找匹配进行操作"><span class="nav-number">7.2.6.</span> <span class="nav-text">7.2.6 对完整的查找匹配进行操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-7-利用查找历史，迭代完成复杂的模式"><span class="nav-number">7.2.7.</span> <span class="nav-text">7.2.7 利用查找历史，迭代完成复杂的模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-8-查找当前高亮选区中的文本"><span class="nav-number">7.2.8.</span> <span class="nav-text">7.2.8 查找当前高亮选区中的文本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-替换"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 替换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-1-结识substitute命令"><span class="nav-number">7.3.1.</span> <span class="nav-text">7.3.1 结识substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-2-在文件范围内查找并替换每一处匹配"><span class="nav-number">7.3.2.</span> <span class="nav-text">7.3.2 在文件范围内查找并替换每一处匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-3-手动控制每一次替换操作"><span class="nav-number">7.3.3.</span> <span class="nav-text">7.3.3 手动控制每一次替换操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-4-重用上次的查找模式"><span class="nav-number">7.3.4.</span> <span class="nav-text">7.3.4 重用上次的查找模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-5-用寄存器的内容替换"><span class="nav-number">7.3.5.</span> <span class="nav-text">7.3.5 用寄存器的内容替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-6-重复上一次Substitute命令"><span class="nav-number">7.3.6.</span> <span class="nav-text">7.3.6 重复上一次Substitute命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-7-使用子匹配重排CSV文件的字段"><span class="nav-number">7.3.7.</span> <span class="nav-text">7.3.7 使用子匹配重排CSV文件的字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-8-在替换过程中执行算术运算"><span class="nav-number">7.3.8.</span> <span class="nav-text">7.3.8 在替换过程中执行算术运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-9-交换两个或更多的单词"><span class="nav-number">7.3.9.</span> <span class="nav-text">7.3.9 交换两个或更多的单词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-10-在多个文件中执行查找与替换"><span class="nav-number">7.3.10.</span> <span class="nav-text">7.3.10 在多个文件中执行查找与替换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-global命令"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 global命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-1-结识global命令"><span class="nav-number">7.4.1.</span> <span class="nav-text">7.4.1 结识global命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-2-删除所有包含模式的文本行"><span class="nav-number">7.4.2.</span> <span class="nav-text">7.4.2 删除所有包含模式的文本行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-3-将ToDo项收集至寄存器"><span class="nav-number">7.4.3.</span> <span class="nav-text">7.4.3 将ToDo项收集至寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-4-将CSS文件中所有规则的属性按照字母排序"><span class="nav-number">7.4.4.</span> <span class="nav-text">7.4.4 将CSS文件中所有规则的属性按照字母排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-工具"><span class="nav-number">8.</span> <span class="nav-text">8. 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-过ctags建立索引，并用其浏览源代码"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 过ctags建立索引，并用其浏览源代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-结识ctags"><span class="nav-number">8.1.1.</span> <span class="nav-text">8.1.1 结识ctags</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-1-安装Exuberant-Ctags"><span class="nav-number">8.1.1.1.</span> <span class="nav-text">8.1.1.1 安装Exuberant Ctags</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-2-创建代码库索引"><span class="nav-number">8.1.1.2.</span> <span class="nav-text">8.1.1.2 创建代码库索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-3-详解标签文件"><span class="nav-number">8.1.1.3.</span> <span class="nav-text">8.1.1.3 详解标签文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-4-用模式定位关键字，而不是行号"><span class="nav-number">8.1.1.4.</span> <span class="nav-text">8.1.1.4 用模式定位关键字，而不是行号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-1-5-用元数据标记关键字"><span class="nav-number">8.1.1.5.</span> <span class="nav-text">8.1.1.5 用元数据标记关键字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-配置Vim使用ctags"><span class="nav-number">8.1.2.</span> <span class="nav-text">8.1.2 配置Vim使用ctags</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-1-生成标签文件"><span class="nav-number">8.1.2.1.</span> <span class="nav-text">8.1.2.1 生成标签文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-2-在每次保存文件时自动执行ctags"><span class="nav-number">8.1.2.2.</span> <span class="nav-text">8.1.2.2 在每次保存文件时自动执行ctags</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-2-3-通过版本控制工具的回调机制自动执行ctags"><span class="nav-number">8.1.2.3.</span> <span class="nav-text">8.1.2.3 通过版本控制工具的回调机制自动执行ctags</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-使用Vim的标签中转命令，浏览关键字的定义"><span class="nav-number">8.1.3.</span> <span class="nav-text">8.1.3 使用Vim的标签中转命令，浏览关键字的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-编译代码，并通过Quickfix列表浏览错误信息"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 编译代码，并通过Quickfix列表浏览错误信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-不用离开Vim也能编译代码"><span class="nav-number">8.2.1.</span> <span class="nav-text">8.2.1 不用离开Vim也能编译代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-浏览Quickfix列表"><span class="nav-number">8.2.2.</span> <span class="nav-text">8.2.2 浏览Quickfix列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-2-1-位置列表以-开头，quickfix只有一份，位置列表有多份"><span class="nav-number">8.2.2.1.</span> <span class="nav-text">8.2.2.1 位置列表以|开头，quickfix只有一份，位置列表有多份</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-回溯以前的Quickfix列表"><span class="nav-number">8.2.3.</span> <span class="nav-text">8.2.3 回溯以前的Quickfix列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-4-定制外部编译器"><span class="nav-number">8.2.4.</span> <span class="nav-text">8.2.4 定制外部编译器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-通过grep-vimgrep以及其他工具对整个工程进行查找"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 通过grep,vimgrep以及其他工具对整个工程进行查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-1-不必离开Vim也能调用grep"><span class="nav-number">8.3.1.</span> <span class="nav-text">8.3.1 不必离开Vim也能调用grep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-2-定制grep程序"><span class="nav-number">8.3.2.</span> <span class="nav-text">8.3.2 定制grep程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-3-自动补全"><span class="nav-number">8.3.3.</span> <span class="nav-text">8.3.3 自动补全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-4-利用Vim的拼写检查器，查找并更正拼写错误"><span class="nav-number">8.3.4.</span> <span class="nav-text">8.3.4 利用Vim的拼写检查器，查找并更正拼写错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-5-接下来干什么"><span class="nav-number">8.3.5.</span> <span class="nav-text">8.3.5 接下来干什么</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-根据个人喜好定制vim"><span class="nav-number">8.4.</span> <span class="nav-text">8.4 根据个人喜好定制vim</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-1-动态改变vim的设置项"><span class="nav-number">8.4.1.</span> <span class="nav-text">8.4.1 动态改变vim的设置项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-2-将配置信息存至vimrc文件"><span class="nav-number">8.4.2.</span> <span class="nav-text">8.4.2 将配置信息存至vimrc文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-3-为特定类型的文件应用个性化设置"><span class="nav-number">8.4.3.</span> <span class="nav-text">8.4.3 为特定类型的文件应用个性化设置</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

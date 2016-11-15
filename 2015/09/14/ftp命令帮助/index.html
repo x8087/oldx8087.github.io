@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="ftp,mac,shell,zsh," />
+  <meta name="keywords" content="shell,zsh,ftp,mac," />
 
 
 
@@ -217,7 +217,7 @@
 
       
         <span itemprop="articleBody"><p><strong>ftp</strong>网络文件传输程序<br>ftp [-46AadefginpRtvV] [-N netrc] [-o output] [-p port] [-q quittime] [ -s srcaddr] [-r retry] [-T dir,max[,inc]] [[user@]host [port]] [[user@]host:[path][/]] [file://path] [ftp://[user[:password]@]host[:port]/path[/][;type=X]][<a href="http://[user[:password]@]host[:port]/path" target="_blank" rel="external">http://[user[:password]@]host[:port]/path</a>] […]<br>ftp -u URL file […]</p>
-<h3 id="描述：">描述：</h3><p>ftp是网络标准传输协议的用户接口。程序允许用户与远程网络站点传输文件。<br>选项可指定给命令行或者命令解释器。<br>-4 强制ftp只使用IPv4地址<br>-6 强制ftp只使用IPv6地址<br>-A 强制使用主动模式ftp。默认情况，ftp尝试使用被动模式ftp且当服务器不支持被动模式时回退到主动模式。这个选项使ftp总是使用主动连接。这只是对连接非常老可能没有实现被动模式的服务器有用。<br>-a 使ftp绕过普通登录程序，并替换为使用匿名登录。<br>-d 开启调试<br>-e 关闭命令行编辑。这对Emacs ange-ftp模式有用。<br>-f 强制经过ftp或者http代理的传输缓存重载。<br>-g 关闭文件名扩展。<br>-i 在多文件传输时关闭交互提示。<br>-n 阻止ftp在初始化非”auto-fetch”传输连接时尝试”auto-login”。如果允许自动登录，ftp会检查用户Home目录里的.netrc文件获取描述远程端账户的入口。如果入口不存在，ftp会提示远程端登录名（默认是用户本地机器上定义的）且如果有需要时提示登录账号的密码。覆盖”auto-fetch”传输的自动登录，指定合适的用户名（和可选的，密码）。<br>-N netrc 使用netrc替代~/.netrc。更多信息请参阅.netrc文件。<br>-o output 当自动获取文件时，保存内容到<code>output</code>。<code>output</code>根据下面的文件命名规则解析。如果<code>output</code>没有’-‘或者不是以’|’开头，那只有指定的第一个文件在<code>output</code>中检索到。所有其他文件在他们远程名字的basename里检索到。<br>-p 启用被动模式操作，用于在连接过滤防火墙后面使用。Ftp现在默认尝试使用被动模式已不推荐使用此选项，如果服务器不支持被动连接则回退到主动模式。<br>-P port 设置端口号为<code>port</code>。<br>-q quittime 在连接停滞<code>quitime</code>秒后退出。<br>-r wait 如果连接失败，暂停<code>wait</code>秒尝试重新连接。<br>-R 重新启动所有非代理的自动提取<br>-s srcaddr 使用srcaddr作为所有连接的本地IP地址<br>-t 启用数据包跟踪<br>-T direction,maximum[,increment] 为<code>direction</code>设置最大传输速度到<code>maximum</code>字节/秒，如果指定，则增量为<code>increment</code>字节/秒。更多信息参考<code>rate</code>。<br>-u URL file […] 在命令行上传文件到<code>URL</code>，<code>URL</code>是支持<code>auto-fetch</code>的ftp URL类型之一（对单个文件的上传附加一个可选目标文件名)，<code>file</code>是即将上传的一个或多个文件。<br>-v 启用详情和进度。如果输出是输出到终端这是默认的（对于进度，ftp是前台程序）。强制ftp显示所有来自远程服务端的响应，以及对数据传输的统计报告。<br>-V 禁用详情和进度，如果输出是输出到终端，覆盖默认的启用。</p>
+<h3 id="描述："><a href="#描述：" class="headerlink" title="描述："></a>描述：</h3><p>ftp是网络标准传输协议的用户接口。程序允许用户与远程网络站点传输文件。<br>选项可指定给命令行或者命令解释器。<br>-4 强制ftp只使用IPv4地址<br>-6 强制ftp只使用IPv6地址<br>-A 强制使用主动模式ftp。默认情况，ftp尝试使用被动模式ftp且当服务器不支持被动模式时回退到主动模式。这个选项使ftp总是使用主动连接。这只是对连接非常老可能没有实现被动模式的服务器有用。<br>-a 使ftp绕过普通登录程序，并替换为使用匿名登录。<br>-d 开启调试<br>-e 关闭命令行编辑。这对Emacs ange-ftp模式有用。<br>-f 强制经过ftp或者http代理的传输缓存重载。<br>-g 关闭文件名扩展。<br>-i 在多文件传输时关闭交互提示。<br>-n 阻止ftp在初始化非”auto-fetch”传输连接时尝试”auto-login”。如果允许自动登录，ftp会检查用户Home目录里的.netrc文件获取描述远程端账户的入口。如果入口不存在，ftp会提示远程端登录名（默认是用户本地机器上定义的）且如果有需要时提示登录账号的密码。覆盖”auto-fetch”传输的自动登录，指定合适的用户名（和可选的，密码）。<br>-N netrc 使用netrc替代~/.netrc。更多信息请参阅.netrc文件。<br>-o output 当自动获取文件时，保存内容到<code>output</code>。<code>output</code>根据下面的文件命名规则解析。如果<code>output</code>没有’-‘或者不是以’|’开头，那只有指定的第一个文件在<code>output</code>中检索到。所有其他文件在他们远程名字的basename里检索到。<br>-p 启用被动模式操作，用于在连接过滤防火墙后面使用。Ftp现在默认尝试使用被动模式已不推荐使用此选项，如果服务器不支持被动连接则回退到主动模式。<br>-P port 设置端口号为<code>port</code>。<br>-q quittime 在连接停滞<code>quitime</code>秒后退出。<br>-r wait 如果连接失败，暂停<code>wait</code>秒尝试重新连接。<br>-R 重新启动所有非代理的自动提取<br>-s srcaddr 使用srcaddr作为所有连接的本地IP地址<br>-t 启用数据包跟踪<br>-T direction,maximum[,increment] 为<code>direction</code>设置最大传输速度到<code>maximum</code>字节/秒，如果指定，则增量为<code>increment</code>字节/秒。更多信息参考<code>rate</code>。<br>-u URL file […] 在命令行上传文件到<code>URL</code>，<code>URL</code>是支持<code>auto-fetch</code>的ftp URL类型之一（对单个文件的上传附加一个可选目标文件名)，<code>file</code>是即将上传的一个或多个文件。<br>-v 启用详情和进度。如果输出是输出到终端这是默认的（对于进度，ftp是前台程序）。强制ftp显示所有来自远程服务端的响应，以及对数据传输的统计报告。<br>-V 禁用详情和进度，如果输出是输出到终端，覆盖默认的启用。</p>
 <p>与ftp通讯的客户端主机可以在命令行中指定。如果这样的话，ftp会立即试图在主机上建立一个与ftp服务器的连接；否则，ftp会进入它的命令解释器并等待来自用户的指令。当等待来自用户的命令时，ftp提供给用户<code>ftp&gt;</code>的提示。下面是ftp认可的命令：</p>
 <p>! [command [args]]<br>在本地机器上调用一个交互式的shell。如果有参数，第一个是直接执行的命令，其余的参数作为其参数。</p>
 <p>$ macro-name [args]<br>执行macdef命令定义的宏<code>macro-name</code>。参数传递到宏unglobbed。</p>
@@ -330,13 +330,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ftp/" rel="tag">#ftp</a>
-          
-            <a href="/tags/mac/" rel="tag">#mac</a>
-          
             <a href="/tags/shell/" rel="tag">#shell</a>
           
             <a href="/tags/zsh/" rel="tag">#zsh</a>
+          
+            <a href="/tags/ftp/" rel="tag">#ftp</a>
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
           
         </div>
       

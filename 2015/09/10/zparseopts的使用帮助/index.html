@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="getopts,zparseopts,zsh," />
+  <meta name="keywords" content="zsh,zparseopts,getopts," />
 
 
 
@@ -232,11 +232,11 @@
 <p><code>-K</code><br>使用该选项可以使<code>-a</code>选项指定和<code>=array</code>格式的数组在没有<code>spec</code>使用到时保持不变。另一方面，当任何<code>spec</code>使用到时替换整个数组。通过<code>-A</code>选项指定的关联数组单独项使用<code>-K</code>保存。这使得可以在调用<code>zparseopts</code>前指派默认值到数组里。</p>
 <p><code>-M</code><br>实现相同选项名之间映射的指派规则变化。任何使用<code>=array</code>格式来选择值保存在哪里的<code>spec</code>，字符串<code>array</code>被解释为另一个<code>spec</code>的名字。如果没有找到其他<code>spec</code>，选项值按往常保存。这只是选项值保存方法的变化，不是<code>$*</code>被解析的方法，所以如果<code>name+</code>指定不一致结果将不可预知。</p>
 <p><code>-E</code><br>这改变了分析规则，在遇到首个字符串不是按<code>spec</code>中的一个描述时不停止。它可用于测试或（如果和<code>-D</code>配合使用时）提取选项和他们的参数，忽略位置参数中的其他所有选项和参数。例如:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> -bx -c y -cz baz -cend</span><br><span class="line">zparseopts a=foo <span class="tag">b</span>:=bar c+:=bar</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">foo=(-a)</span><br><span class="line">bar=(-<span class="tag">b</span> x -c y -c z)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">set -- -<span class="selector-tag">a</span> -bx -c y -cz baz -cend</div><div class="line">zparseopts a=foo <span class="selector-tag">b</span>:=bar c+:=bar</div><div class="line"><span class="comment">//结果：</span></div><div class="line">foo=(-a)</div><div class="line">bar=(-<span class="selector-tag">b</span> x -c y -c z)</div></pre></td></tr></table></figure>
 <p>‘baz’后的参数将不会用到。</p>
-<p>使用<code>-E</code>选项后：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> x -<span class="tag">b</span> y -c z arg1 arg2</span><br><span class="line">zparseopts -E -D <span class="tag">b</span>:=bar</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">bar=(-<span class="tag">b</span> y)</span><br><span class="line">set -- -<span class="tag">a</span> x -c z arg1 arg2</span><br></pre></td></tr></table></figure></p>
+<p>使用<code>-E</code>选项后：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">set -- -<span class="selector-tag">a</span> x -<span class="selector-tag">b</span> y -c z arg1 arg2</div><div class="line">zparseopts -E -D <span class="selector-tag">b</span>:=bar</div><div class="line"><span class="comment">//结果：</span></div><div class="line">bar=(-<span class="selector-tag">b</span> y)</div><div class="line">set -- -<span class="selector-tag">a</span> x -c z arg1 arg2</div></pre></td></tr></table></figure></p>
 <p>这就是说，选项<code>-b</code>和它的参数从位置参数提取到数组<code>bar</code>。</p>
-<p><code>-M</code>选项可以这样使用：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -- -<span class="tag">a</span> -bx -c y -cz baz -cend</span><br><span class="line">zparseopts -A bar -M a=foo b+: c:=<span class="tag">b</span></span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">foo=(-a)</span><br><span class="line">bar=(-<span class="tag">a</span> <span class="string">''</span> -<span class="tag">b</span> xyz)</span><br></pre></td></tr></table></figure></p>
+<p><code>-M</code>选项可以这样使用：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">set -- -<span class="selector-tag">a</span> -bx -c y -cz baz -cend</div><div class="line">zparseopts -A bar -M a=foo b+: c:=<span class="selector-tag">b</span></div><div class="line"><span class="comment">//结果：</span></div><div class="line">foo=(-a)</div><div class="line">bar=(-<span class="selector-tag">a</span> <span class="string">''</span> -<span class="selector-tag">b</span> xyz)</div></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -245,11 +245,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/getopts/" rel="tag">#getopts</a>
+            <a href="/tags/zsh/" rel="tag">#zsh</a>
           
             <a href="/tags/zparseopts/" rel="tag">#zparseopts</a>
           
-            <a href="/tags/zsh/" rel="tag">#zsh</a>
+            <a href="/tags/getopts/" rel="tag">#getopts</a>
           
         </div>
       
